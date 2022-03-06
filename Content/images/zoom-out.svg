@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13.523" height="13.523" viewBox="0 0 13.523 13.523">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none;stroke:#c6c6c6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}
+        </style>
+    </defs>
+    <g id="prefix__zoom-out" transform="translate(.974 .974)">
+        <path id="prefix__Line_2" d="M3.604 3.604L0 0" class="prefix__cls-1" data-name="Line 2" transform="translate(8.238 8.238)"/>
+        <circle id="prefix__Ellipse_13" cx="5" cy="5" r="5" class="prefix__cls-1" data-name="Ellipse 13" transform="translate(-.474 -.474)"/>
+    </g>
+</svg>

@@ -1,0 +1,4654 @@
+.select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle; }
+    .select2-container .select2-selection--single {
+      box-sizing: border-box;
+      cursor: pointer;
+      display: block;
+      height: 28px;
+      user-select: none;
+      -webkit-user-select: none; }
+      .select2-container .select2-selection--single .select2-selection__rendered {
+        display: block;
+        padding-left: 8px;
+        padding-right: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .select2-container .select2-selection--single .select2-selection__clear {
+        position: relative; }
+    .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
+      padding-right: 8px;
+      padding-left: 20px; }
+    .select2-container .select2-selection--multiple {
+      box-sizing: border-box;
+      cursor: pointer;
+      display: block;
+      min-height: 32px;
+      user-select: none;
+      -webkit-user-select: none; }
+      .select2-container .select2-selection--multiple .select2-selection__rendered {
+        display: inline-block;
+        overflow: hidden;
+        padding-left: 8px;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+    .select2-container .select2-search--inline {
+      float: left; }
+      .select2-container .select2-search--inline .select2-search__field {
+        box-sizing: border-box;
+        border: none;
+        font-size: 100%;
+        margin-top: 5px;
+        padding: 0; }
+        .select2-container .select2-search--inline .select2-search__field::-webkit-search-cancel-button {
+          -webkit-appearance: none; }
+  
+  .select2-dropdown {
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    left: -100000px;
+    width: 100%;
+    z-index: 1051; }
+  
+  .select2-results {
+    display: block; }
+  
+  .select2-results__options {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  
+  .select2-results__option {
+    padding: 6px;
+    user-select: none;
+    -webkit-user-select: none; }
+    .select2-results__option[aria-selected] {
+      cursor: pointer; }
+  
+  .select2-container--open .select2-dropdown {
+    left: 0; }
+  
+  .select2-container--open .select2-dropdown--above {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  
+  .select2-container--open .select2-dropdown--below {
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
+  
+  .select2-search--dropdown {
+    display: block;
+    padding: 4px; }
+    .select2-search--dropdown .select2-search__field {
+      padding: 4px;
+      width: 100%;
+      box-sizing: border-box; }
+      .select2-search--dropdown .select2-search__field::-webkit-search-cancel-button {
+        -webkit-appearance: none; }
+    .select2-search--dropdown.select2-search--hide {
+      display: none; }
+  
+  .select2-close-mask {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    z-index: 99;
+    background-color: #fff;
+    filter: alpha(opacity=0); }
+  
+  .select2-hidden-accessible {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important; }
+  
+  .select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px; }
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+      color: #444;
+      line-height: 28px; }
+    .select2-container--default .select2-selection--single .select2-selection__clear {
+      cursor: pointer;
+      float: right;
+      font-weight: bold; }
+    .select2-container--default .select2-selection--single .select2-selection__placeholder {
+      color: #999; }
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+      height: 26px;
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      width: 20px; }
+      .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        border-color: #888 transparent transparent transparent;
+        border-style: solid;
+        border-width: 5px 4px 0 4px;
+        height: 0;
+        left: 50%;
+        margin-left: -4px;
+        margin-top: -2px;
+        position: absolute;
+        top: 50%;
+        width: 0; }
+  
+  .select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__clear {
+    float: left; }
+  
+  .select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__arrow {
+    left: 1px;
+    right: auto; }
+  
+  .select2-container--default.select2-container--disabled .select2-selection--single {
+    background-color: #eee;
+    cursor: default; }
+    .select2-container--default.select2-container--disabled .select2-selection--single .select2-selection__clear {
+      display: none; }
+  
+  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent #888 transparent;
+    border-width: 0 4px 5px 4px; }
+  
+  .select2-container--default .select2-selection--multiple {
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: text; }
+    .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+      box-sizing: border-box;
+      list-style: none;
+      margin: 0;
+      padding: 0 5px;
+      width: 100%; }
+      .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+        list-style: none; }
+    .select2-container--default .select2-selection--multiple .select2-selection__placeholder {
+      color: #999;
+      margin-top: 5px;
+      float: left; }
+    .select2-container--default .select2-selection--multiple .select2-selection__clear {
+      cursor: pointer;
+      float: right;
+      font-weight: bold;
+      margin-top: 5px;
+      margin-right: 10px; }
+    .select2-container--default .select2-selection--multiple .select2-selection__choice {
+      background-color: #e4e4e4;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      cursor: default;
+      float: left;
+      margin-right: 5px;
+      margin-top: 5px;
+      padding: 0 5px; }
+    .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+      color: #999;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: bold;
+      margin-right: 2px; }
+      .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+        color: #333; }
+  
+  .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__placeholder, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-search--inline {
+    float: right; }
+  
+  .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
+    margin-left: 5px;
+    margin-right: auto; }
+  
+  .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove {
+    margin-left: 2px;
+    margin-right: auto; }
+  
+  .select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: solid black 1px;
+    outline: 0; }
+  
+  .select2-container--default.select2-container--disabled .select2-selection--multiple {
+    background-color: #eee;
+    cursor: default; }
+  
+  .select2-container--default.select2-container--disabled .select2-selection__choice__remove {
+    display: none; }
+  
+  .select2-container--default.select2-container--open.select2-container--above .select2-selection--single, .select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
+  
+  .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  
+  .select2-container--default .select2-search--dropdown .select2-search__field {
+    border: 1px solid #aaa; }
+  
+  .select2-container--default .select2-search--inline .select2-search__field {
+    background: transparent;
+    border: none;
+    outline: 0;
+    box-shadow: none;
+    -webkit-appearance: textfield; }
+  
+  
+  
+  .select2-container--default .select2-results__option[role=group] {
+    padding: 0; }
+  
+  .select2-container--default .select2-results__option[aria-disabled=true] {
+    color: #999; }
+  
+  .select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #ddd; }
+  
+  .select2-container--default .select2-results__option .select2-results__option {
+    padding-left: 1em; }
+    .select2-container--default .select2-results__option .select2-results__option .select2-results__group {
+      padding-left: 0; }
+    .select2-container--default .select2-results__option .select2-results__option .select2-results__option {
+      margin-left: -1em;
+      padding-left: 2em; }
+      .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+        margin-left: -2em;
+        padding-left: 3em; }
+        .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+          margin-left: -3em;
+          padding-left: 4em; }
+          .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+            margin-left: -4em;
+            padding-left: 5em; }
+            .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+              margin-left: -5em;
+              padding-left: 6em; }
+  
+  .select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #5897fb;
+    color: white; }
+  
+  .select2-container--default .select2-results__group {
+    cursor: default;
+    display: block;
+    padding: 6px; }
+  
+  .select2-container--classic .select2-selection--single {
+    background-color: #f7f7f7;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    outline: 0;
+    background-image: -webkit-linear-gradient(top, white 50%, #eeeeee 100%);
+    background-image: -o-linear-gradient(top, white 50%, #eeeeee 100%);
+    background-image: linear-gradient(to bottom, white 50%, #eeeeee 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0); }
+    .select2-container--classic .select2-selection--single:focus {
+      border: 1px solid #5897fb; }
+    .select2-container--classic .select2-selection--single .select2-selection__rendered {
+      color: #444;
+      line-height: 28px; }
+    .select2-container--classic .select2-selection--single .select2-selection__clear {
+      cursor: pointer;
+      float: right;
+      font-weight: bold;
+      margin-right: 10px; }
+    .select2-container--classic .select2-selection--single .select2-selection__placeholder {
+      color: #999; }
+    .select2-container--classic .select2-selection--single .select2-selection__arrow {
+      background-color: #ddd;
+      border: none;
+      border-left: 1px solid #aaa;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      height: 26px;
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      width: 20px;
+      background-image: -webkit-linear-gradient(top, #eeeeee 50%, #cccccc 100%);
+      background-image: -o-linear-gradient(top, #eeeeee 50%, #cccccc 100%);
+      background-image: linear-gradient(to bottom, #eeeeee 50%, #cccccc 100%);
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC', GradientType=0); }
+      .select2-container--classic .select2-selection--single .select2-selection__arrow b {
+        border-color: #888 transparent transparent transparent;
+        border-style: solid;
+        border-width: 5px 4px 0 4px;
+        height: 0;
+        left: 50%;
+        margin-left: -4px;
+        margin-top: -2px;
+        position: absolute;
+        top: 50%;
+        width: 0; }
+  
+  .select2-container--classic[dir="rtl"] .select2-selection--single .select2-selection__clear {
+    float: left; }
+  
+  .select2-container--classic[dir="rtl"] .select2-selection--single .select2-selection__arrow {
+    border: none;
+    border-right: 1px solid #aaa;
+    border-radius: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    left: 1px;
+    right: auto; }
+  
+  .select2-container--classic.select2-container--open .select2-selection--single {
+    border: 1px solid #5897fb; }
+    .select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow {
+      background: transparent;
+      border: none; }
+      .select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b {
+        border-color: transparent transparent #888 transparent;
+        border-width: 0 4px 5px 4px; }
+  
+  .select2-container--classic.select2-container--open.select2-container--above .select2-selection--single {
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-image: -webkit-linear-gradient(top, white 0%, #eeeeee 50%);
+    background-image: -o-linear-gradient(top, white 0%, #eeeeee 50%);
+    background-image: linear-gradient(to bottom, white 0%, #eeeeee 50%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0); }
+  
+  .select2-container--classic.select2-container--open.select2-container--below .select2-selection--single {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-image: -webkit-linear-gradient(top, #eeeeee 50%, white 100%);
+    background-image: -o-linear-gradient(top, #eeeeee 50%, white 100%);
+    background-image: linear-gradient(to bottom, #eeeeee 50%, white 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFFFFFFF', GradientType=0); }
+  
+  .select2-container--classic .select2-selection--multiple {
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: text;
+    outline: 0; }
+    .select2-container--classic .select2-selection--multiple:focus {
+      border: 1px solid #5897fb; }
+    .select2-container--classic .select2-selection--multiple .select2-selection__rendered {
+      list-style: none;
+      margin: 0;
+      padding: 0 5px; }
+    .select2-container--classic .select2-selection--multiple .select2-selection__clear {
+      display: none; }
+    .select2-container--classic .select2-selection--multiple .select2-selection__choice {
+      background-color: #e4e4e4;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      cursor: default;
+      float: left;
+      margin-right: 5px;
+      margin-top: 5px;
+      padding: 0 5px; }
+    .select2-container--classic .select2-selection--multiple .select2-selection__choice__remove {
+      color: #888;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: bold;
+      margin-right: 2px; }
+      .select2-container--classic .select2-selection--multiple .select2-selection__choice__remove:hover {
+        color: #555; }
+  
+  .select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
+    float: right; }
+  
+  .select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
+    margin-left: 5px;
+    margin-right: auto; }
+  
+  .select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove {
+    margin-left: 2px;
+    margin-right: auto; }
+  
+  .select2-container--classic.select2-container--open .select2-selection--multiple {
+    border: 1px solid #5897fb; }
+  
+  .select2-container--classic.select2-container--open.select2-container--above .select2-selection--multiple {
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
+  
+  .select2-container--classic.select2-container--open.select2-container--below .select2-selection--multiple {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  
+  .select2-container--classic .select2-search--dropdown .select2-search__field {
+    border: 1px solid #aaa;
+    outline: 0; }
+  
+  .select2-container--classic .select2-search--inline .select2-search__field {
+    outline: 0;
+    box-shadow: none; }
+  
+  .select2-container--classic .select2-dropdown {
+    background-color: white;
+    border: 1px solid transparent; }
+  
+  .select2-container--classic .select2-dropdown--above {
+    border-bottom: none; }
+  
+  .select2-container--classic .select2-dropdown--below {
+    border-top: none; }
+  
+  .select2-container--classic .select2-results > .select2-results__options {
+    max-height: 200px;
+    overflow-y: auto; }
+  
+  .select2-container--classic .select2-results__option[role=group] {
+    padding: 0; }
+  
+  .select2-container--classic .select2-results__option[aria-disabled=true] {
+    color: grey; }
+  
+  .select2-container--classic .select2-results__option--highlighted[aria-selected] {
+    background-color: #3875d7;
+    color: white; }
+  
+  .select2-container--classic .select2-results__group {
+    cursor: default;
+    display: block;
+    padding: 6px; }
+  
+  .select2-container--classic.select2-container--open .select2-dropdown {
+    border-color: #5897fb; }
+  
+  .xdsoft_datetimepicker {
+      box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.506);
+      background: #fff;
+      border-bottom: 1px solid #bbb;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      color: #333;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      padding: 8px;
+      padding-left: 0;
+      padding-top: 2px;
+      position: absolute;
+      z-index: 9999;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      display: none;
+  }
+  .xdsoft_datetimepicker.xdsoft_rtl {
+      padding: 8px 0 8px 8px;
+  }
+  
+  .xdsoft_datetimepicker iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 75px;
+      height: 210px;
+      background: transparent;
+      border: none;
+  }
+  
+  /*For IE8 or lower*/
+  .xdsoft_datetimepicker button {
+      border: none !important;
+  }
+  
+  .xdsoft_noselect {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+  }
+  
+  .xdsoft_noselect::selection { background: transparent }
+  .xdsoft_noselect::-moz-selection { background: transparent }
+  
+  .xdsoft_datetimepicker.xdsoft_inline {
+      display: inline-block;
+      position: static;
+      box-shadow: none;
+  }
+  
+  .xdsoft_datetimepicker * {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_datepicker, .xdsoft_datetimepicker .xdsoft_timepicker {
+      display: none;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_datepicker.active, .xdsoft_datetimepicker .xdsoft_timepicker.active {
+      display: block;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_datepicker {
+      width: 224px;
+      float: left;
+      margin-left: 8px;
+  }
+  .xdsoft_datetimepicker.xdsoft_rtl .xdsoft_datepicker {
+      float: right;
+      margin-right: 8px;
+      margin-left: 0;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_showweeks .xdsoft_datepicker {
+      width: 256px;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_timepicker {
+      width: 58px;
+      float: left;
+      text-align: center;
+      margin-left: 8px;
+      margin-top: 0;
+  }
+  .xdsoft_datetimepicker.xdsoft_rtl .xdsoft_timepicker {
+      float: right;
+      margin-right: 8px;
+      margin-left: 0;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_datepicker.active+.xdsoft_timepicker {
+      margin-top: 8px;
+      margin-bottom: 3px
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_mounthpicker {
+      position: relative;
+      text-align: center;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_label i,
+  .xdsoft_datetimepicker .xdsoft_prev,
+  .xdsoft_datetimepicker .xdsoft_next,
+  .xdsoft_datetimepicker .xdsoft_today_button {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAeCAYAAADaW7vzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0NBRjI1NjM0M0UwMTFFNDk4NkFGMzJFQkQzQjEwRUIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NBRjI1NjQ0M0UwMTFFNDk4NkFGMzJFQkQzQjEwRUIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQ0FGMjU2MTQzRTAxMUU0OTg2QUYzMkVCRDNCMTBFQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQ0FGMjU2MjQzRTAxMUU0OTg2QUYzMkVCRDNCMTBFQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoNEP54AAAIOSURBVHja7Jq9TsMwEMcxrZD4WpBYeKUCe+kTMCACHZh4BFfHO/AAIHZGFhYkBBsSEqxsLCAgXKhbXYOTxh9pfJVP+qutnZ5s/5Lz2Y5I03QhWji2GIcgAokWgfCxNvcOCCGKqiSqhUp0laHOne05vdEyGMfkdxJDVjgwDlEQgYQBgx+ULJaWSXXS6r/ER5FBVR8VfGftTKcITNs+a1XpcFoExREIDF14AVIFxgQUS+h520cdud6wNkC0UBw6BCO/HoCYwBhD8QCkQ/x1mwDyD4plh4D6DDV0TAGyo4HcawLIBBSLDkHeH0Mg2yVP3l4TQMZQDDsEOl/MgHQqhMNuE0D+oBh0CIr8MAKyazBH9WyBuKxDWgbXfjNf32TZ1KWm/Ap1oSk/R53UtQ5xTh3LUlMmT8gt6g51Q9p+SobxgJQ/qmsfZhWywGFSl0yBjCLJCMgXail3b7+rumdVJ2YRss4cN+r6qAHDkPWjPjdJCF4n9RmAD/V9A/Wp4NQassDjwlB6XBiCxcJQWmZZb8THFilfy/lfrTvLghq2TqTHrRMTKNJ0sIhdo15RT+RpyWwFdY96UZ/LdQKBGjcXpcc1AlSFEfLmouD+1knuxBDUVrvOBmoOC/rEcN7OQxKVeJTCiAdUzUJhA2Oez9QTkp72OTVcxDcXY8iKNkxGAJXmJCOQwOa6dhyXsOa6XwEGAKdeb5ET3rQdAAAAAElFTkSuQmCC);
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_label i {
+      opacity: 0.5;
+      background-position: -92px -19px;
+      display: inline-block;
+      width: 9px;
+      height: 20px;
+      vertical-align: middle;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_prev {
+      float: left;
+      background-position: -20px 0;
+  }
+  .xdsoft_datetimepicker .xdsoft_today_button {
+      float: left;
+      background-position: -70px 0;
+      margin-left: 5px;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_next {
+      float: right;
+      background-position: 0 0;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_next,
+  .xdsoft_datetimepicker .xdsoft_prev ,
+  .xdsoft_datetimepicker .xdsoft_today_button {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      border: 0 none;
+      cursor: pointer;
+      display: block;
+      height: 30px;
+      opacity: 0.5;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      outline: medium none;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      text-indent: 100%;
+      white-space: nowrap;
+      width: 20px;
+      min-width: 0;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_prev,
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_next {
+      float: none;
+      background-position: -40px -15px;
+      height: 15px;
+      width: 30px;
+      display: block;
+      margin-left: 14px;
+      margin-top: 7px;
+  }
+  .xdsoft_datetimepicker.xdsoft_rtl .xdsoft_timepicker .xdsoft_prev,
+  .xdsoft_datetimepicker.xdsoft_rtl .xdsoft_timepicker .xdsoft_next {
+      float: none;
+      margin-left: 0;
+      margin-right: 14px;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_prev {
+      background-position: -40px 0;
+      margin-bottom: 7px;
+      margin-top: 0;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box {
+      height: 151px;
+      overflow: hidden;
+      border-bottom: 1px solid #ddd;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div {
+      background: #f5f5f5;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-size: 12px;
+      text-align: center;
+      border-collapse: collapse;
+      cursor: pointer;
+      border-bottom-width: 0;
+      height: 25px;
+      line-height: 25px;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div > div:first-child {
+      border-top-width: 0;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_today_button:hover,
+  .xdsoft_datetimepicker .xdsoft_next:hover,
+  .xdsoft_datetimepicker .xdsoft_prev:hover {
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_label {
+      display: inline;
+      position: relative;
+      z-index: 9999;
+      margin: 0;
+      padding: 5px 3px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: bold;
+      background-color: #fff;
+      float: left;
+      width: 182px;
+      text-align: center;
+      cursor: pointer;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_label:hover>span {
+      text-decoration: underline;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_label:hover i {
+      opacity: 1.0;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select {
+      border: 1px solid #ccc;
+      position: absolute;
+      right: 0;
+      top: 30px;
+      z-index: 101;
+      display: none;
+      background: #fff;
+      max-height: 160px;
+      overflow-y: hidden;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select.xdsoft_monthselect{ right: -7px }
+  .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select.xdsoft_yearselect{ right: 2px }
+  .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover {
+      color: #fff;
+      background: #ff8000;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option {
+      padding: 2px 10px 2px 5px;
+      text-decoration: none !important;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current {
+      background: #33aaff;
+      box-shadow: #178fe5 0 1px 3px 0 inset;
+      color: #fff;
+      font-weight: 700;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_month {
+      width: 100px;
+      text-align: right;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar {
+      clear: both;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_year{
+      width: 48px;
+      margin-left: 5px;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar table {
+      border-collapse: collapse;
+      width: 100%;
+  
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar td > div {
+      padding-right: 5px;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar th {
+      height: 25px;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar td,.xdsoft_datetimepicker .xdsoft_calendar th {
+      width: 14.2857142%;
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      color: #666;
+      font-size: 12px;
+      text-align: right;
+      vertical-align: middle;
+      padding: 0;
+      border-collapse: collapse;
+      cursor: pointer;
+      height: 25px;
+  }
+  .xdsoft_datetimepicker.xdsoft_showweeks .xdsoft_calendar td,.xdsoft_datetimepicker.xdsoft_showweeks .xdsoft_calendar th {
+      width: 12.5%;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar th {
+      background: #f1f1f1;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today {
+      color: #33aaff;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_highlighted_default {
+      background: #ffe9d2;
+      box-shadow: #ffb871 0 1px 4px 0 inset;
+      color: #000;
+  }
+  .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_highlighted_mint {
+      background: #c1ffc9;
+      box-shadow: #00dd1c 0 1px 4px 0 inset;
+      color: #000;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default,
+  .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_current {
+      background: #33aaff;
+      box-shadow: #178fe5 0 1px 3px 0 inset;
+      color: #fff;
+      font-weight: 700;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_other_month,
+  .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_disabled,
+  .xdsoft_datetimepicker .xdsoft_time_box >div >div.xdsoft_disabled {
+      opacity: 0.5;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      cursor: default;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_other_month.xdsoft_disabled {
+      opacity: 0.2;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar td:hover,
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div:hover {
+      color: #fff !important;
+      background: #ff8000 !important;
+      box-shadow: none !important;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current.xdsoft_disabled:hover,
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box>div>div.xdsoft_current.xdsoft_disabled:hover {
+      background: #33aaff !important;
+      box-shadow: #178fe5 0 1px 3px 0 inset !important;
+      color: #fff !important;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_disabled:hover,
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_disabled:hover {
+      color: inherit  !important;
+      background: inherit !important;
+      box-shadow: inherit !important;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_calendar th {
+      font-weight: 700;
+      text-align: center;
+      color: #999;
+      cursor: default;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_copyright {
+      color: #ccc !important;
+      font-size: 10px;
+      clear: both;
+      float: none;
+      margin-left: 8px;
+  }
+  
+  .xdsoft_datetimepicker .xdsoft_copyright a { color: #eee !important }
+  .xdsoft_datetimepicker .xdsoft_copyright a:hover { color: #aaa !important }
+  
+  .xdsoft_time_box {
+      position: relative;
+      border: 1px solid #ccc;
+  }
+  .xdsoft_scrollbar >.xdsoft_scroller {
+      background: #ccc !important;
+      height: 20px;
+      border-radius: 3px;
+  }
+  .xdsoft_scrollbar {
+      position: absolute;
+      width: 7px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      cursor: pointer;
+  }
+  .xdsoft_datetimepicker.xdsoft_rtl .xdsoft_scrollbar {
+      left: 0;
+      right: auto;
+  }
+  .xdsoft_scroller_box {
+      position: relative;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark {
+      box-shadow: 0 5px 15px -5px rgba(255, 255, 255, 0.506);
+      background: #000;
+      border-bottom: 1px solid #444;
+      border-left: 1px solid #333;
+      border-right: 1px solid #333;
+      border-top: 1px solid #333;
+      color: #ccc;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_timepicker .xdsoft_time_box {
+      border-bottom: 1px solid #222;
+  }
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_timepicker .xdsoft_time_box >div >div {
+      background: #0a0a0a;
+      border-top: 1px solid #222;
+      color: #999;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_label {
+      background-color: #000;
+  }
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_label > .xdsoft_select {
+      border: 1px solid #333;
+      background: #000;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover {
+      color: #000;
+      background: #007fff;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current {
+      background: #cc5500;
+      box-shadow: #b03e00 0 1px 3px 0 inset;
+      color: #000;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_label i,
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_prev,
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_next,
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_today_button {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAeCAYAAADaW7vzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUExQUUzOTA0M0UyMTFFNDlBM0FFQTJENTExRDVBODYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUExQUUzOTE0M0UyMTFFNDlBM0FFQTJENTExRDVBODYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBQTFBRTM4RTQzRTIxMUU0OUEzQUVBMkQ1MTFENUE4NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBQTFBRTM4RjQzRTIxMUU0OUEzQUVBMkQ1MTFENUE4NiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pp0VxGEAAAIASURBVHja7JrNSgMxEMebtgh+3MSLr1T1Xn2CHoSKB08+QmR8Bx9A8e7RixdB9CKCoNdexIugxFlJa7rNZneTbLIpM/CnNLsdMvNjM8l0mRCiQ9Ye61IKCAgZAUnH+mU3MMZaHYChBnJUDzWOFZdVfc5+ZFLbrWDeXPwbxIqrLLfaeS0hEBVGIRQCEiZoHQwtlGSByCCdYBl8g8egTTAWoKQMRBRBcZxYlhzhKegqMOageErsCHVkk3hXIFooDgHB1KkHIHVgzKB4ADJQ/A1jAFmAYhkQqA5TOBtocrKrgXwQA8gcFIuAIO8sQSA7hidvPwaQGZSaAYHOUWJABhWWw2EMIH9QagQERU4SArJXo0ZZL18uvaxejXt/Em8xjVBXmvFr1KVm/AJ10tRe2XnraNqaJvKE3KHuUbfK1E+VHB0q40/y3sdQSxY4FHWeKJCunP8UyDdqJZenT3ntVV5jIYCAh20vT7ioP8tpf6E2lfEMwERe+whV1MHjwZB7PBiCxcGQWwKZKD62lfGNnP/1poFAA60T7rF1UgcKd2id3KDeUS+oLWV8DfWAepOfq00CgQabi9zjcgJVYVD7PVzQUAUGAQkbNJTBICDhgwYTjDYD6XeW08ZKh+A4pYkzenOxXUbvZcWz7E8ykRMnIHGX1XPl+1m2vPYpL+2qdb8CDAARlKFEz/ZVkAAAAABJRU5ErkJggg==);
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_calendar td,
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_calendar th {
+      background: #0a0a0a;
+      border: 1px solid #222;
+      color: #999;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_calendar th {
+      background: #0e0e0e;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_calendar td.xdsoft_today {
+      color: #cc5500;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_calendar td.xdsoft_highlighted_default {
+      background: #ffe9d2;
+      box-shadow: #ffb871 0 1px 4px 0 inset;
+      color:#000;
+  }
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_calendar td.xdsoft_highlighted_mint {
+      background: #c1ffc9;
+      box-shadow: #00dd1c 0 1px 4px 0 inset;
+      color:#000;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_calendar td.xdsoft_default,
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_calendar td.xdsoft_current,
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_current {
+      background: #cc5500;
+      box-shadow: #b03e00 0 1px 3px 0 inset;
+      color: #000;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_calendar td:hover,
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_timepicker .xdsoft_time_box >div >div:hover {
+      color: #000 !important;
+      background: #007fff !important;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_calendar th {
+      color: #666;
+  }
+  
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_copyright { color: #333 !important }
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_copyright a { color: #111 !important }
+  .xdsoft_datetimepicker.xdsoft_dark .xdsoft_copyright a:hover { color: #555 !important }
+  
+  .xdsoft_dark .xdsoft_time_box {
+      border: 1px solid #333;
+  }
+  
+  .xdsoft_dark .xdsoft_scrollbar >.xdsoft_scroller {
+      background: #333 !important;
+  }
+  .xdsoft_datetimepicker .xdsoft_save_selected {
+      display: block;
+      border: 1px solid #dddddd !important;
+      margin-top: 5px;
+      width: 100%;
+      color: #454551;
+      font-size: 13px;
+  }
+  .xdsoft_datetimepicker .blue-gradient-button {
+      font-family: "museo-sans", "Book Antiqua", sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      color: #82878c;
+      height: 28px;
+      position: relative;
+      padding: 4px 17px 4px 33px;
+      border: 1px solid #d7d8da;
+      background: -moz-linear-gradient(top, #fff 0%, #f4f8fa 73%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(73%, #f4f8fa));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #fff 0%, #f4f8fa 73%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #fff 0%, #f4f8fa 73%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #fff 0%, #f4f8fa 73%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #fff 0%, #f4f8fa 73%);
+      /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f4f8fa',GradientType=0 );
+  /* IE6-9 */
+  }
+  .xdsoft_datetimepicker .blue-gradient-button:hover, .xdsoft_datetimepicker .blue-gradient-button:focus, .xdsoft_datetimepicker .blue-gradient-button:hover span, .xdsoft_datetimepicker .blue-gradient-button:focus span {
+    color: #454551;
+    background: -moz-linear-gradient(top, #f4f8fa 0%, #FFF 73%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f8fa), color-stop(73%, #FFF));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f4f8fa 0%, #FFF 73%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f4f8fa 0%, #FFF 73%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f4f8fa 0%, #FFF 73%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #f4f8fa 0%, #FFF 73%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f8fa', endColorstr='#FFF',GradientType=0 );
+    /* IE6-9 */
+  }
+  
+      /**
+   * @preserve jQuery PeriodPicker plugin v3.4.1
+   * @homepage http://xdsoft.net/jqplugins/periodpicker/
+   * @copyright (c) 2016 xdsoft.net Chupurnov Valeriy
+   * @license BASIC http://xdsoft.net/jqplugins/periodpicker/license/
+   */
+  .xdsoft_noselect,.xdsoft_noselect *{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.period_picker_input{border:0;line-height:28px;font-size:13px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;font-family:Arial,sans-serif;color:#000;cursor:pointer;position:relative;display:inline-block;margin:0;padding:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-align:center;white-space:nowrap;outline:0}.period_picker_input:before{position:absolute;top:1px;right:1px;bottom:1px;left:1px;padding:0;content:'';-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#fff;-webkit-box-shadow:0 0 0 1px rgba(0,0,0,.2);-moz-box-shadow:0 0 0 1px rgba(0,0,0,.2);box-shadow:0 0 0 1px rgba(0,0,0,.2)}.period_picker_input:active:before{background-color:#f6f5f3;-webkit-box-shadow:0 0 0 1px rgba(0,0,0,.3);-moz-box-shadow:0 0 0 1px rgba(0,0,0,.3);box-shadow:0 0 0 1px rgba(0,0,0,.3)}.period_picker_input .period_button_text{padding:0 13px;position:relative}.period_picker_input .icon_calendar,.period_picker_input .icon_clear{width:16px;height:16px;background:50% no-repeat;-moz-background-size:100% 100%;-o-background-size:100% 100%;background-size:100% 100%;background-position:center center;background-repeat:no-repeat;background-image:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill%3D%22%23010202%22%20d%3D%22M0%206h3v3H0V6zm4%203h3V6H4v3zm4%200h3V6H8v3zm4%200h3V6h-3v3zm0-7v3h3V2h-3zM8%205h3V2H8v3zM4%205h3V2H4v3zm-4%208h3v-3H0v3zm4%200h3v-3H4v3zm4%200h3v-3H8v3z%22%2F%3E%3C%2Fsvg%3E);margin-right:9px;margin-bottom:2px;position:relative;vertical-align:middle;display:inline-block}.period_picker_input .icon_calendar:after,.period_picker_input .icon_clear:after{visibility:hidden;content:'\00A0'}.period_picker_input .icon_clear{background-image:url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%0A%3Cpath%20fill%3D%22%23444444%22%20d%3D%22M8%200c-4.418%200-8%203.582-8%208s3.582%208%208%208%208-3.582%208-8-3.582-8-8-8zM8%2014.5c-3.59%200-6.5-2.91-6.5-6.5s2.91-6.5%206.5-6.5%206.5%202.91%206.5%206.5-2.91%206.5-6.5%206.5z%22%3E%3C%2Fpath%3E%0A%3Cpath%20fill%3D%22%23666666%22%20d%3D%22M10.5%204l-2.5%202.5-2.5-2.5-1.5%201.5%202.5%202.5-2.5%202.5%201.5%201.5%202.5-2.5%202.5%202.5%201.5-1.5-2.5-2.5%202.5-2.5z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A);margin-right:0;margin-left:9px;-webkit-transition:opacity .2s linear,background .2s linear;-moz-transition:opacity .2s linear,background .2s linear;-o-transition:opacity .2s linear,background .2s linear;transition:opacity .2s linear,background .2s linear;position:relative;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px}.period_picker_input .icon_clear:hover{opacity:.8}.period_picker_input .icon_clear:active{background-color:#ccc}.period_picker_input .period_button_dash{margin-left:3px;margin-right:2px}.period_picker_box{position:absolute;left:0;top:0;padding:0 20px 20px;background:#fff;font-family:Arial,sans-serif;font-size:13px;cursor:default;overflow:hidden;z-index:33001;border:1px solid rgba(0,0,0,.1);-webkit-box-shadow:0 10px 20px -5px rgba(0,0,0,.4);-moz-box-shadow:0 10px 20px -5px rgba(0,0,0,.4);box-shadow:0 10px 20px -5px rgba(0,0,0,.4);min-width:236px;min-height:365px;padding-bottom:80px;visibility:hidden}.period_picker_box,.period_picker_box *{-webkit-box-sizing:border-box!important;-moz-box-sizing:border-box!important;box-sizing:border-box!important;color:#606060}.period_picker_box.with_first_timepicker{min-width:-webkit-calc(236px + 87px);min-width:-moz-calc(236px + 87px);min-width:calc(236px + 87px)}.period_picker_box.with_first_timepicker.with_second_timepicker{min-width:-webkit-calc(236px + 87px + 87px);min-width:-moz-calc(236px + 87px + 87px);min-width:calc(236px + 87px + 87px)}.period_picker_box.period_picker_maximize{border:0;position:fixed;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;left:0;top:0;min-width:667px;min-height:395px;margin-top:0;width:100%!important;height:100%!important;left:0!important;top:0!important}.period_picker_box.visible{visibility:visible}.period_picker_box.animation{opacity:0;margin-top:-200px;-webkit-transition:.15s linear;-moz-transition:.15s linear;-o-transition:.15s linear;transition:.15s linear;-webkit-transition-property:opacity,margin-top;-moz-transition-property:opacity,margin-top;-o-transition-property:opacity,margin-top;transition-property:opacity,margin-top}.period_picker_box.active.animation{opacity:1;margin-top:0}.period_picker_box.animation.xdsoft_inline,.period_picker_box.xdsoft_inline{position:relative;top:auto;bottom:auto;left:auto;right:auto;visibility:visible;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;opacity:1;margin:0;z-index:0}.period_picker_box .period_picker_error{-webkit-box-shadow:1px 1px 10px red!important;-moz-box-shadow:1px 1px 10px red!important;box-shadow:1px 1px 10px red!important}.period_picker_box .period_picker_head{color:#333;position:relative;height:40px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.period_picker_box .period_picker_head_title{display:inline-block;margin-top:12px;color:rgba(0,0,0,.5)}.period_picker_box .period_picker_close,.period_picker_box .period_picker_max_min,.period_picker_box .period_picker_resizer{background-image:url(data:image/svg+xml,%3Csvg%20width%3D%2256%22%20height%3D%2214%22%20viewBox%3D%220%200%2056%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23000%22%3E%3Cpath%20d%3D%22M16%202h11v10H16V2zm1%201h9v8h-9V3z%22%2F%3E%3Cpath%20d%3D%22M38%209h2V3h-7v2h-2v6h7V9h1V4h-6v1h5v4zm-6-3h5v4h-5V6z%22%2F%3E%3Cpath%20d%3D%22M12%202.714L11.287%202%207%206.286%202.714%202%202%202.714%206.286%207%202%2011.285l.714.715L7%207.714%2011.287%2012l.713-.715L7.714%207%2012%202.714%22%2F%3E%3Cpath%20d%3D%22M44.964%2010.328l.708.708%206.364-6.364-.708-.708-6.364%206.364zm3.415.586l.706.707%203.535-3.534-.706-.707-3.535%203.534z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E);background-repeat:no-repeat;opacity:.5;right:0}.period_picker_box .period_picker_resizer{position:absolute;bottom:0;right:0;font-size:0;line-height:0;width:14px;height:14px;cursor:se-resize;z-index:7;display:block;background-position:-42px 0}.period_picker_box .period_picker_close,.period_picker_box .period_picker_max_min{position:absolute;width:14px;height:14px;top:10px;cursor:pointer;background-position:0 0}.period_picker_box .period_picker_max_min{background-position:-14px 0;right:20px}.period_picker_box .period_picker_maximize div span.period_picker_max_min{background-position:-28px 0}.period_picker_box .period_picker_years{position:relative;left:0;height:30px;margin-bottom:15px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.period_picker_box .period_picker_years_selector{position:absolute;width:100%;height:30px;overflow:hidden;font-size:14px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#f4f4f3}.period_picker_box .period_picker_years_selector .period_picker_year{position:absolute;top:5px;width:3em;margin-left:-1.5em;font-size:12px;text-align:center;cursor:pointer;z-index:11;color:rgba(0,0,0,.5);font-weight:700}.period_picker_box .period_picker_years_selector .period_picker_year:hover{color:#000}.period_picker_box .period_picker_years_selector .period_picker_year:after{content:'';display:block;width:1px;height:9px;margin:2px auto;background:rgba(0,0,0,.2)}.period_picker_box .period_picker_years_selector_container{position:absolute;left:0;top:0;height:30px}.period_picker_box .period_picker_years_dragger{position:absolute;top:0;right:20px;width:70px;height:30px;margin-left:-1px;font-size:0;line-height:0;z-index:12;cursor:pointer}.period_picker_box .period_picker_years_dragger:after{content:'';display:block;border:2px solid rgba(0,0,0,.7);background:rgba(255,255,255,.4);-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;position:absolute;top:0;bottom:0;left:1px;right:-1px}.period_picker_box .period_picker_years_dragger:hover:after{border-color:#000;background:rgba(255,255,255,.6)}.period_picker_box .period_picker_years_period{background:#ffcf00;position:absolute;right:100px;width:1px;height:32px;font-size:0;line-height:0;z-index:9;display:none}.period_picker_box .period_picker_first_letters_td,.period_picker_box .period_picker_first_letters_tr{padding:0 6px}.period_picker_box table{border-spacing:0;border-collapse:separate}.period_picker_box table td,.period_picker_box table th{font-family:Arial,sans-serif;font-size:13px;font-weight:400;white-space:nowrap;padding:0;text-align:left;vertical-align:top;border-collapse:collapse}.period_picker_box table td.period_picker_first_letters_td,.period_picker_box table td.period_picker_first_letters_tr,.period_picker_box table th.period_picker_first_letters_td,.period_picker_box table th.period_picker_first_letters_tr{padding:0}.period_picker_box table td.period_picker_selector_week{width:16px;padding:2px 5px 0;text-align:center}.period_picker_box .period_picker_days table td{vertical-align:top}.period_picker_box .period_picker_days table table{width:184px;table-layout:fixed;border-spacing:0}.period_picker_box .period_picker_days table table.period_picker_first_letters_table th{text-align:right;font-size:9px;height:10px;line-height:10px;padding:0;color:rgba(0,0,0,.5);font-family:Verdana,Arial,sans-serif}.period_picker_box .period_picker_days table table th{width:23px;padding:0 5px;height:25px;white-space:nowrap}.period_picker_box .period_picker_days table table td{width:23px;padding:0 5px;height:25px;cursor:pointer;empty-cells:hide;vertical-align:middle}.period_picker_box .period_picker_days table table td:hover{background:#EBEBEB;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}.period_picker_box .period_picker_days table table td.period_picker_holiday,.period_picker_box .period_picker_days table table th.period_picker_holiday{color:#C11924}.period_picker_box .period_picker_days table table th.period_picker_month{border:0;font-weight:700;padding:14px 0 10px 12px;text-transform:uppercase}.period_picker_box .period_picker_days table table th.period_picker_month:hover{color:rgba(0,0,0,.7);cursor:pointer}.period_picker_box .period_picker_days table table td.period_picker_empty,.period_picker_box .period_picker_days table table td.period_picker_empty:hover{cursor:default!important;background:0 0!important;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.period_picker_box .period_picker_days table table td.period_picker_gray_period,.period_picker_box .period_picker_days table table td.period_picker_gray_period:hover{color:#aaa}.period_picker_box .period_picker_days table td.period_picker_month12:not(:last-child){position:relative}.period_picker_box .period_picker_days table td.period_picker_month12:not(:last-child):after{content:'';display:block;border-right:2px solid rgba(0,0,0,.1);position:absolute;top:-16px;bottom:0;right:-5px}.period_picker_box .period_picker_days table td.period_picker_selected{background:#FFEBA0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.period_picker_box .period_picker_days table td.period_picker_selected :hover{background-color:#FFF5D0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.period_picker_box .period_picker_days table td.period_picker_selected_start,.period_picker_box .period_picker_days table td.period_picker_selected_start:hover{-webkit-border-radius:5px 0 0 0;-moz-border-radius:5px 0 0 0;border-radius:5px 0 0 0}.period_picker_box .period_picker_days table td.period_picker_selected_end,.period_picker_box .period_picker_days table td.period_picker_selected_end:hover{-webkit-border-radius:0 0 5px 0;-moz-border-radius:0 0 5px 0;border-radius:0 0 5px 0}.period_picker_box span.period_picker_selector_week_cap{visibility:hidden}.period_picker_box span.period_picker_selector_week,.period_picker_box span.period_picker_selector_week_cap{padding:0;background-color:#ccc;display:inline-block;width:2px;height:16px}.period_picker_box .period_picker_empty,.period_picker_box .period_picker_gray_period,.period_picker_box .period_picker_holiday,.period_picker_box .period_picker_weekday{text-align:right}.period_picker_box .period_picker_month b{display:none}.period_picker_box .period_picker_submit_dates{position:absolute;bottom:0;right:0;left:0;font-size:13px;text-align:center;margin:0 20px 15px;background-color:#fff}.period_picker_box .period_picker_submit_dates:before{content:'';border-top:1px solid rgba(0,0,0,.1);margin:0;margin-bottom:20px;display:block}.period_picker_box .period_picker_submit_dates .input_box{padding-right:7px;background:#fff;-webkit-box-shadow:inset 0 0 0 1px #cbcbcb;-moz-box-shadow:inset 0 0 0 1px #cbcbcb;box-shadow:inset 0 0 0 1px #cbcbcb;position:relative;display:block;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;cursor:text}.period_picker_box .period_picker_submit_dates .input_focused_yes .input_box{-webkit-box-shadow:inset 0 0 0 1px #d0ba65,0 0 10px #fc0;-moz-box-shadow:inset 0 0 0 1px #d0ba65,0 0 10px #fc0;box-shadow:inset 0 0 0 1px #d0ba65,0 0 10px #fc0}.period_picker_box .period_picker_submit_dates input{width:6.1em}.period_picker_box .period_picker_submit_dates input.input_control{position:relative;z-index:3;width:100%;margin:0;font-size:100%;-webkit-tap-highlight-color:transparent;-webkit-appearance:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:.4em 0;border:0;outline:0;background:0 0;font-family:Arial,sans-serif;color:#000;padding-left:7px}.period_picker_box.without_bottom_panel{min-height:311px;padding-bottom:0}.period_picker_box.without_bottom_panel .period_picker_submit_dates{display:none}.period_picker_box.without_yearsline{min-height:335px}.period_picker_box.without_header{min-height:325px}.period_picker_box.without_header .period_picker_head{height:10px}.period_picker_box.without_header.without_yearsline{min-height:325px}.period_picker_box.without_header.without_bottom_panel{min-height:271px}.period_picker_box.without_yearsline.without_bottom_panel{min-height:281px}.period_picker_box.without_yearsline.without_header.without_bottom_panel{min-height:241px}.period_picker_box .period_picker_from_block,.period_picker_box .period_picker_from_time_block,.period_picker_box .period_picker_to_block,.period_picker_box .period_picker_to_time_block{margin-right:5px;width:81px;font-size:13px;line-height:28px;font-family:Arial,sans-serif;color:#000;position:relative;display:inline-block;margin-bottom:5px}.period_picker_box .period_picker_from_time_block,.period_picker_box .period_picker_to_time_block{width:60px}.period_picker_box.xdsoft_norange .period_picker_from_block~span{display:none}.period_picker_box .period_picker_to_block,.period_picker_box .period_picker_to_time_block{margin-right:0;margin-left:5px}.period_picker_box .period_picker_show{display:inline-block;margin:0;padding:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-align:center;white-space:nowrap;outline:0;position:absolute;right:0;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;font-family:Arial,sans-serif;color:#000;line-height:28px;font-size:13px;cursor:pointer;border:0;background:0 0;z-index:3}.period_picker_box .period_picker_show+.period_picker_show{right:50px}.period_picker_box .period_picker_show:before{position:absolute;top:1px;right:1px;bottom:1px;left:1px;padding:0;content:'';-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#ffdb4d;-webkit-box-shadow:0 0 0 1px rgba(191,153,0,.8);-moz-box-shadow:0 0 0 1px rgba(191,153,0,.8);box-shadow:0 0 0 1px rgba(191,153,0,.8)}.period_picker_box .period_picker_show span{position:relative;padding:0 13px}.period_picker_box .period_picker_show:focus{-webkit-box-shadow:0 0 6px #fc0;-moz-box-shadow:0 0 6px #fc0;box-shadow:0 0 6px #fc0}.period_picker_box .period_picker_show:active:before{background-color:#fc0;-webkit-box-shadow:0 0 0 1px rgba(159,127,0,.8);-moz-box-shadow:0 0 0 1px rgba(159,127,0,.8);box-shadow:0 0 0 1px rgba(159,127,0,.8)}.period_picker_box .period_picker_work{vertical-align:top;height:100%;position:relative}.period_picker_box .period_picker_timepicker_box{width:87px;display:block;top:0;bottom:100px;left:0;position:absolute}.period_picker_box .period_picker_timepicker_box+.period_picker_days+.period_picker_timepicker_box{left:auto;right:0}.period_picker_box.with_first_timepicker .period_picker_days{width:-webkit-calc(100% - 87px);width:-moz-calc(100% - 87px);width:calc(100% - 87px);margin-left:87px}.period_picker_box.with_first_timepicker.with_second_timepicker .period_picker_days{width:-webkit-calc(100% - 174px);width:-moz-calc(100% - 174px);width:calc(100% - 174px);margin-left:87px}.period_picker_box .xdsoft_navigate{background:url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%0D%0A%3Csvg%20height%3D%2212px%22%20version%3D%221.1%22%20viewBox%3D%220%200%209%2012%22%20width%3D%229px%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Asketch%3D%22http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%2Fns%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0D%0A%09%3Ctitle%2F%3E%0D%0A%09%3Cdesc%2F%3E%0D%0A%09%3Cdefs%2F%3E%0D%0A%09%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%3E%0D%0A%09%09%3Cg%20fill%3D%22%23444444%22%20id%3D%22Core%22%20transform%3D%22translate(-218.000000%2C%20-90.000000)%22%3E%0D%0A%09%09%09%3Cg%20id%3D%22chevron-left%22%20transform%3D%22translate(218.500000%2C%2090.000000)%22%3E%0D%0A%09%09%09%09%3Cpath%20d%3D%22M7.4%2C1.4%20L6%2C0%20L-8.8817842e-16%2C6%20L6%2C12%20L7.4%2C10.6%20L2.8%2C6%20L7.4%2C1.4%20Z%22%20id%3D%22Shape%22%2F%3E%0D%0A%09%09%09%3C%2Fg%3E%0D%0A%09%09%3C%2Fg%3E%0D%0A%09%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E") no-repeat center center;position:absolute;top:0;left:-13px;bottom:100px;width:15px;opacity:.7;-webkit-transition:opacity .3s linear;-moz-transition:opacity .3s linear;-o-transition:opacity .3s linear;transition:opacity .3s linear}.period_picker_box .xdsoft_navigate:hover{opacity:1}.period_picker_box .xdsoft_navigate:active{margin-top:2px}.period_picker_box .xdsoft_navigate.xdsoft_navigate_next{background-image:url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%0D%0A%3Csvg%20height%3D%2212px%22%20version%3D%221.1%22%20viewBox%3D%220%200%209%2012%22%20width%3D%229px%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Asketch%3D%22http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%2Fns%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0D%0A%09%3Ctitle%2F%3E%0D%0A%09%3Cdesc%2F%3E%0D%0A%09%3Cdefs%2F%3E%0D%0A%09%3Cg%20transform%3D%22rotate(180%204.1999969482421875%2C6)%20%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%3E%0D%0A%09%09%3Cg%20fill%3D%22%23444444%22%20id%3D%22Core%22%20transform%3D%22translate(-218.000000%2C%20-90.000000)%22%3E%0D%0A%09%09%09%3Cg%20id%3D%22chevron-left%22%20transform%3D%22translate(218.500000%2C%2090.000000)%22%3E%0D%0A%09%09%09%09%3Cpath%20d%3D%22M7.4%2C1.4%20L6%2C0%20L-8.8817842e-16%2C6%20L6%2C12%20L7.4%2C10.6%20L2.8%2C6%20L7.4%2C1.4%20Z%22%20id%3D%22Shape%22%2F%3E%0D%0A%09%09%09%3C%2Fg%3E%0D%0A%09%09%3C%2Fg%3E%0D%0A%09%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E");left:auto;right:-15px}.period_picker_box.without_bottom_panel .xdsoft_navigate{bottom:0}
+  /*
+   * qTip2 - Pretty powerful tooltips - v3.0.3
+   * http://qtip2.com
+   *
+   * Copyright (c) 2016 
+   * Released under the MIT licenses
+   * http://jquery.org/license
+   *
+   * Date: Wed May 11 2016 10:31 GMT+0100+0100
+   * Plugins: tips modal viewport svg imagemap ie6
+   * Styles: core basic css3
+   */
+  .qtip{
+      position: absolute;
+      left: -28000px;
+      top: -28000px;
+      display: none;
+  
+      max-width: 280px;
+      min-width: 50px;
+  
+      font-size: 10.5px;
+      line-height: 12px;
+  
+      direction: ltr;
+  
+      box-shadow: none;
+      padding: 0;
+  }
+  
+      .qtip-content{
+          position: relative;
+          padding: 5px 9px;
+          overflow: hidden;
+  
+          text-align: left;
+          word-wrap: break-word;
+      }
+  
+      .qtip-titlebar{
+          position: relative;
+          padding: 5px 35px 5px 10px;
+          overflow: hidden;
+  
+          border-width: 0 0 1px;
+          font-weight: bold;
+      }
+  
+      .qtip-titlebar + .qtip-content{ border-top-width: 0 !important; }
+  
+      /* Default close button class */
+      .qtip-close{
+          position: absolute;
+          right: -9px; top: -9px;
+          z-index: 11; /* Overlap .qtip-tip */
+  
+          cursor: pointer;
+          outline: medium none;
+  
+          border: 1px solid transparent;
+      }
+  
+          .qtip-titlebar .qtip-close{
+              right: 4px; top: 50%;
+              margin-top: -9px;
+          }
+  
+          * html .qtip-titlebar .qtip-close{ top: 16px; } /* IE fix */
+  
+          .qtip-titlebar .ui-icon,
+          .qtip-icon .ui-icon{
+              display: block;
+              text-indent: -1000em;
+              direction: ltr;
+          }
+  
+          .qtip-icon, .qtip-icon .ui-icon{
+              -moz-border-radius: 3px;
+              -webkit-border-radius: 3px;
+              border-radius: 3px;
+              text-decoration: none;
+          }
+  
+              .qtip-icon .ui-icon{
+                  width: 18px;
+                  height: 14px;
+  
+                  line-height: 14px;
+                  text-align: center;
+                  text-indent: 0;
+                  font: normal bold 10px/13px Tahoma,sans-serif;
+  
+                  color: inherit;
+                  background: transparent none no-repeat -100em -100em;
+              }
+  
+  /* Applied to 'focused' tooltips e.g. most recently displayed/interacted with */
+  .qtip-focus{}
+  
+  /* Applied on hover of tooltips i.e. added/removed on mouseenter/mouseleave respectively */
+  .qtip-hover{}
+  
+  /* Default tooltip style */
+  .qtip-default{
+      border: 1px solid #F1D031;
+  
+      background-color: #FFFFA3;
+      color: #555;
+  }
+  
+      .qtip-default .qtip-titlebar{
+          background-color: #FFEF93;
+      }
+  
+      .qtip-default .qtip-icon{
+          border-color: #CCC;
+          background: #F1F1F1;
+          color: #777;
+      }
+  
+      .qtip-default .qtip-titlebar .qtip-close{
+          border-color: #AAA;
+          color: #111;
+      }
+  
+  
+  /*! Light tooltip style */
+  .qtip-light{
+      background-color: white;
+      border-color: #E2E2E2;
+      color: #454545;
+  }
+  
+      .qtip-light .qtip-titlebar{
+          background-color: #f1f1f1;
+      }
+  
+  
+  /*! Dark tooltip style */
+  .qtip-dark{
+      background-color: #505050;
+      border-color: #303030;
+      color: #f3f3f3;
+  }
+  
+      .qtip-dark .qtip-titlebar{
+          background-color: #404040;
+      }
+  
+      .qtip-dark .qtip-icon{
+          border-color: #444;
+      }
+  
+      .qtip-dark .qtip-titlebar .ui-state-hover{
+          border-color: #303030;
+      }
+  
+  
+  /*! Cream tooltip style */
+  .qtip-cream{
+      background-color: #FBF7AA;
+      border-color: #F9E98E;
+      color: #A27D35;
+  }
+  
+      .qtip-cream .qtip-titlebar{
+          background-color: #F0DE7D;
+      }
+  
+      .qtip-cream .qtip-close .qtip-icon{
+          background-position: -82px 0;
+      }
+  
+  
+  /*! Red tooltip style */
+  .qtip-red{
+      background-color: #F78B83;
+      border-color: #D95252;
+      color: #912323;
+  }
+  
+      .qtip-red .qtip-titlebar{
+          background-color: #F06D65;
+      }
+  
+      .qtip-red .qtip-close .qtip-icon{
+          background-position: -102px 0;
+      }
+  
+      .qtip-red .qtip-icon{
+          border-color: #D95252;
+      }
+  
+      .qtip-red .qtip-titlebar .ui-state-hover{
+          border-color: #D95252;
+      }
+  
+  
+  /*! Green tooltip style */
+  .qtip-green{
+      background-color: #CAED9E;
+      border-color: #90D93F;
+      color: #3F6219;
+  }
+  
+      .qtip-green .qtip-titlebar{
+          background-color: #B0DE78;
+      }
+  
+      .qtip-green .qtip-close .qtip-icon{
+          background-position: -42px 0;
+      }
+  
+  
+  /*! Blue tooltip style */
+  .qtip-blue{
+      background-color: #E5F6FE;
+      border-color: #ADD9ED;
+      color: #5E99BD;
+  }
+  
+      .qtip-blue .qtip-titlebar{
+          background-color: #D0E9F5;
+      }
+  
+      .qtip-blue .qtip-close .qtip-icon{
+          background-position: -2px 0;
+      }
+  
+  
+  .qtip-shadow{
+      -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Add rounded corners to your tooltips in: FF3+, Chrome 2+, Opera 10.6+, IE9+, Safari 2+ */
+  .qtip-rounded,
+  .qtip-tipsy,
+  .qtip-bootstrap{
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+  }
+  
+  .qtip-rounded .qtip-titlebar{
+      -moz-border-radius: 4px 4px 0 0;
+      -webkit-border-radius: 4px 4px 0 0;
+      border-radius: 4px 4px 0 0;
+  }
+  
+  /* Youtube tooltip style */
+  .qtip-youtube{
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+  
+      -webkit-box-shadow: 0 0 3px #333;
+      -moz-box-shadow: 0 0 3px #333;
+      box-shadow: 0 0 3px #333;
+  
+      color: white;
+      border: 0 solid transparent;
+  
+      background: #4A4A4A;
+      background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#4A4A4A),color-stop(100%,black));
+      background-image: -webkit-linear-gradient(top,#4A4A4A 0,black 100%);
+      background-image: -moz-linear-gradient(top,#4A4A4A 0,black 100%);
+      background-image: -ms-linear-gradient(top,#4A4A4A 0,black 100%);
+      background-image: -o-linear-gradient(top,#4A4A4A 0,black 100%);
+  }
+  
+      .qtip-youtube .qtip-titlebar{
+          background-color: #4A4A4A;
+          background-color: rgba(0,0,0,0);
+      }
+  
+      .qtip-youtube .qtip-content{
+          padding: .75em;
+          font: 12px arial,sans-serif;
+  
+          filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#4a4a4a,EndColorStr=#000000);
+          -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#4a4a4a,EndColorStr=#000000);";
+      }
+  
+      .qtip-youtube .qtip-icon{
+          border-color: #222;
+      }
+  
+      .qtip-youtube .qtip-titlebar .ui-state-hover{
+          border-color: #303030;
+      }
+  
+  
+  /* jQuery TOOLS Tooltip style */
+  .qtip-jtools{
+      background: #232323;
+      background: rgba(0, 0, 0, 0.7);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#717171), to(#232323));
+      background-image: -moz-linear-gradient(top, #717171, #232323);
+      background-image: -webkit-linear-gradient(top, #717171, #232323);
+      background-image: -ms-linear-gradient(top, #717171, #232323);
+      background-image: -o-linear-gradient(top, #717171, #232323);
+  
+      border: 2px solid #ddd;
+      border: 2px solid rgba(241,241,241,1);
+  
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+  
+      -webkit-box-shadow: 0 0 12px #333;
+      -moz-box-shadow: 0 0 12px #333;
+      box-shadow: 0 0 12px #333;
+  }
+  
+      /* IE Specific */
+      .qtip-jtools .qtip-titlebar{
+          background-color: transparent;
+          filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171,endColorstr=#4A4A4A);
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171,endColorstr=#4A4A4A)";
+      }
+      .qtip-jtools .qtip-content{
+          filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4A4A4A,endColorstr=#232323);
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4A4A4A,endColorstr=#232323)";
+      }
+  
+      .qtip-jtools .qtip-titlebar,
+      .qtip-jtools .qtip-content{
+          background: transparent;
+          color: white;
+          border: 0 dashed transparent;
+      }
+  
+      .qtip-jtools .qtip-icon{
+          border-color: #555;
+      }
+  
+      .qtip-jtools .qtip-titlebar .ui-state-hover{
+          border-color: #333;
+      }
+  
+  
+  /* Cluetip style */
+  .qtip-cluetip{
+      -webkit-box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+      box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+  
+      background-color: #D9D9C2;
+      color: #111;
+      border: 0 dashed transparent;
+  }
+  
+      .qtip-cluetip .qtip-titlebar{
+          background-color: #87876A;
+          color: white;
+          border: 0 dashed transparent;
+      }
+  
+      .qtip-cluetip .qtip-icon{
+          border-color: #808064;
+      }
+  
+      .qtip-cluetip .qtip-titlebar .ui-state-hover{
+          border-color: #696952;
+          color: #696952;
+      }
+  
+  
+  /* Tipsy style */
+  .qtip-tipsy{
+      background: black;
+      background: rgba(0, 0, 0, .87);
+  
+      color: white;
+      border: 0 solid transparent;
+  
+      font-size: 11px;
+      font-family: 'Lucida Grande', sans-serif;
+      font-weight: bold;
+      line-height: 16px;
+      text-shadow: 0 1px black;
+  }
+  
+      .qtip-tipsy .qtip-titlebar{
+          padding: 6px 35px 0 10px;
+          background-color: transparent;
+      }
+  
+      .qtip-tipsy .qtip-content{
+          padding: 6px 10px;
+      }
+  
+      .qtip-tipsy .qtip-icon{
+          border-color: #222;
+          text-shadow: none;
+      }
+  
+      .qtip-tipsy .qtip-titlebar .ui-state-hover{
+          border-color: #303030;
+      }
+  
+  
+  /* Tipped style */
+  .qtip-tipped{
+      border: 3px solid #959FA9;
+  
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+  
+      background-color: #F9F9F9;
+      color: #454545;
+  
+      font-weight: normal;
+      font-family: serif;
+  }
+  
+      .qtip-tipped .qtip-titlebar{
+          border-bottom-width: 0;
+  
+          color: white;
+          background: #3A79B8;
+          background-image: -webkit-gradient(linear, left top, left bottom, from(#3A79B8), to(#2E629D));
+          background-image: -webkit-linear-gradient(top, #3A79B8, #2E629D);
+          background-image: -moz-linear-gradient(top, #3A79B8, #2E629D);
+          background-image: -ms-linear-gradient(top, #3A79B8, #2E629D);
+          background-image: -o-linear-gradient(top, #3A79B8, #2E629D);
+          filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#3A79B8,endColorstr=#2E629D);
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#3A79B8,endColorstr=#2E629D)";
+      }
+  
+      .qtip-tipped .qtip-icon{
+          border: 2px solid #285589;
+          background: #285589;
+      }
+  
+          .qtip-tipped .qtip-icon .ui-icon{
+              background-color: #FBFBFB;
+              color: #555;
+          }
+  
+  
+  /**
+   * Twitter Bootstrap style.
+   *
+   * Tested with IE 8, IE 9, Chrome 18, Firefox 9, Opera 11.
+   * Does not work with IE 7.
+   */
+  .qtip-bootstrap{
+      /** Taken from Bootstrap body */
+      font-size: 14px;
+      line-height: 20px;
+      color: #333333;
+  
+      /** Taken from Bootstrap .popover */
+      padding: 1px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box;
+  }
+  
+      .qtip-bootstrap .qtip-titlebar{
+          /** Taken from Bootstrap .popover-title */
+          padding: 8px 14px;
+          margin: 0;
+          font-size: 14px;
+          font-weight: normal;
+          line-height: 18px;
+          background-color: #f7f7f7;
+          border-bottom: 1px solid #ebebeb;
+          -webkit-border-radius: 5px 5px 0 0;
+          -moz-border-radius: 5px 5px 0 0;
+          border-radius: 5px 5px 0 0;
+      }
+  
+          .qtip-bootstrap .qtip-titlebar .qtip-close{
+              /**
+               * Overrides qTip2:
+               * .qtip-titlebar .qtip-close{
+               *   [...]
+               *   right: 4px;
+               *   top: 50%;
+               *   [...]
+               *   border-style: solid;
+               * }
+               */
+              right: 11px;
+              top: 45%;
+              border-style: none;
+          }
+  
+      .qtip-bootstrap .qtip-content{
+          /** Taken from Bootstrap .popover-content */
+          padding: 9px 14px;
+      }
+  
+      .qtip-bootstrap .qtip-icon{
+          /**
+           * Overrides qTip2:
+           * .qtip-default .qtip-icon {
+           *   border-color: #CCC;
+           *   background: #F1F1F1;
+           *   color: #777;
+           * }
+           */
+          background: transparent;
+      }
+  
+          .qtip-bootstrap .qtip-icon .ui-icon{
+              /**
+               * Overrides qTip2:
+               * .qtip-icon .ui-icon{
+               *   width: 18px;
+               *   height: 14px;
+               * }
+               */
+              width: auto;
+              height: auto;
+  
+              /* Taken from Bootstrap .close */
+              float: right;
+              font-size: 20px;
+              font-weight: bold;
+              line-height: 18px;
+              color: #000000;
+              text-shadow: 0 1px 0 #ffffff;
+              opacity: 0.2;
+              filter: alpha(opacity=20);
+          }
+  
+          .qtip-bootstrap .qtip-icon .ui-icon:hover{
+              /* Taken from Bootstrap .close:hover */
+              color: #000000;
+              text-decoration: none;
+              cursor: pointer;
+              opacity: 0.4;
+              filter: alpha(opacity=40);
+          }
+  
+  
+  /* IE9 fix - removes all filters */
+  .qtip:not(.ie9haxors) div.qtip-content,
+  .qtip:not(.ie9haxors) div.qtip-titlebar{
+      filter: none;
+      -ms-filter: none;
+  }
+  
+  
+  .qtip .qtip-tip{
+      margin: 0 auto;
+      overflow: hidden;
+      z-index: 10;
+  
+  }
+  
+      /* Opera bug #357 - Incorrect tip position
+      https://github.com/Craga89/qTip2/issues/367 */
+      x:-o-prefocus, .qtip .qtip-tip{
+          visibility: hidden;
+      }
+  
+      .qtip .qtip-tip,
+      .qtip .qtip-tip .qtip-vml,
+      .qtip .qtip-tip canvas{
+          position: absolute;
+  
+          color: #123456;
+          background: transparent;
+          border: 0 dashed transparent;
+      }
+  
+      .qtip .qtip-tip canvas{ top: 0; left: 0; }
+  
+      .qtip .qtip-tip .qtip-vml{
+          behavior: url(#default#VML);
+          display: inline-block;
+          visibility: visible;
+      }
+  
+  
+  #qtip-overlay{
+      position: fixed;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+  }
+  
+      /* Applied to modals with show.modal.blur set to true */
+      #qtip-overlay.blurs{ cursor: pointer; }
+  
+      /* Change opacity of overlay here */
+      #qtip-overlay div{
+          position: absolute;
+          left: 0; top: 0;
+          width: 100%; height: 100%;
+  
+          background-color: black;
+  
+          opacity: 0.7;
+          filter:alpha(opacity=70);
+          -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+      }
+  
+  
+  .qtipmodal-ie6fix{
+      position: absolute !important;
+  }
+  
+  /*
+  == malihu jquery custom scrollbar plugin ==
+  Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
+  */
+  
+  
+  
+  /*
+  CONTENTS: 
+      1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited). 
+      2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar. 
+      3. HORIZONTAL SCROLLBAR - Positioning and dimensions of horizontal scrollbar.
+      4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars. 
+      5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars. 
+      6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS 
+          6.1 THEMES - Scrollbar colors, opacity, dimensions, backgrounds etc. via ready-to-use themes.
+  */
+  
+  
+  
+  /* 
+  ------------------------------------------------------------------------------------------------------------------------
+  1. BASIC STYLE  
+  ------------------------------------------------------------------------------------------------------------------------
+  */
+  
+      .mCustomScrollbar{ -ms-touch-action: pinch-zoom; touch-action: pinch-zoom; /* direct pointer events to js */ }
+      .mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action{ -ms-touch-action: auto; touch-action: auto; }
+      
+      .mCS_no_scrollbar .mCustomScrollBox{width: 99.8%;}
+      .mCustomScrollBox{ /* contains plugin's markup */
+          position: relative;
+          overflow: hidden;
+          height: 100%;
+          width: 100%;
+          outline: none;
+          direction: ltr;
+      }
+  
+      .mCSB_container{ /* contains the original content */
+          overflow: hidden;
+          width: auto;
+          height: auto;
+      }
+  
+  
+  
+  /* 
+  ------------------------------------------------------------------------------------------------------------------------
+  2. VERTICAL SCROLLBAR 
+  y-axis
+  ------------------------------------------------------------------------------------------------------------------------
+  */
+  
+      .mCSB_inside > .mCSB_container{ margin-right: 12px; }
+  
+      .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-right: 0; } /* non-visible scrollbar */
+      
+      .mCS-dir-rtl > .mCSB_inside > .mCSB_container{ /* RTL direction/left-side scrollbar */
+          margin-right: 0;
+          margin-left: 30px;
+      }
+      
+      .mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-left: 0; } /* RTL direction/left-side scrollbar */
+  
+      .mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
+          position: absolute;
+          width: 8px;
+          height: auto;
+          left: auto;
+          top: 0;
+          right: 0;
+          bottom: 0;
+      }
+  
+      .mCSB_outside + .mCSB_scrollTools{ right: -26px; } /* scrollbar position: outside */
+      
+      .mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools, 
+      .mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ /* RTL direction/left-side scrollbar */
+          right: auto;
+          left: 0;
+      }
+      
+      .mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ left: -26px; } /* RTL direction/left-side scrollbar (scrollbar position: outside) */
+  
+      .mCSB_scrollTools .mCSB_draggerContainer{ /* contains the draggable element and dragger rail markup */
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0; 
+          height: auto;
+      }
+  
+      .mCSB_scrollTools a + .mCSB_draggerContainer{ margin: 20px 0; }
+  
+      .mCSB_scrollTools .mCSB_draggerRail{
+          width: 2px;
+          height: 100%;
+          margin: 0 auto;
+          -webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
+      }
+  
+      .mCSB_scrollTools .mCSB_dragger{ /* the draggable element */
+          cursor: pointer;
+          width: 100%;
+          height: 30px; /* minimum dragger height */
+          z-index: 1;
+      }
+  
+      .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ /* the dragger element */
+          position: relative;
+          width: 4px;
+          height: 100%;
+          margin: 0 auto;
+          -webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
+          text-align: center;
+      }
+      
+      .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+      .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{ width: 12px; /* auto-expanded scrollbar */ }
+      
+      .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+      .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width: 8px; /* auto-expanded scrollbar */ }
+  
+      .mCSB_scrollTools .mCSB_buttonUp,
+      .mCSB_scrollTools .mCSB_buttonDown{
+          display: block;
+          position: absolute;
+          height: 20px;
+          width: 100%;
+          overflow: hidden;
+          margin: 0 auto;
+          cursor: pointer;
+      }
+  
+      .mCSB_scrollTools .mCSB_buttonDown{ bottom: 0; }
+  
+  
+  
+  /* 
+  ------------------------------------------------------------------------------------------------------------------------
+  3. HORIZONTAL SCROLLBAR 
+  x-axis
+  ------------------------------------------------------------------------------------------------------------------------
+  */
+  
+      .mCSB_horizontal.mCSB_inside > .mCSB_container{
+          margin-right: 0;
+          margin-bottom: 13px;
+      }
+      
+      .mCSB_horizontal.mCSB_outside > .mCSB_container{ min-height: 100%; }
+  
+      .mCSB_horizontal > .mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; } /* non-visible scrollbar */
+  
+      .mCSB_scrollTools.mCSB_scrollTools_horizontal{
+          width: auto;
+          height: 8px;
+          top: auto;
+          right: 0;
+          bottom: 0;
+          left: 0;
+      }
+  
+      .mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+      .mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal{ bottom: -26px; } /* scrollbar position: outside */
+  
+      .mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer{ margin: 0 20px; }
+  
+      .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+          width: 100%;
+          height: 2px;
+          margin: 7px 0;
+      }
+  
+      .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger{
+          width: 30px; /* minimum dragger width */
+          height: 100%;
+          left: 0;
+      }
+  
+      .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+          width: 100%;
+          height: 4px;
+          margin: 6px auto;
+      }
+      
+      .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+      .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{
+          height: 12px; /* auto-expanded scrollbar */
+          margin: 2px auto;
+      }
+      
+      .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+      .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
+          height: 8px; /* auto-expanded scrollbar */
+          margin: 4px 0;
+      }
+  
+      .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,
+      .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{
+          display: block;
+          position: absolute;
+          width: 20px;
+          height: 100%;
+          overflow: hidden;
+          margin: 0 auto;
+          cursor: pointer;
+      }
+      
+      .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft{ left: 0; }
+  
+      .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{ right: 0; }
+  
+  
+  
+  /* 
+  ------------------------------------------------------------------------------------------------------------------------
+  4. VERTICAL AND HORIZONTAL SCROLLBARS 
+  yx-axis 
+  ------------------------------------------------------------------------------------------------------------------------
+  */
+  
+      .mCSB_container_wrapper{
+          position: absolute;
+          height: auto;
+          width: auto;
+          overflow: hidden;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin-right: 30px;
+          margin-bottom: 30px;
+      }
+      
+      .mCSB_container_wrapper > .mCSB_container{
+          padding-right: 30px;
+          padding-bottom: 30px;
+          -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+      }
+      
+      .mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 20px; }
+      
+      .mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 20px; }
+      
+      /* non-visible horizontal scrollbar */
+      .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 0; }
+      
+      /* non-visible vertical scrollbar/RTL direction/left-side scrollbar */
+      .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
+      .mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 0; }
+      
+      /* RTL direction/left-side scrollbar */
+      .mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 20px; }
+      
+      /* non-visible scrollbar/RTL direction/left-side scrollbar */
+      .mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 0; }
+      
+      .mCS-dir-rtl > .mCSB_inside > .mCSB_container_wrapper{ /* RTL direction/left-side scrollbar */
+          margin-right: 0;
+          margin-left: 30px;
+      }
+      
+      .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden > .mCSB_container{ padding-right: 0; }
+      
+      .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container{ padding-bottom: 0; }
+      
+      .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden{
+          margin-right: 0; /* non-visible scrollbar */
+          margin-left: 0;
+      }
+      
+      /* non-visible horizontal scrollbar */
+      .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; }
+  
+  
+  
+  /* 
+  ------------------------------------------------------------------------------------------------------------------------
+  5. TRANSITIONS  
+  ------------------------------------------------------------------------------------------------------------------------
+  */
+  
+      .mCSB_scrollTools, 
+      .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCSB_scrollTools .mCSB_buttonUp,
+      .mCSB_scrollTools .mCSB_buttonDown,
+      .mCSB_scrollTools .mCSB_buttonLeft,
+      .mCSB_scrollTools .mCSB_buttonRight{
+          -webkit-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+          -moz-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+          -o-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+          transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+      }
+      
+      .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, /* auto-expanded scrollbar */
+      .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail, 
+      .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, 
+      .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail{
+          -webkit-transition: width .2s ease-out .2s, height .2s ease-out .2s, 
+                      margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
+                      margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
+                      opacity .2s ease-in-out, background-color .2s ease-in-out; 
+          -moz-transition: width .2s ease-out .2s, height .2s ease-out .2s, 
+                      margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
+                      margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
+                      opacity .2s ease-in-out, background-color .2s ease-in-out; 
+          -o-transition: width .2s ease-out .2s, height .2s ease-out .2s, 
+                      margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
+                      margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
+                      opacity .2s ease-in-out, background-color .2s ease-in-out; 
+          transition: width .2s ease-out .2s, height .2s ease-out .2s, 
+                      margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
+                      margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
+                      opacity .2s ease-in-out, background-color .2s ease-in-out; 
+      }
+  
+  
+  
+  /* 
+  ------------------------------------------------------------------------------------------------------------------------
+  6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  
+  ------------------------------------------------------------------------------------------------------------------------
+  */
+  
+      /* 
+      ----------------------------------------
+      6.1 THEMES 
+      ----------------------------------------
+      */
+      
+      /* default theme ("light") */
+  
+      .mCSB_scrollTools{ opacity: 0.75; filter: "alpha(opacity=75)"; -ms-filter: "alpha(opacity=75)"; }
+      
+      .mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,
+      .mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 0; filter: "alpha(opacity=0)"; -ms-filter: "alpha(opacity=0)"; }
+      
+      .mCustomScrollbar > .mCustomScrollBox > .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+      .mCustomScrollbar > .mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+      .mCustomScrollBox:hover > .mCSB_scrollTools,
+      .mCustomScrollBox:hover ~ .mCSB_scrollTools,
+      .mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools,
+      .mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 1; filter: "alpha(opacity=100)"; -ms-filter: "alpha(opacity=100)"; }
+  
+       .mCSB_scrollTools .mCSB_draggerRail{
+           background-color: #000; background-color: rgba(0,0,0,0.4);
+           filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)"; 
+       }
+       .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+           background-color: #fff; background-color: rgba(255,255,255,0.75);
+           filter: "alpha(opacity=75)"; -ms-filter: "alpha(opacity=75)"; 
+       }
+       .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+           background-color: #fff; background-color: rgba(255,255,255,0.85);
+           filter: "alpha(opacity=85)"; -ms-filter: "alpha(opacity=85)"; 
+       }
+       .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+       .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+           background-color: #fff; background-color: rgba(255,255,255,0.9);
+           filter: "alpha(opacity=90)"; -ms-filter: "alpha(opacity=90)"; 
+       }
+  
+      .mCSB_scrollTools .mCSB_buttonUp,
+      .mCSB_scrollTools .mCSB_buttonDown,
+      .mCSB_scrollTools .mCSB_buttonLeft,
+      .mCSB_scrollTools .mCSB_buttonRight{
+          background-image: url(mCSB_buttons.png); /* css sprites */
+          background-repeat: no-repeat;
+          opacity: 0.4; filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)"; 
+      }
+  
+      .mCSB_scrollTools .mCSB_buttonUp{
+          background-position: 0 0;
+          /* 
+          sprites locations 
+          light: 0 0, -16px 0, -32px 0, -48px 0, 0 -72px, -16px -72px, -32px -72px
+          dark: -80px 0, -96px 0, -112px 0, -128px 0, -80px -72px, -96px -72px, -112px -72px
+          */
+      }
+  
+      .mCSB_scrollTools .mCSB_buttonDown{
+          background-position: 0 -20px;
+          /* 
+          sprites locations
+          light: 0 -20px, -16px -20px, -32px -20px, -48px -20px, 0 -92px, -16px -92px, -32px -92px
+          dark: -80px -20px, -96px -20px, -112px -20px, -128px -20px, -80px -92px, -96px -92px, -112 -92px
+          */
+      }
+  
+      .mCSB_scrollTools .mCSB_buttonLeft{
+          background-position: 0 -40px;
+          /* 
+          sprites locations 
+          light: 0 -40px, -20px -40px, -40px -40px, -60px -40px, 0 -112px, -20px -112px, -40px -112px
+          dark: -80px -40px, -100px -40px, -120px -40px, -140px -40px, -80px -112px, -100px -112px, -120px -112px
+          */
+      }
+  
+      .mCSB_scrollTools .mCSB_buttonRight{
+          background-position: 0 -56px;
+          /* 
+          sprites locations 
+          light: 0 -56px, -20px -56px, -40px -56px, -60px -56px, 0 -128px, -20px -128px, -40px -128px
+          dark: -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100px -128px, -120px -128px
+          */
+      }
+  
+      .mCSB_scrollTools .mCSB_buttonUp:hover,
+      .mCSB_scrollTools .mCSB_buttonDown:hover,
+      .mCSB_scrollTools .mCSB_buttonLeft:hover,
+      .mCSB_scrollTools .mCSB_buttonRight:hover{ opacity: 0.75; filter: "alpha(opacity=75)"; -ms-filter: "alpha(opacity=75)"; }
+  
+      .mCSB_scrollTools .mCSB_buttonUp:active,
+      .mCSB_scrollTools .mCSB_buttonDown:active,
+      .mCSB_scrollTools .mCSB_buttonLeft:active,
+      .mCSB_scrollTools .mCSB_buttonRight:active{ opacity: 0.9; filter: "alpha(opacity=90)"; -ms-filter: "alpha(opacity=90)"; }
+      
+  
+      /* theme: "dark" */
+  
+      .mCS-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.15); }
+  
+      .mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }
+  
+      .mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: rgba(0,0,0,0.85); }
+  
+      .mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: rgba(0,0,0,0.9); }
+  
+      .mCS-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -80px 0; }
+  
+      .mCS-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -20px; }
+  
+      .mCS-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -40px; }
+  
+      .mCS-dark.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -56px; }
+      
+      /* ---------------------------------------- */
+      
+  
+  
+      /* theme: "light-2", "dark-2" */
+  
+      .mCS-light-2.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{
+          width: 4px;
+          background-color: #fff; background-color: rgba(255,255,255,0.1);
+          -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px;
+      }
+  
+      .mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+          width: 4px;
+          background-color: #fff; background-color: rgba(255,255,255,0.75);
+          -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px;
+      }
+  
+      .mCS-light-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+      .mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+      .mCS-light-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+          width: 100%;
+          height: 4px;
+          margin: 6px auto;
+      }
+  
+      .mCS-light-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.85); }
+  
+      .mCS-light-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-light-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.9); }
+  
+      .mCS-light-2.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px 0; }
+  
+      .mCS-light-2.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -20px; }
+  
+      .mCS-light-2.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -40px; }
+  
+      .mCS-light-2.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -56px; }
+      
+      
+      /* theme: "dark-2" */
+  
+      .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{
+          background-color: #000; background-color: rgba(0,0,0,0.1);
+          -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px;
+      }
+  
+      .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+          background-color: #000; background-color: rgba(0,0,0,0.75);
+          -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px;
+      }
+  
+      .mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+  
+      .mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+  
+      .mCS-dark-2.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px 0; }
+  
+      .mCS-dark-2.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -20px; }
+  
+      .mCS-dark-2.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -40px; }
+  
+      .mCS-dark-2.mCSB_scrollTools .mCSB_buttonRight{ background-position: -120px -56px; }
+      
+      /* ---------------------------------------- */
+      
+  
+  
+      /* theme: "light-thick", "dark-thick" */
+  
+      .mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail{
+          width: 4px;
+          background-color: #fff; background-color: rgba(255,255,255,0.1);
+          -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;
+      }
+  
+      .mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+          width: 6px;
+          background-color: #fff; background-color: rgba(255,255,255,0.75);
+          -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;
+      }
+  
+      .mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+      .mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+          width: 100%;
+          height: 4px;
+          margin: 6px 0;
+      }
+  
+      .mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+          width: 100%;
+          height: 6px;
+          margin: 5px auto;
+      }
+  
+      .mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.85); }
+  
+      .mCS-light-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-light-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.9); }
+  
+      .mCS-light-thick.mCSB_scrollTools .mCSB_buttonUp{ background-position: -16px 0; }
+  
+      .mCS-light-thick.mCSB_scrollTools .mCSB_buttonDown{ background-position: -16px -20px; }
+  
+      .mCS-light-thick.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -20px -40px; }
+  
+      .mCS-light-thick.mCSB_scrollTools .mCSB_buttonRight{ background-position: -20px -56px; }
+  
+  
+      /* theme: "dark-thick" */
+      
+      .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail{
+          background-color: #000; background-color: rgba(0,0,0,0.1);
+          -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;
+      }
+  
+      .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+          background-color: #000; background-color: rgba(0,0,0,0.75);
+          -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;
+      }
+  
+      .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+  
+      .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+  
+      .mCS-dark-thick.mCSB_scrollTools .mCSB_buttonUp{ background-position: -96px 0; }
+  
+      .mCS-dark-thick.mCSB_scrollTools .mCSB_buttonDown{ background-position: -96px -20px; }
+  
+      .mCS-dark-thick.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -100px -40px; }
+  
+      .mCS-dark-thick.mCSB_scrollTools .mCSB_buttonRight{ background-position: -100px -56px; }
+      
+      /* ---------------------------------------- */
+      
+  
+  
+      /* theme: "light-thin", "dark-thin" */
+      
+      .mCS-light-thin.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.1); }
+  
+      .mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width: 2px; }
+  
+      .mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+      .mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail{ width: 100%; }
+  
+      .mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+          width: 100%;
+          height: 2px;
+          margin: 7px auto;
+      }
+  
+  
+      /* theme "dark-thin" */
+      
+      .mCS-dark-thin.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.15); }
+  
+      .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }
+      
+      .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+      
+      .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+      
+      .mCS-dark-thin.mCSB_scrollTools .mCSB_buttonUp{ background-position: -80px 0; }
+  
+      .mCS-dark-thin.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -20px; }
+  
+      .mCS-dark-thin.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -40px; }
+  
+      .mCS-dark-thin.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -56px; }
+      
+      /* ---------------------------------------- */
+      
+      
+      
+      /* theme "rounded", "rounded-dark", "rounded-dots", "rounded-dots-dark" */
+      
+      .mCS-rounded.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.15); }
+      
+      .mCS-rounded.mCSB_scrollTools .mCSB_dragger, 
+      .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger, 
+      .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger, 
+      .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger{ height: 14px; }
+      
+      .mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+          width: 14px;
+          margin: 0 1px;
+      }
+      
+      .mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger, 
+      .mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger, 
+      .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger, 
+      .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 14px; }
+      
+      .mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+          height: 14px;
+          margin: 1px 0;
+      }
+      
+      .mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+      .mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+      .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{
+          width: 16px; /* auto-expanded scrollbar */
+          height: 16px;
+          margin: -1px 0;
+      }
+      
+      .mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+      .mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, 
+      .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+      .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width: 4px; /* auto-expanded scrollbar */ }
+      
+      .mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+      .mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+      .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{
+          height: 16px; /* auto-expanded scrollbar */
+          width: 16px;
+          margin: 0 -1px;
+      }
+      
+      .mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+      .mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, 
+      .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+      .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
+          height: 4px; /* auto-expanded scrollbar */
+          margin: 6px 0;
+      }
+      
+      .mCS-rounded.mCSB_scrollTools .mCSB_buttonUp{ background-position: 0 -72px; }
+      
+      .mCS-rounded.mCSB_scrollTools .mCSB_buttonDown{ background-position: 0 -92px; }
+      
+      .mCS-rounded.mCSB_scrollTools .mCSB_buttonLeft{ background-position: 0 -112px; }
+      
+      .mCS-rounded.mCSB_scrollTools .mCSB_buttonRight{ background-position: 0 -128px; }
+      
+      
+      /* theme "rounded-dark", "rounded-dots-dark" */
+      
+      .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }
+      
+      .mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.15); }
+      
+      .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+      .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+      
+      .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
+      .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+      
+      .mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -80px -72px; }
+      
+      .mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -92px; }
+      
+      .mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -112px; }
+      
+      .mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -128px; }
+      
+      
+      /* theme "rounded-dots", "rounded-dots-dark" */
+      
+      .mCS-rounded-dots.mCSB_scrollTools_vertical .mCSB_draggerRail, 
+      .mCS-rounded-dots-dark.mCSB_scrollTools_vertical .mCSB_draggerRail{ width: 4px; }
+      
+      .mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+      .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+          background-color: transparent;
+          background-position: center;
+      }
+      
+      .mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail{
+          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANElEQVQYV2NkIAAYiVbw//9/Y6DiM1ANJoyMjGdBbLgJQAX/kU0DKgDLkaQAvxW4HEvQFwCRcxIJK1XznAAAAABJRU5ErkJggg==");
+          background-repeat: repeat-y;
+          opacity: 0.3;
+          filter: "alpha(opacity=30)"; -ms-filter: "alpha(opacity=30)"; 
+      }
+      
+      .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+      .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+          height: 4px;
+          margin: 6px 0;
+          background-repeat: repeat-x;
+      }
+      
+      .mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonUp{ background-position: -16px -72px; }
+      
+      .mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonDown{ background-position: -16px -92px; }
+      
+      .mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -20px -112px; }
+      
+      .mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonRight{ background-position: -20px -128px; }
+      
+      
+      /* theme "rounded-dots-dark" */
+      
+      .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail{
+          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALElEQVQYV2NkIAAYSVFgDFR8BqrBBEifBbGRTfiPZhpYjiQFBK3A6l6CvgAAE9kGCd1mvgEAAAAASUVORK5CYII=");
+      }
+      
+      .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -96px -72px; }
+      
+      .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -96px -92px; }
+      
+      .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -100px -112px; }
+      
+      .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonRight{ background-position: -100px -128px; }
+      
+      /* ---------------------------------------- */
+      
+      
+      
+      /* theme "3d", "3d-dark", "3d-thick", "3d-thick-dark" */
+      
+      .mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+          background-repeat: repeat-y;
+          background-image: -moz-linear-gradient(left, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+          background-image: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0)));
+          background-image: -webkit-linear-gradient(left, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+          background-image: -o-linear-gradient(left, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+          background-image: -ms-linear-gradient(left, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+          background-image: linear-gradient(to right, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+      }
+      
+      .mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+          background-repeat: repeat-x;
+          background-image: -moz-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0)));
+          background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+          background-image: -o-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+          background-image: -ms-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+          background-image: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+      }
+      
+      
+      /* theme "3d", "3d-dark" */
+      
+      .mCS-3d.mCSB_scrollTools_vertical .mCSB_dragger, 
+      .mCS-3d-dark.mCSB_scrollTools_vertical .mCSB_dragger{ height: 70px; }
+      
+      .mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger, 
+      .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 70px; }
+      
+      .mCS-3d.mCSB_scrollTools, 
+      .mCS-3d-dark.mCSB_scrollTools{
+          opacity: 1;
+          filter: "alpha(opacity=30)"; -ms-filter: "alpha(opacity=30)"; 
+      }
+      
+      .mCS-3d.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ -webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px; }
+      
+      .mCS-3d.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail{
+          width: 8px;
+          background-color: #000; background-color: rgba(0,0,0,0.2);
+          box-shadow: inset 1px 0 1px rgba(0,0,0,0.5), inset -1px 0 1px rgba(255,255,255,0.2);
+      }
+      
+      .mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,    
+      .mCS-3d.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+      .mCS-3d.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-3d.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #555; }
+  
+      .mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width: 8px; }
+  
+      .mCS-3d.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+      .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+          width: 100%;
+          height: 8px;
+          margin: 4px 0;
+          box-shadow: inset 0 1px 1px rgba(0,0,0,0.5), inset 0 -1px 1px rgba(255,255,255,0.2);
+      }
+  
+      .mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+          width: 100%;
+          height: 8px;
+          margin: 4px auto;
+      }
+      
+      .mCS-3d.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }
+      
+      .mCS-3d.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }
+      
+      .mCS-3d.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }
+      
+      .mCS-3d.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }
+      
+      
+      /* theme "3d-dark" */
+      
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail{
+          background-color: #000; background-color: rgba(0,0,0,0.1);
+          box-shadow: inset 1px 0 1px rgba(0,0,0,0.1);
+      }
+      
+      .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{ box-shadow: inset 0 1px 1px rgba(0,0,0,0.1); }
+      
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }
+  
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }
+  
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }
+  
+      .mCS-3d-dark.mCSB_scrollTools .mCSB_buttonRight{    background-position: -120px -128px; }
+      
+      /* ---------------------------------------- */
+      
+      
+      
+      /* theme: "3d-thick", "3d-thick-dark" */
+      
+      .mCS-3d-thick.mCSB_scrollTools, 
+      .mCS-3d-thick-dark.mCSB_scrollTools{
+          opacity: 1;
+          filter: "alpha(opacity=30)"; -ms-filter: "alpha(opacity=30)"; 
+      }
+      
+      .mCS-3d-thick.mCSB_scrollTools, 
+      .mCS-3d-thick-dark.mCSB_scrollTools, 
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer, 
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer{ -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; }
+      
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+      
+      .mCSB_inside + .mCS-3d-thick.mCSB_scrollTools_vertical, 
+      .mCSB_inside + .mCS-3d-thick-dark.mCSB_scrollTools_vertical{ right: 1px; }
+      
+      .mCS-3d-thick.mCSB_scrollTools_vertical, 
+      .mCS-3d-thick-dark.mCSB_scrollTools_vertical{ box-shadow: inset 1px 0 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.5); }
+      
+      .mCS-3d-thick.mCSB_scrollTools_horizontal, 
+      .mCS-3d-thick-dark.mCSB_scrollTools_horizontal{
+          bottom: 1px;
+          box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.5);
+      }
+      
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+          box-shadow: inset 1px 0 0 rgba(255,255,255,0.4);
+          width: 12px;
+          margin: 2px;
+          position: absolute;
+          height: auto;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+      }
+      
+      .mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{ box-shadow: inset 0 1px 0 rgba(255,255,255,0.4); }
+      
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,  
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #555; }
+      
+      .mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+          height: 12px;
+          width: auto;
+      }
+      
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer{
+          background-color: #000; background-color: rgba(0,0,0,0.05);
+          box-shadow: inset 1px 1px 16px rgba(0,0,0,0.1);
+      }
+      
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_draggerRail{ background-color: transparent; }
+      
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }
+      
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }
+  
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }
+  
+      .mCS-3d-thick.mCSB_scrollTools .mCSB_buttonRight{   background-position: -40px -128px; }
+      
+      
+      /* theme: "3d-thick-dark" */
+      
+      .mCS-3d-thick-dark.mCSB_scrollTools{ box-shadow: inset 0 0 14px rgba(0,0,0,0.2); }
+      
+      .mCS-3d-thick-dark.mCSB_scrollTools_horizontal{ box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.2); }
+      
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ box-shadow: inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(0,0,0,0.2); }
+       
+      .mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{ box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), inset 0 -1px 0 rgba(0,0,0,0.2); }
+      
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,  
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #777; }
+      
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer{
+          background-color: #fff; background-color: rgba(0,0,0,0.05);
+          box-shadow: inset 1px 1px 16px rgba(0,0,0,0.1);
+      }
+      
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: transparent; }
+      
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }
+      
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }
+  
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }
+  
+      .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonRight{  background-position: -120px -128px; }
+      
+      /* ---------------------------------------- */
+      
+      
+      
+      /* theme: "minimal", "minimal-dark" */
+      
+      .mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, 
+      .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical{
+          right: 0; 
+          margin: 12px 0; 
+      }
+      
+      .mCustomScrollBox.mCS-minimal + .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
+      .mCustomScrollBox.mCS-minimal + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
+      .mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
+      .mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal{
+          bottom: 0; 
+          margin: 0 12px; 
+      }
+      
+      /* RTL direction/left-side scrollbar */
+      .mCS-dir-rtl > .mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, 
+      .mCS-dir-rtl > .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical{
+          left: 0; 
+          right: auto;
+      }
+      
+      .mCS-minimal.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: transparent; }
+      
+      .mCS-minimal.mCSB_scrollTools_vertical .mCSB_dragger, 
+      .mCS-minimal-dark.mCSB_scrollTools_vertical .mCSB_dragger{ height: 50px; }
+      
+      .mCS-minimal.mCSB_scrollTools_horizontal .mCSB_dragger, 
+      .mCS-minimal-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 50px; }
+      
+      .mCS-minimal.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+          background-color: #fff; background-color: rgba(255,255,255,0.2);
+          filter: "alpha(opacity=20)"; -ms-filter: "alpha(opacity=20)"; 
+      }
+      
+      .mCS-minimal.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-minimal.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+          background-color: #fff; background-color: rgba(255,255,255,0.5);
+          filter: "alpha(opacity=50)"; -ms-filter: "alpha(opacity=50)"; 
+      }
+      
+      
+      /* theme: "minimal-dark" */
+      
+      .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+          background-color: #000; background-color: rgba(0,0,0,0.2);
+          filter: "alpha(opacity=20)"; -ms-filter: "alpha(opacity=20)"; 
+      }
+      
+      .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+          background-color: #000; background-color: rgba(0,0,0,0.5);
+          filter: "alpha(opacity=50)"; -ms-filter: "alpha(opacity=50)"; 
+      }
+      
+      /* ---------------------------------------- */
+      
+      
+      
+      /* theme "light-3", "dark-3" */
+      
+      .mCS-light-3.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{
+          width: 6px;
+          background-color: #000; background-color: rgba(0,0,0,0.2);
+      }
+  
+      .mCS-light-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width: 6px; }
+  
+      .mCS-light-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-light-3.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+      .mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+          width: 100%;
+          height: 6px;
+          margin: 5px 0;
+      }
+      
+      .mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+      .mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, 
+      .mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+      .mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
+          width: 12px;
+      }
+      
+      .mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+      .mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, 
+      .mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+      .mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
+          height: 12px;
+          margin: 2px 0;
+      }
+      
+      .mCS-light-3.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }
+      
+      .mCS-light-3.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }
+      
+      .mCS-light-3.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }
+      
+      .mCS-light-3.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }
+      
+      
+      /* theme "dark-3" */
+      
+      .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }
+  
+      .mCS-dark-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+  
+      .mCS-dark-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-dark-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+      
+      .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.1); }
+      
+      .mCS-dark-3.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }
+  
+      .mCS-dark-3.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }
+  
+      .mCS-dark-3.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }
+  
+      .mCS-dark-3.mCSB_scrollTools .mCSB_buttonRight{ background-position: -120px -128px; }
+      
+      /* ---------------------------------------- */
+      
+      
+      
+      /* theme "inset", "inset-dark", "inset-2", "inset-2-dark", "inset-3", "inset-3-dark" */
+      
+      .mCS-inset.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail{
+          width: 12px;
+          background-color: #000; background-color: rgba(0,0,0,0.2);
+      }
+  
+      .mCS-inset.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-inset-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ 
+          width: 6px;
+          margin: 3px 5px;
+          position: absolute;
+          height: auto;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+      }
+  
+      .mCS-inset.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+          height: 6px;
+          margin: 5px 3px;
+          position: absolute;
+          width: auto;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+      }
+      
+      .mCS-inset.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+      .mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+      .mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+      .mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+      .mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+      .mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+          width: 100%;
+          height: 12px;
+          margin: 2px 0;
+      }
+      
+      .mCS-inset.mCSB_scrollTools .mCSB_buttonUp, 
+      .mCS-inset-2.mCSB_scrollTools .mCSB_buttonUp, 
+      .mCS-inset-3.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }
+      
+      .mCS-inset.mCSB_scrollTools .mCSB_buttonDown, 
+      .mCS-inset-2.mCSB_scrollTools .mCSB_buttonDown, 
+      .mCS-inset-3.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }
+      
+      .mCS-inset.mCSB_scrollTools .mCSB_buttonLeft, 
+      .mCS-inset-2.mCSB_scrollTools .mCSB_buttonLeft, 
+      .mCS-inset-3.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }
+      
+      .mCS-inset.mCSB_scrollTools .mCSB_buttonRight, 
+      .mCS-inset-2.mCSB_scrollTools .mCSB_buttonRight, 
+      .mCS-inset-3.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }
+      
+      
+      /* theme "inset-dark", "inset-2-dark", "inset-3-dark" */
+      
+      .mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }
+  
+      .mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+      .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+  
+      .mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-inset-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
+      .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+      
+      .mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.1); }
+      
+      .mCS-inset-dark.mCSB_scrollTools .mCSB_buttonUp, 
+      .mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonUp, 
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }
+  
+      .mCS-inset-dark.mCSB_scrollTools .mCSB_buttonDown, 
+      .mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonDown, 
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }
+  
+      .mCS-inset-dark.mCSB_scrollTools .mCSB_buttonLeft, 
+      .mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonLeft, 
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }
+  
+      .mCS-inset-dark.mCSB_scrollTools .mCSB_buttonRight, 
+      .mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonRight, 
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonRight{   background-position: -120px -128px; }
+      
+      
+      /* theme "inset-2", "inset-2-dark" */
+      
+      .mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail, 
+      .mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail{
+          background-color: transparent;
+          border-width: 1px;
+          border-style: solid;
+          border-color: #fff;
+          border-color: rgba(255,255,255,0.2);
+          -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+      }
+      
+      .mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail{ border-color: #000; border-color: rgba(0,0,0,0.2); }
+      
+      
+      /* theme "inset-3", "inset-3-dark" */
+      
+      .mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.6); }
+      
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.6); }
+      
+      .mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }
+      
+      .mCS-inset-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+      
+      .mCS-inset-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-inset-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+      
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.75); }
+      
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.85); }
+      
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+      .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.9); }
+      
+      /* ---------------------------------------- */
+  
+  /* This is the core CSS of Tooltipster */
+  
+  /* GENERAL STRUCTURE RULES (do not edit this section) */
+  
+  .tooltipster-base {
+      /* this ensures that a constrained height set by functionPosition,
+      if greater that the natural height of the tooltip, will be enforced
+      in browsers that support display:flex */
+      display: flex;
+      pointer-events: none;
+      /* this may be overriden in JS for fixed position origins */
+      position: absolute;
+  }
+  
+  .tooltipster-box {
+      /* see .tooltipster-base. flex-shrink 1 is only necessary for IE10-
+      and flex-basis auto for IE11- (at least) */
+      flex: 1 1 auto;
+  }
+  
+  .tooltipster-content {
+      /* prevents an overflow if the user adds padding to the div */
+      box-sizing: border-box;
+      /* these make sure we'll be able to detect any overflow */
+      max-height: 100%;
+      max-width: 100%;
+      overflow: auto;
+  }
+  
+  .tooltipster-ruler {
+      /* these let us test the size of the tooltip without overflowing the window */
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      position: fixed;
+      right: 0;
+      top: 0;
+      visibility: hidden;
+  }
+  
+  /* ANIMATIONS */
+  
+  /* Open/close animations */
+  
+  /* fade */
+  
+  .tooltipster-fade {
+      opacity: 0;
+      -webkit-transition-property: opacity;
+      -moz-transition-property: opacity;
+      -o-transition-property: opacity;
+      -ms-transition-property: opacity;
+      transition-property: opacity;
+  }
+  .tooltipster-fade.tooltipster-show {
+      opacity: 1;
+  }
+  
+  /* grow */
+  
+  .tooltipster-grow {
+      -webkit-transform: scale(0,0);
+      -moz-transform: scale(0,0);
+      -o-transform: scale(0,0);
+      -ms-transform: scale(0,0);
+      transform: scale(0,0);
+      -webkit-transition-property: -webkit-transform;
+      -moz-transition-property: -moz-transform;
+      -o-transition-property: -o-transform;
+      -ms-transition-property: -ms-transform;
+      transition-property: transform;
+      -webkit-backface-visibility: hidden;
+  }
+  .tooltipster-grow.tooltipster-show {
+      -webkit-transform: scale(1,1);
+      -moz-transform: scale(1,1);
+      -o-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+      transform: scale(1,1);
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+  }
+  
+  /* swing */
+  
+  .tooltipster-swing {
+      opacity: 0;
+      -webkit-transform: rotateZ(4deg);
+      -moz-transform: rotateZ(4deg);
+      -o-transform: rotateZ(4deg);
+      -ms-transform: rotateZ(4deg);
+      transform: rotateZ(4deg);
+      -webkit-transition-property: -webkit-transform, opacity;
+      -moz-transition-property: -moz-transform;
+      -o-transition-property: -o-transform;
+      -ms-transition-property: -ms-transform;
+      transition-property: transform;
+  }
+  .tooltipster-swing.tooltipster-show {
+      opacity: 1;
+      -webkit-transform: rotateZ(0deg);
+      -moz-transform: rotateZ(0deg);
+      -o-transform: rotateZ(0deg);
+      -ms-transform: rotateZ(0deg);
+      transform: rotateZ(0deg);
+      -webkit-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 1);
+      -webkit-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+      -moz-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+      -ms-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+      -o-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+      transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+  }
+  
+  /* fall */
+  
+  .tooltipster-fall {
+      -webkit-transition-property: top;
+      -moz-transition-property: top;
+      -o-transition-property: top;
+      -ms-transition-property: top;
+      transition-property: top;
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+  }
+  .tooltipster-fall.tooltipster-initial {
+      top: 0 !important;
+  }
+  .tooltipster-fall.tooltipster-show {
+  }
+  .tooltipster-fall.tooltipster-dying {
+      -webkit-transition-property: all;
+      -moz-transition-property: all;
+      -o-transition-property: all;
+      -ms-transition-property: all;
+      transition-property: all;
+      top: 0 !important;
+      opacity: 0;
+  }
+  
+  /* slide */
+  
+  .tooltipster-slide {
+      -webkit-transition-property: left;
+      -moz-transition-property: left;
+      -o-transition-property: left;
+      -ms-transition-property: left;
+      transition-property: left;
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+  }
+  .tooltipster-slide.tooltipster-initial {
+      left: -40px !important;
+  }
+  .tooltipster-slide.tooltipster-show {
+  }
+  .tooltipster-slide.tooltipster-dying {
+      -webkit-transition-property: all;
+      -moz-transition-property: all;
+      -o-transition-property: all;
+      -ms-transition-property: all;
+      transition-property: all;
+      left: 0 !important;
+      opacity: 0;
+  }
+  
+  /* Update animations */
+  
+  /* We use animations rather than transitions here because
+   transition durations may be specified in the style tag due to
+   animationDuration, and we try to avoid collisions and the use
+   of !important */
+  
+  /* fade */
+  
+  @keyframes tooltipster-fading {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  
+  .tooltipster-update-fade {
+      animation: tooltipster-fading 400ms;
+  }
+  
+  /* rotate */
+  
+  @keyframes tooltipster-rotating {
+      25% {
+          transform: rotate(-2deg);
+      }
+      75% {
+          transform: rotate(2deg);
+      }
+      100% {
+          transform: rotate(0);
+      }
+  }
+  
+  .tooltipster-update-rotate {
+      animation: tooltipster-rotating 600ms;
+  }
+  
+  /* scale */
+  
+  @keyframes tooltipster-scaling {
+      50% {
+          transform: scale(1.1);
+      }
+      100% {
+          transform: scale(1);
+      }
+  }
+  
+  .tooltipster-update-scale {
+      animation: tooltipster-scaling 600ms;
+  }
+  
+  /* This is the core CSS of Tooltipster */
+  
+  /* GENERAL STRUCTURE RULES (do not edit this section) */
+  
+  .tooltipster-base {
+      /* this ensures that a constrained height set by functionPosition,
+      if greater that the natural height of the tooltip, will be enforced
+      in browsers that support display:flex */
+      display: flex;
+      pointer-events: none;
+      /* this may be overriden in JS for fixed position origins */
+      position: absolute;
+  }
+  
+  .tooltipster-box {
+      /* see .tooltipster-base. flex-shrink 1 is only necessary for IE10-
+      and flex-basis auto for IE11- (at least) */
+      flex: 1 1 auto;
+  }
+  
+  .tooltipster-content {
+      /* prevents an overflow if the user adds padding to the div */
+      box-sizing: border-box;
+      /* these make sure we'll be able to detect any overflow */
+      max-height: 100%;
+      max-width: 100%;
+      overflow: auto;
+  }
+  
+  .tooltipster-ruler {
+      /* these let us test the size of the tooltip without overflowing the window */
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      position: fixed;
+      right: 0;
+      top: 0;
+      visibility: hidden;
+  }
+  
+  /* ANIMATIONS */
+  
+  /* Open/close animations */
+  
+  /* fade */
+  
+  .tooltipster-fade {
+      opacity: 0;
+      -webkit-transition-property: opacity;
+      -moz-transition-property: opacity;
+      -o-transition-property: opacity;
+      -ms-transition-property: opacity;
+      transition-property: opacity;
+  }
+  .tooltipster-fade.tooltipster-show {
+      opacity: 1;
+  }
+  
+  /* grow */
+  
+  .tooltipster-grow {
+      -webkit-transform: scale(0,0);
+      -moz-transform: scale(0,0);
+      -o-transform: scale(0,0);
+      -ms-transform: scale(0,0);
+      transform: scale(0,0);
+      -webkit-transition-property: -webkit-transform;
+      -moz-transition-property: -moz-transform;
+      -o-transition-property: -o-transform;
+      -ms-transition-property: -ms-transform;
+      transition-property: transform;
+      -webkit-backface-visibility: hidden;
+  }
+  .tooltipster-grow.tooltipster-show {
+      -webkit-transform: scale(1,1);
+      -moz-transform: scale(1,1);
+      -o-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+      transform: scale(1,1);
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+  }
+  
+  /* swing */
+  
+  .tooltipster-swing {
+      opacity: 0;
+      -webkit-transform: rotateZ(4deg);
+      -moz-transform: rotateZ(4deg);
+      -o-transform: rotateZ(4deg);
+      -ms-transform: rotateZ(4deg);
+      transform: rotateZ(4deg);
+      -webkit-transition-property: -webkit-transform, opacity;
+      -moz-transition-property: -moz-transform;
+      -o-transition-property: -o-transform;
+      -ms-transition-property: -ms-transform;
+      transition-property: transform;
+  }
+  .tooltipster-swing.tooltipster-show {
+      opacity: 1;
+      -webkit-transform: rotateZ(0deg);
+      -moz-transform: rotateZ(0deg);
+      -o-transform: rotateZ(0deg);
+      -ms-transform: rotateZ(0deg);
+      transform: rotateZ(0deg);
+      -webkit-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 1);
+      -webkit-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+      -moz-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+      -ms-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+      -o-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+      transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+  }
+  
+  /* fall */
+  
+  .tooltipster-fall {
+      -webkit-transition-property: top;
+      -moz-transition-property: top;
+      -o-transition-property: top;
+      -ms-transition-property: top;
+      transition-property: top;
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+  }
+  .tooltipster-fall.tooltipster-initial {
+      top: 0 !important;
+  }
+  .tooltipster-fall.tooltipster-show {
+  }
+  .tooltipster-fall.tooltipster-dying {
+      -webkit-transition-property: all;
+      -moz-transition-property: all;
+      -o-transition-property: all;
+      -ms-transition-property: all;
+      transition-property: all;
+      top: 0 !important;
+      opacity: 0;
+  }
+  
+  /* slide */
+  
+  .tooltipster-slide {
+      -webkit-transition-property: left;
+      -moz-transition-property: left;
+      -o-transition-property: left;
+      -ms-transition-property: left;
+      transition-property: left;
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+  }
+  .tooltipster-slide.tooltipster-initial {
+      left: -40px !important;
+  }
+  .tooltipster-slide.tooltipster-show {
+  }
+  .tooltipster-slide.tooltipster-dying {
+      -webkit-transition-property: all;
+      -moz-transition-property: all;
+      -o-transition-property: all;
+      -ms-transition-property: all;
+      transition-property: all;
+      left: 0 !important;
+      opacity: 0;
+  }
+  
+  /* Update animations */
+  
+  /* We use animations rather than transitions here because
+   transition durations may be specified in the style tag due to
+   animationDuration, and we try to avoid collisions and the use
+   of !important */
+  
+  /* fade */
+  
+  @keyframes tooltipster-fading {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  
+  .tooltipster-update-fade {
+      animation: tooltipster-fading 400ms;
+  }
+  
+  /* rotate */
+  
+  @keyframes tooltipster-rotating {
+      25% {
+          transform: rotate(-2deg);
+      }
+      75% {
+          transform: rotate(2deg);
+      }
+      100% {
+          transform: rotate(0);
+      }
+  }
+  
+  .tooltipster-update-rotate {
+      animation: tooltipster-rotating 600ms;
+  }
+  
+  /* scale */
+  
+  @keyframes tooltipster-scaling {
+      50% {
+          transform: scale(1.1);
+      }
+      100% {
+          transform: scale(1);
+      }
+  }
+  
+  .tooltipster-update-scale {
+      animation: tooltipster-scaling 600ms;
+  }
+  
+  /**
+   * DEFAULT STYLE OF THE SIDETIP PLUGIN
+   * 
+   * All styles are "namespaced" with .tooltipster-sidetip to prevent
+   * conflicts between plugins.
+   */
+  
+  /* .tooltipster-box */
+  
+  .tooltipster-sidetip .tooltipster-box {
+      background: #565656;
+      border: 2px solid black;
+      border-radius: 4px;
+  }
+  
+  .tooltipster-sidetip.tooltipster-bottom .tooltipster-box {
+      margin-top: 8px;
+  }
+  
+  .tooltipster-sidetip.tooltipster-left .tooltipster-box {
+      margin-right: 8px;
+  }
+  
+  .tooltipster-sidetip.tooltipster-right .tooltipster-box {
+      margin-left: 8px;
+  }
+  
+  .tooltipster-sidetip.tooltipster-top .tooltipster-box {
+      margin-bottom: 8px;
+  }
+  
+  /* .tooltipster-content */
+  
+  .tooltipster-sidetip .tooltipster-content {
+      color: white;
+      line-height: 18px;
+      padding: 6px 14px;
+  }
+  
+  /* .tooltipster-arrow : will keep only the zone of .tooltipster-arrow-uncropped that
+  corresponds to the arrow we want to display */
+  
+  .tooltipster-sidetip .tooltipster-arrow {
+      overflow: hidden;
+      position: absolute;
+  }
+  
+  .tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow {
+      height: 10px;
+      /* half the width, for centering */
+      margin-left: -10px;
+      top: 0;
+      width: 20px;
+  }
+  
+  .tooltipster-sidetip.tooltipster-left .tooltipster-arrow {
+      height: 20px;
+      margin-top: -10px;
+      right: 0;
+      /* top 0 to keep the arrow from overflowing .tooltipster-base when it has not
+      been positioned yet */
+      top: 0;
+      width: 10px;
+  }
+  
+  .tooltipster-sidetip.tooltipster-right .tooltipster-arrow {
+      height: 20px;
+      margin-top: -10px;
+      left: 0;
+      /* same as .tooltipster-left .tooltipster-arrow */
+      top: 0;
+      width: 10px;
+  }
+  
+  .tooltipster-sidetip.tooltipster-top .tooltipster-arrow {
+      bottom: 0;
+      height: 10px;
+      margin-left: -10px;
+      width: 20px;
+  }
+  
+  /* common rules between .tooltipster-arrow-background and .tooltipster-arrow-border */
+  
+  .tooltipster-sidetip .tooltipster-arrow-background, .tooltipster-sidetip .tooltipster-arrow-border {
+      height: 0;
+      position: absolute;
+      width: 0;
+  }
+  
+  /* .tooltipster-arrow-background */
+  
+  .tooltipster-sidetip .tooltipster-arrow-background {
+      border: 10px solid transparent;
+  }
+  
+  .tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-background {
+      border-bottom-color: #565656;
+      left: 0;
+      top: 3px;
+  }
+  
+  .tooltipster-sidetip.tooltipster-left .tooltipster-arrow-background {
+      border-left-color: #565656;
+      left: -3px;
+      top: 0;
+  }
+  
+  .tooltipster-sidetip.tooltipster-right .tooltipster-arrow-background {
+      border-right-color: #565656;
+      left: 3px;
+      top: 0;
+  }
+  
+  .tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background {
+      border-top-color: #565656;
+      left: 0;
+      top: -3px;
+  }
+  
+  /* .tooltipster-arrow-border */
+  
+  .tooltipster-sidetip .tooltipster-arrow-border {
+      border: 10px solid transparent;
+      left: 0;
+      top: 0;
+  }
+  
+  .tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border {
+      border-bottom-color: black;
+  }
+  
+  .tooltipster-sidetip.tooltipster-left .tooltipster-arrow-border {
+      border-left-color: black;
+  }
+  
+  .tooltipster-sidetip.tooltipster-right .tooltipster-arrow-border {
+      border-right-color: black;
+  }
+  
+  .tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border {
+      border-top-color: black;
+  }
+  
+  /* tooltipster-arrow-uncropped */
+  
+  .tooltipster-sidetip .tooltipster-arrow-uncropped {
+      position: relative;
+  }
+  
+  .tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-uncropped {
+      top: -10px;
+  }
+  
+  .tooltipster-sidetip.tooltipster-right .tooltipster-arrow-uncropped {
+      left: -10px;
+  }
+  
+  /* Slider */
+  .slick-slider
+  {
+      position: relative;
+  
+      display: block;
+      box-sizing: border-box;
+  
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+  
+      -webkit-touch-callout: none;
+      -khtml-user-select: none;
+      -ms-touch-action: pan-y;
+          touch-action: pan-y;
+      -webkit-tap-highlight-color: transparent;
+  }
+  
+  .slick-list
+  {
+      position: relative;
+  
+      display: block;
+      overflow: hidden;
+  
+      margin: 0;
+      padding: 0;
+  }
+  .slick-list:focus
+  {
+      outline: none;
+  }
+  .slick-list.dragging
+  {
+      cursor: pointer;
+      cursor: hand;
+  }
+  
+  .slick-slider .slick-track,
+  .slick-slider .slick-list
+  {
+      -webkit-transform: translate3d(0, 0, 0);
+         -moz-transform: translate3d(0, 0, 0);
+          -ms-transform: translate3d(0, 0, 0);
+           -o-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+  }
+  
+  .slick-track
+  {
+      position: relative;
+      top: 0;
+      left: 0;
+  
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .slick-track:before,
+  .slick-track:after
+  {
+      display: table;
+  
+      content: '';
+  }
+  .slick-track:after
+  {
+      clear: both;
+  }
+  .slick-loading .slick-track
+  {
+      visibility: hidden;
+  }
+  
+  .slick-slide
+  {
+      display: none;
+      float: left;
+  
+      height: 100%;
+      min-height: 1px;
+  }
+  [dir='rtl'] .slick-slide
+  {
+      float: right;
+  }
+  .slick-slide img
+  {
+      display: block;
+  }
+  .slick-slide.slick-loading img
+  {
+      display: none;
+  }
+  .slick-slide.dragging img
+  {
+      pointer-events: none;
+  }
+  .slick-initialized .slick-slide
+  {
+      display: block;
+  }
+  .slick-loading .slick-slide
+  {
+      visibility: hidden;
+  }
+  .slick-vertical .slick-slide
+  {
+      display: block;
+  
+      height: auto;
+  
+      border: 1px solid transparent;
+  }
+  .slick-arrow.slick-hidden {
+      display: none;
+  }
+  
+  
+  
+  
+  /* Arrows */
+  .slick-prev,
+  .slick-next {
+      font-size: 0;
+      line-height: 0;
+      position: absolute;
+      top: -40px;
+      display: block;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      cursor: pointer;
+      color: #23252a;
+      border: none;
+      outline: none;
+      background: #f0b61c;
+      border-radius: 8px;
+      z-index: 9;
+  }
+  
+      .slick-prev:hover,
+      .slick-prev:focus,
+      .slick-next:hover,
+      .slick-next:focus {
+          color: #23252a;
+          outline: none;
+      }
+  
+  .slick-prev:hover:before,
+  .slick-prev:focus:before,
+  .slick-next:hover:before,
+  .slick-next:focus:before {
+      opacity: 1;
+  }
+  
+  .slick-prev.slick-disabled,
+  .slick-next.slick-disabled {
+      opacity: .35;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+      font-family: iconFonts;
+      font-size: 12px;
+      line-height: 1;
+      opacity: .75;
+      color: #23252a;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .slick-prev {
+      right: 45px;
+  }
+  
+  
+  .slick-prev:before {
+      content: '\e9ae';
+  }
+  
+  
+  
+  .slick-next {
+      right: 5px;
+  }
+  
+  
+  .slick-next:before {
+      content: "\e97f";
+  }
+  
+  
+  
+  /**
+   * Swiper 6.4.15
+   * Most modern mobile touch slider and framework with hardware accelerated transitions
+   * https://swiperjs.com
+   *
+   * Copyright 2014-2021 Vladimir Kharlampidi
+   *
+   * Released under the MIT License
+   *
+   * Released on: February 18, 2021
+   */
+  
+  @font-face {
+    font-family: 'swiper-icons';
+    src: url('data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  :root {
+    --swiper-theme-color: #007aff;
+  }
+  .swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    /* Fix of Webkit flickering */
+    z-index: 1;
+  }
+  .swiper-container-vertical > .swiper-wrapper {
+    flex-direction: column;
+  }
+  .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+  }
+  .swiper-container-android .swiper-slide,
+  .swiper-wrapper {
+    transform: translate3d(0px, 0, 0);
+  }
+  .swiper-container-multirow > .swiper-wrapper {
+    flex-wrap: wrap;
+  }
+  .swiper-container-multirow-column > .swiper-wrapper {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .swiper-container-free-mode > .swiper-wrapper {
+    transition-timing-function: ease-out;
+    margin: 0 auto;
+  }
+  .swiper-container-pointer-events {
+    touch-action: pan-y;
+  }
+  .swiper-container-pointer-events.swiper-container-vertical {
+    touch-action: pan-x;
+  }
+  .swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+  }
+  .swiper-slide-invisible-blank {
+    visibility: hidden;
+  }
+  /* Auto Height */
+  .swiper-container-autoheight,
+  .swiper-container-autoheight .swiper-slide {
+    height: auto;
+  }
+  .swiper-container-autoheight .swiper-wrapper {
+    align-items: flex-start;
+    transition-property: transform, height;
+  }
+  /* 3D Effects */
+  .swiper-container-3d {
+    perspective: 1200px;
+  }
+  .swiper-container-3d .swiper-wrapper,
+  .swiper-container-3d .swiper-slide,
+  .swiper-container-3d .swiper-slide-shadow-left,
+  .swiper-container-3d .swiper-slide-shadow-right,
+  .swiper-container-3d .swiper-slide-shadow-top,
+  .swiper-container-3d .swiper-slide-shadow-bottom,
+  .swiper-container-3d .swiper-cube-shadow {
+    transform-style: preserve-3d;
+  }
+  .swiper-container-3d .swiper-slide-shadow-left,
+  .swiper-container-3d .swiper-slide-shadow-right,
+  .swiper-container-3d .swiper-slide-shadow-top,
+  .swiper-container-3d .swiper-slide-shadow-bottom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .swiper-container-3d .swiper-slide-shadow-left {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+  .swiper-container-3d .swiper-slide-shadow-right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+  .swiper-container-3d .swiper-slide-shadow-top {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+  .swiper-container-3d .swiper-slide-shadow-bottom {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+  /* CSS Mode */
+  .swiper-container-css-mode > .swiper-wrapper {
+    overflow: auto;
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+  }
+  .swiper-container-css-mode > .swiper-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .swiper-container-css-mode > .swiper-wrapper > .swiper-slide {
+    scroll-snap-align: start start;
+  }
+  .swiper-container-horizontal.swiper-container-css-mode > .swiper-wrapper {
+    scroll-snap-type: x mandatory;
+  }
+  .swiper-container-vertical.swiper-container-css-mode > .swiper-wrapper {
+    scroll-snap-type: y mandatory;
+  }
+  :root {
+    --swiper-navigation-size: 44px;
+    /*
+    --swiper-navigation-color: var(--swiper-theme-color);
+    */
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: calc(var(--swiper-navigation-size) / 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  }
+  .swiper-button-prev.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+  }
+  .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    left: 10px;
+    right: auto;
+  }
+  .swiper-button-prev:after,
+  .swiper-container-rtl .swiper-button-next:after {
+    content: 'prev';
+  }
+  .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    right: 10px;
+    left: auto;
+  }
+  .swiper-button-next:after,
+  .swiper-container-rtl .swiper-button-prev:after {
+    content: 'next';
+  }
+  .swiper-button-prev.swiper-button-white,
+  .swiper-button-next.swiper-button-white {
+    --swiper-navigation-color: #ffffff;
+  }
+  .swiper-button-prev.swiper-button-black,
+  .swiper-button-next.swiper-button-black {
+    --swiper-navigation-color: #000000;
+  }
+  .swiper-button-lock {
+    display: none;
+  }
+  :root {
+    /*
+    --swiper-pagination-color: var(--swiper-theme-color);
+    */
+  }
+  .swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: 300ms opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+  }
+  .swiper-pagination.swiper-pagination-hidden {
+    opacity: 0;
+  }
+  /* Common Styles */
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+  }
+  /* Bullets */
+  .swiper-pagination-bullets-dynamic {
+    overflow: hidden;
+    font-size: 0;
+  }
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    transform: scale(0.33);
+    position: relative;
+  }
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
+    transform: scale(1);
+  }
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+    transform: scale(1);
+  }
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
+    transform: scale(0.66);
+  }
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+    transform: scale(0.33);
+  }
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+    transform: scale(0.66);
+  }
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+    transform: scale(0.33);
+  }
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #000;
+    opacity: 0.2;
+  }
+  button.swiper-pagination-bullet {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  .swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  }
+  .swiper-container-vertical > .swiper-pagination-bullets {
+    right: 10px;
+    top: 50%;
+    transform: translate3d(0px, -50%, 0);
+  }
+  .swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 6px 0;
+    display: block;
+  }
+  .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+  }
+  .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    display: inline-block;
+    transition: 200ms transform, 200ms top;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 4px;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    transition: 200ms transform, 200ms left;
+  }
+  .swiper-container-horizontal.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    transition: 200ms transform, 200ms right;
+  }
+  /* Progress */
+  .swiper-pagination-progressbar {
+    background: rgba(0, 0, 0, 0.25);
+    position: absolute;
+  }
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: var(--swiper-pagination-color, var(--swiper-theme-color));
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transform-origin: left top;
+  }
+  .swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    transform-origin: right top;
+  }
+  .swiper-container-horizontal > .swiper-pagination-progressbar,
+  .swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    width: 100%;
+    height: 4px;
+    left: 0;
+    top: 0;
+  }
+  .swiper-container-vertical > .swiper-pagination-progressbar,
+  .swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    width: 4px;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  .swiper-pagination-white {
+    --swiper-pagination-color: #ffffff;
+  }
+  .swiper-pagination-black {
+    --swiper-pagination-color: #000000;
+  }
+  .swiper-pagination-lock {
+    display: none;
+  }
+  /* Scrollbar */
+  .swiper-scrollbar {
+    border-radius: 10px;
+    position: relative;
+    -ms-touch-action: none;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .swiper-container-horizontal > .swiper-scrollbar {
+    position: absolute;
+    left: 1%;
+    bottom: 3px;
+    z-index: 50;
+    height: 5px;
+    width: 98%;
+  }
+  .swiper-container-vertical > .swiper-scrollbar {
+    position: absolute;
+    right: 3px;
+    top: 1%;
+    z-index: 50;
+    width: 5px;
+    height: 98%;
+  }
+  .swiper-scrollbar-drag {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+  }
+  .swiper-scrollbar-cursor-drag {
+    cursor: move;
+  }
+  .swiper-scrollbar-lock {
+    display: none;
+  }
+  .swiper-zoom-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .swiper-zoom-container > img,
+  .swiper-zoom-container > svg,
+  .swiper-zoom-container > canvas {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .swiper-slide-zoomed {
+    cursor: move;
+  }
+  /* Preloader */
+  :root {
+    /*
+    --swiper-preloader-color: var(--swiper-theme-color);
+    */
+  }
+  .swiper-lazy-preloader {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -21px;
+    margin-top: -21px;
+    z-index: 10;
+    transform-origin: 50%;
+    animation: swiper-preloader-spin 1s infinite linear;
+    box-sizing: border-box;
+    border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
+    border-radius: 50%;
+    border-top-color: transparent;
+  }
+  .swiper-lazy-preloader-white {
+    --swiper-preloader-color: #fff;
+  }
+  .swiper-lazy-preloader-black {
+    --swiper-preloader-color: #000;
+  }
+  @keyframes swiper-preloader-spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  /* a11y */
+  .swiper-container .swiper-notification {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
+  }
+  .swiper-container-fade.swiper-container-free-mode .swiper-slide {
+    transition-timing-function: ease-out;
+  }
+  .swiper-container-fade .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity;
+  }
+  .swiper-container-fade .swiper-slide .swiper-slide {
+    pointer-events: none;
+  }
+  .swiper-container-fade .swiper-slide-active,
+  .swiper-container-fade .swiper-slide-active .swiper-slide-active {
+    pointer-events: auto;
+  }
+  .swiper-container-cube {
+    overflow: visible;
+  }
+  .swiper-container-cube .swiper-slide {
+    pointer-events: none;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    z-index: 1;
+    visibility: hidden;
+    transform-origin: 0 0;
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-container-cube .swiper-slide .swiper-slide {
+    pointer-events: none;
+  }
+  .swiper-container-cube.swiper-container-rtl .swiper-slide {
+    transform-origin: 100% 0;
+  }
+  .swiper-container-cube .swiper-slide-active,
+  .swiper-container-cube .swiper-slide-active .swiper-slide-active {
+    pointer-events: auto;
+  }
+  .swiper-container-cube .swiper-slide-active,
+  .swiper-container-cube .swiper-slide-next,
+  .swiper-container-cube .swiper-slide-prev,
+  .swiper-container-cube .swiper-slide-next + .swiper-slide {
+    pointer-events: auto;
+    visibility: visible;
+  }
+  .swiper-container-cube .swiper-slide-shadow-top,
+  .swiper-container-cube .swiper-slide-shadow-bottom,
+  .swiper-container-cube .swiper-slide-shadow-left,
+  .swiper-container-cube .swiper-slide-shadow-right {
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  .swiper-container-cube .swiper-cube-shadow {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: 0;
+  }
+  .swiper-container-cube .swiper-cube-shadow:before {
+    content: '';
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+  }
+  .swiper-container-flip {
+    overflow: visible;
+  }
+  .swiper-container-flip .swiper-slide {
+    pointer-events: none;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    z-index: 1;
+  }
+  .swiper-container-flip .swiper-slide .swiper-slide {
+    pointer-events: none;
+  }
+  .swiper-container-flip .swiper-slide-active,
+  .swiper-container-flip .swiper-slide-active .swiper-slide-active {
+    pointer-events: auto;
+  }
+  .swiper-container-flip .swiper-slide-shadow-top,
+  .swiper-container-flip .swiper-slide-shadow-bottom,
+  .swiper-container-flip .swiper-slide-shadow-left,
+  .swiper-container-flip .swiper-slide-shadow-right {
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  
+  /*!
+    Flashy - jQuery Lightbox & Popup Plugin
+    @name flashy.css
+    @description jQuery plugin for creating responsive lightboxes & popups with focus on performance and effects
+    @author Max Lavretiev
+    @site http://www.avirtum.com
+    @copyright (c) Max Lavretiev
+  */
+  body.flashy-active {
+      overflow: hidden;
+  }
+  
+      body.flashy-active .flashy-overlay {
+          opacity: 1;
+          pointer-events: auto;
+      }
+  
+  .flashy-overlay {
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      -webkit-transform: translateZ(1000px);
+      transform: translateZ(1000px);
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      background-color: rgba(233, 246, 244, 0.66);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1001;
+      overflow: hidden;
+  }
+  
+  .flashy-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      outline: none;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      z-index: 1002;
+  }
+  
+      .flashy-container .flashy-content-outer {
+          position: absolute;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row;
+      }
+  
+      .flashy-container .flashy-content-inner {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          min-width: 100vw;
+          min-height: 100vh;
+          padding: 30px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+      }
+  
+      .flashy-container .flashy-content {
+          display: inline-block;
+          padding: 15px;
+          /*background: #fff;*/
+          opacity: 0;
+          pointer-events: none;
+      }
+  
+          .flashy-container .flashy-content * {
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+          }
+  
+          .flashy-container .flashy-content.flashy-show {
+              opacity: 1;
+              pointer-events: auto;
+          }
+  
+          .flashy-container .flashy-content.flashy-error {
+              color: #a94442;
+              background-color: #f2dede;
+              border: 1px solid #a94442;
+              -webkit-box-shadow: 0 0 40px rgba(169, 68, 66, 0.9);
+              box-shadow: 0 0 40px rgba(169, 68, 66, 0.9);
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 14px;
+              width: auto !important;
+          }
+  
+          .flashy-container .flashy-content.flashy-image img {
+              max-width: 100%;
+          }
+  
+          .flashy-container .flashy-content.flashy-inline,
+          .flashy-container .flashy-content.flashy-ajax {
+              width: 100%;
+          }
+  
+          .flashy-container .flashy-content.flashy-iframe iframe {
+              width: 100%;
+              height: 70vh;
+              border: none;
+          }
+  
+          .flashy-container .flashy-content.flashy-video {
+              width: 100%;
+              height: 260px;
+          }
+  
+              .flashy-container .flashy-content.flashy-video iframe {
+                  width: 100%;
+                  height: 100%;
+                  border: none;
+                  background-color: #000;
+                  border-radius: 12px;
+              }
+  
+  @media (min-width: 768px) {
+      .flashy-container .flashy-content.flashy-iframe {
+          width: 90%;
+          height: 70vh;
+      }
+  
+      .flashy-container .flashy-content.flashy-video {
+          width: 640px;
+          height: 360px;
+      }
+  }
+  
+  @media (min-width: 992px) {
+      .flashy-container .flashy-content.flashy-inline,
+      .flashy-container .flashy-content.flashy-ajax {
+          max-width: 1200px;
+          width: 80%;
+      }
+  
+      .flashy-container .flashy-content.flashy-iframe {
+          width: 90%;
+          height: 70vh;
+      }
+  
+      .flashy-container .flashy-content.flashy-video {
+          width: 960px;
+          height: 540px;
+      }
+  }
+  
+  .flashy-overlay.flashy-fullscreen .flashy-numeration,
+  .flashy-overlay.flashy-fullscreen .flashy-prev,
+  .flashy-overlay.flashy-fullscreen .flashy-next,
+  .flashy-overlay.flashy-fullscreen .flashy-title {
+      opacity: 0 !important;
+      pointer-events: none !important;
+  }
+  
+  .flashy-overlay .flashy-numeration {
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0 10px;
+      line-height: 38px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.8);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      letter-spacing: .6px;
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1003;
+  }
+  
+      .flashy-overlay .flashy-numeration.flashy-show {
+          opacity: 1;
+          pointer-events: auto;
+      }
+  
+  .flashy-overlay .flashy-title {
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 0 10px;
+      line-height: 38px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.8);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      letter-spacing: .6px;
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1003;
+  }
+  
+      .flashy-overlay .flashy-title.flashy-show {
+          pointer-events: auto;
+          opacity: 1;
+      }
+  
+  .flashy-overlay .flashy-close {
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      z-index: 9999;
+      cursor: pointer;
+      margin: 12px 14px;
+      padding: 2px 12px 0;
+      font-size: 31px;
+      line-height: 37px;
+      top: 0;
+      cursor: pointer;
+  }
+  
+  .flashy-overlay .flashy-close:hover {
+      opacity: 1;
+  }
+  
+  .flashy-overlay .flashy-prev,
+  .flashy-overlay .flashy-next {
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      position: absolute;
+      top: 50vh;
+      width: 28px;
+      height: 28px;
+      margin-top: -34px;
+      padding: 20px 5px;
+      background-color: rgba(0, 0, 0, 0.8);
+      background-repeat: no-repeat;
+      background-position: center center;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1003;
+  }
+  
+      .flashy-overlay .flashy-prev.flashy-show,
+      .flashy-overlay .flashy-next.flashy-show {
+          pointer-events: auto;
+          opacity: 0.8;
+      }
+  
+          .flashy-overlay .flashy-prev.flashy-show:hover,
+          .flashy-overlay .flashy-next.flashy-show:hover {
+              opacity: 1;
+          }
+  
+  .flashy-overlay .flashy-prev {
+      left: 0px;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyOHB4IiBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjggMjgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0zLjI5MywxNC43MDdMMTEsMjIuNDE0TDEyLjQxNCwyMWwtNi02SDI0YzAuNTUzLDAsMS0wLjQ0OCwxLTFzLTAuNDQ3LTEtMS0xSDYuNDE0bDYtNkwxMSw1LjU4NmwtNy43MDcsNy43MDdDMi45MDIsMTMuNjg0LDIuOTAyLDE0LjMxNiwzLjI5MywxNC43MDd6Ii8+PC9zdmc+');
+  }
+  
+  .flashy-overlay .flashy-next {
+      right: 0px;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyOHB4IiBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjggMjgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0yNC43MDcsMTMuMjkzTDE3LDUuNTg2TDE1LjU4Niw3bDYsNkg0Yy0wLjU1MywwLTEsMC40NDgtMSwxczAuNDQ3LDEsMSwxaDE3LjU4NmwtNiw2TDE3LDIyLjQxNGw3LjcwNy03LjcwN0MyNS4wOTgsMTQuMzE2LDI1LjA5OCwxMy42ODQsMjQuNzA3LDEzLjI5M3oiLz48L3N2Zz4=');
+  }
+  
+  .flashy-preloader {
+      -webkit-transition: all .5s;
+      transition: all .5s;
+      -webkit-animation: flashy-spin 1200ms infinite linear;
+      animation: flashy-spin 1200ms infinite linear;
+      width: 80px;
+      height: 80px;
+      background-color: rgba(0, 0, 0, 0.25);
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTM4cHgiIGhlaWdodD0iMTM4cHgiIHZpZXdCb3g9IjgxIDgxIDEzOCAxMzgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgODEgODEgMTM4IDEzOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIxOSwxNTBjMC0zOC4xLTMwLjktNjktNjktNjljLTM4LjEwMSwwLTY5LDMwLjktNjksNjkgTTkyLjcsMTUwYzAtMzEuNSwyNS41LTU3LjMsNTcuMy01Ny4zczU3LjMsMjUuOCw1Ny4zLDU3LjMiLz48L3N2Zz4=');
+      background-size: cover;
+      border-radius: 100%;
+      -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 2002;
+  }
+  
+      .flashy-preloader.flashy-show {
+          opacity: 1;
+      }
+  
+  @-webkit-keyframes flashy-spin {
+      from {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+      }
+  
+      to {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+      }
+  }
+  
+  @keyframes flashy-spin {
+      from {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+      }
+  
+      to {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+      }
+  }

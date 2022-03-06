@@ -1,0 +1,1370 @@
+/* Minification failed. Returning unminified contents.
+(1175,21): run-time error CSS1063: Expected calculation unit, found '$'
+(1175,21): run-time error CSS1064: Expected calculation product, found '$'
+(1175,21): run-time error CSS1065: Expected calculation sum, found '$'
+(1175,21): run-time error CSS1034: Expected closing parenthesis, found '$'
+(1175,21): run-time error CSS1042: Expected function, found '$'
+(1175,21): run-time error CSS1062: Expected semicolon or closing curly-brace, found '$'
+ */
+@charset "UTF-8";
+/*################################## Palette Colors ################################## */
+/*################################## Brand Colors ################################## */
+/*################################## Brand Colors ################################## */
+/* ############################# Default properties ############################ */
+/* ###################### Screens width #######################  */
+/* ###################### Header Height #######################  */
+/* ###################### GLOBAL UNREAD MESSAGE COLORS  #######################  */
+/* ###################### GLOBAL UNREAD MESSAGE COLORS  #######################  */
+/* ###################################  Social Icons  ####################################  */
+/*################################## Global textual link color ################################## */
+.game .name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  width: 96%; }
+
+.game:not(.provider26-2521) img {
+  transition: transform  0.4s ease;
+  will-change: transform;
+  height: auto; }
+
+.game:not(.provider26-2521) .name {
+  opacity: 0;
+  font-weight: 400; }
+
+.game:not(.provider26-2521):hover .name, .game:not(.provider26-2521):hover .play-for-real-game {
+  opacity: 1;
+  animation: opacity 0.2s ease; }
+
+.game:not(.provider26-2521):hover .favourite-game {
+  display: block; }
+
+.game:not(.provider26-2521):hover img {
+  transform: scale(1.03); }
+
+.game.provider26-2521 img {
+  transition: opacity 1s ease-in-out;
+  height: auto; }
+
+.game.provider26-2521 .provider26-2521 {
+  position: absolute;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  border: none; }
+
+.game.provider26-2521:hover .provider26-2521 {
+  opacity: 0; }
+
+.game .game-hover {
+  align-items: center;
+  padding: 6px;
+  opacity: 0; }
+  @media screen and (max-width: 767px) {
+    .game .game-hover .name {
+      font-size: 11px;
+      text-transform: capitalize; } }
+
+@media screen and (max-width: 767px) {
+  .game:hover .play-btn {
+    display: none; } }
+
+.game:hover .game-hover {
+  top: 0;
+  opacity: 1;
+  transition-delay: 150ms;
+  transition-duration: 200ms;
+  transition-property: opacity; }
+
+.game .image {
+  position: absolute; }
+
+.game .name, .game .Game-Provider-Placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  margin: 4px 0; }
+
+.play-btn {
+  display: flex;
+  padding: 8px 0; }
+  .play-btn::before {
+    content: '\e960';
+    font: normal normal normal 15px/1 iconFonts;
+    font-size: clamp(37px, 3vw, 55px);
+    color: #fff;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: all 0.4s; }
+    @media screen and (max-width: 1024px) and (min-width: 330px) {
+      .play-btn::before {
+        font-size: 40px; } }
+    @media screen and (max-width: 330px) {
+      .play-btn::before {
+        font-size: 29px; } }
+  .play-btn:hover:before {
+    transform: scale(1.1); }
+
+.jackpot-game .play-btn {
+  font-size: clamp(37px, 4vw, 55px); }
+
+.game-mode .hero-swiper-carousel,
+.game-mode .hero-swiper-pagination {
+  display: none; }
+
+.game-mode #rcasino {
+  background: none;
+  margin-top: 35px; }
+  .game-mode #rcasino h1 {
+    visibility: hidden; }
+  .game-mode #rcasino .Navbar nav,
+  .game-mode #rcasino .GamesList-loadmore,
+  .game-mode #rcasino .Navbar-bottom,
+  .game-mode #rcasino .GameList-Provider-Item, .game-mode #rcasino .GameList-HomePage-Item {
+    display: none; }
+
+.game-mode .top-menu,
+.game-mode .footers-container-second,
+.game-mode footer {
+  display: block; }
+
+.game-mode #gamePlayContainer {
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 1421px;
+  border-bottom: 10px solid #000;
+  border-radius: 4px; }
+
+.game-mode .games {
+  min-height: 70vh;
+  height: auto; }
+
+.game-mode header .navbar-brand {
+  display: block; }
+
+.game-mode .play-for-fun-logo {
+  display: none; }
+
+.game-mode:fullscreen .top-menu,
+.game-mode:fullscreen .navbar-default,
+.game-mode:fullscreen .footers-container-second,
+.game-mode:fullscreen footer,
+.game-mode:fullscreen #rcasino,
+.game-mode:fullscreen .random-games,
+.game-mode:fullscreen .rc {
+  display: none; }
+
+.game-mode:fullscreen #virtualsportsPlayContainer,
+.game-mode:fullscreen .game-container-iframe-holder-wrapper {
+  max-width: 100%; }
+
+.game-mode:fullscreen .games {
+  max-height: 100%;
+  min-height: 100vh; }
+
+.game-mode:fullscreen #gamePlayContainer, .game-mode:fullscreen #liveCasinoContainer .game-play-frame,
+.game-mode:fullscreen .live-casino.vs .game-container-iframe-holder iframe {
+  max-height: 100%;
+  max-width: 100%;
+  min-height: calc(100vh - 53px);
+  overflow: visible; }
+
+.game-mode:fullscreen a.active.active .realtime {
+  display: none; }
+
+.game-mode #randomGamesContaiener {
+  height: auto;
+  opacity: 1;
+  z-index: 1; }
+
+.game-mode .content-wrapper {
+  background: none; }
+
+.game-mode .header-bg {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); }
+
+.game-mode .game-play-titlebar {
+  height: 53px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.game-mode .game-play-title {
+  font-size: 16px;
+  font-weight: bold; }
+
+.game-mode .game-play-time {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 10px; }
+
+.game-mode .fav-toggle {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 100px;
+  z-index: 10;
+  margin-top: 5px; }
+  .game-mode .fav-toggle:before {
+    content: '\e944';
+    font: normal normal normal 16px/1 iconFonts;
+    vertical-align: middle;
+    position: absolute;
+    line-height: 32px;
+    left: 9px;
+    color: #fff; }
+
+.game-mode .fs,
+.game-mode .efs {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative; }
+  .game-mode .fs:before,
+  .game-mode .efs:before {
+    content: '\ea81';
+    font: normal normal normal 16px/1 iconFonts;
+    position: absolute;
+    color: #fff;
+    left: 1px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 32px;
+    font-size: 14px; }
+    .game-mode .fs:before:hover,
+    .game-mode .efs:before:hover {
+      color: #fff; }
+  .game-mode .fs .icon,
+  .game-mode .efs .icon {
+    display: none; }
+
+.game-mode .game-container-iframe-holder {
+  display: flex;
+  flex-direction: column; }
+
+.game-mode .game-play-frame {
+  flex: 1; }
+
+.game-mode .game-container-iframe-holder iframe {
+  max-height: calc(100% - 53px);
+  padding-top: 53px; }
+
+.game-mode .play-for-fun-filters {
+  display: none; }
+
+.game-mode .game-container-iframe-holder-wrapper {
+  width: 100%;
+  flex: 1 1 0%;
+  position: relative; }
+  .game-mode .game-container-iframe-holder-wrapper .play-for-fun-filters {
+    display: block;
+    position: absolute;
+    z-index: 9;
+    top: 10px;
+    right: 10px;
+    padding-right: 7px; }
+    .game-mode .game-container-iframe-holder-wrapper .play-for-fun-filters .favourite-toggle {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      position: relative;
+      visibility: hidden; }
+      .game-mode .game-container-iframe-holder-wrapper .play-for-fun-filters .favourite-toggle:before {
+        content: '\e944';
+        font: normal normal normal 16px/1 iconFonts;
+        vertical-align: middle;
+        position: absolute;
+        line-height: 32px;
+        left: 9px; }
+    .game-mode .game-container-iframe-holder-wrapper .play-for-fun-filters .winners-toggle {
+      display: inline-block;
+      background: #242424;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      position: relative; }
+      .game-mode .game-container-iframe-holder-wrapper .play-for-fun-filters .winners-toggle:before {
+        content: '\ea7c';
+        font: normal normal normal 13px/1 iconFonts;
+        vertical-align: middle;
+        position: absolute;
+        line-height: 32px;
+        left: 9px;
+        color: #fff; }
+      .game-mode .game-container-iframe-holder-wrapper .play-for-fun-filters .winners-toggle.active:before {
+        color: #ffce00; }
+    .game-mode .game-container-iframe-holder-wrapper .play-for-fun-filters .full-screen.active .efs {
+      display: inline-block !important; }
+    .game-mode .game-container-iframe-holder-wrapper .play-for-fun-filters .close {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative; }
+      .game-mode .game-container-iframe-holder-wrapper .play-for-fun-filters .close:after {
+        content: '\e926';
+        font: normal normal normal 15px/1 iconFonts;
+        position: absolute;
+        line-height: 32px;
+        left: 9px;
+        color: #fff; }
+  .game-mode .game-container-iframe-holder-wrapper .game-container-iframe-holder {
+    padding: 0 10px; }
+
+.game-mode .weekly-players-holder {
+  width: 368px; }
+  .game-mode .weekly-players-holder.active {
+    width: 0; }
+  .game-mode .weekly-players-holder h1 {
+    font-size: 24px;
+    font-weight: 400; }
+    .game-mode .weekly-players-holder h1:before {
+      content: '\ea7c';
+      font: normal normal normal 13px/1 iconFonts;
+      vertical-align: middle;
+      margin-right: 9px; }
+  .game-mode .weekly-players-holder .right-arrow {
+    left: auto;
+    right: 2px;
+    top: 2px; }
+    .game-mode .weekly-players-holder .right-arrow .icon-arrow:before {
+      content: '\ea5c'; }
+  .game-mode .weekly-players-holder.active .right-arrow {
+    display: none; }
+
+.game-mode #liveCasinoContainer > .games {
+  padding-bottom: 0px;
+  box-sizing: content-box; }
+
+body.body-casino:not(.game-mode) {
+  background-image: none !important; }
+  body.body-casino:not(.game-mode) .games {
+    min-height: 0;
+    padding: 0; }
+
+.live-casino.vs .GamesList .game:hover .favourite-game {
+  display: none; }
+
+.live-casino.vs .game-container-iframe-holder-wrapper {
+  width: 100%;
+  max-width: 1380px; }
+
+.live-casino.vs .game-container-iframe-holder iframe {
+  min-width: 100%;
+  max-width: 1326px;
+  max-height: 100%;
+  min-height: 530px; }
+
+.live-casino.vs #virtualsportsPlayContainer {
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 1326px; }
+
+.live-casino.vs .full-screen {
+  display: inline-block !important; }
+
+.App {
+  min-height: 300px; }
+
+.game-mode .App {
+  min-height: 0; }
+
+#rcasino {
+  background: #222224; }
+
+.rc {
+  padding: 32px 0; }
+
+.casino-loading {
+  min-height: 200px;
+  position: relative; }
+
+.GamesList-loadmore {
+  width: 338px;
+  height: 48px;
+  border-radius: 4px;
+  border: solid 1px #c6c6c6;
+  opacity: 0.8;
+  font-size: 20px;
+  font-weight: 500;
+  color: #d8d8d8;
+  background-color: transparent;
+  margin: 30px auto;
+  display: block;
+  cursor: pointer; }
+
+.GamesList .ready-to-go {
+  display: none; }
+
+.GamesList .game {
+  transition: transform 0.2s ease; }
+  .GamesList .game .game-hover .play-for-real-game::before {
+    font-size: clamp(44px, 5vw, 62px); }
+  .GamesList .game .favourite-game {
+    bottom: 8px;
+    right: 6px;
+    display: none;
+    z-index: 14;
+    top: auto; }
+    .GamesList .game .favourite-game .icon {
+      font-size: 19px;
+      color: #fff; }
+      .GamesList .game .favourite-game .icon.selected {
+        font-size: 17px; }
+  .GamesList .game:hover img {
+    transform: none;
+    will-change: auto; }
+  .GamesList .game:hover .image img {
+    transform: scale(1.03); }
+  .GamesList .game:hover .game-hover {
+    background: rgba(34, 34, 34, 0.72); }
+  .GamesList .game:hover .favourite-game {
+    display: block; }
+  .GamesList .game .labels-wrapper {
+    border-radius: 2px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.6);
+    margin: 9px 9px 0 9px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.1;
+    min-width: auto;
+    text-align: center;
+    padding: 3px 5px 2px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…JHcmFkaWVudD48cGF0aCBmaWxsPSJ1cmwoI2EpIiBkPSJNMCAwaDF2MUgweiIvPjwvc3ZnPg==);
+    background-image: linear-gradient(90deg, #fb5e59, #e72f35);
+    transform: skewX(-10deg);
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    z-index: 2; }
+  .GamesList .game .labels-wrapper span {
+    font-size: 10px;
+    text-transform: none;
+    color: #fff; }
+  .GamesList .game label.rating {
+    display: none; }
+
+.GamesList .grid.grid--1of5 .grid-cell {
+  max-height: 275px; }
+
+.anonymous .GamesList .game:hover .favourite-game {
+  display: none; }
+
+.Game-Provider-Image {
+  width: 50%;
+  margin: auto; }
+  @media screen and (max-width: 500px) {
+    .Game-Provider-Image {
+      width: 90%; } }
+
+.jackpot-game .Game-Provider-Image {
+  width: 35%; }
+  @media screen and (max-width: 500px) {
+    .jackpot-game .Game-Provider-Image {
+      width: 75%; } }
+
+.GameList-Provider-Title {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 22px; }
+  .GameList-Provider-Title::before {
+    content: attr(data-first-letter);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 57px;
+    height: 57px;
+    display: inline-block;
+    text-align: center;
+    line-height: 53px;
+    margin-right: 12px; }
+
+.GameList-noFavGames {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  color: #a3a3a3;
+  padding: 50px; }
+  .GameList-noFavGames::before {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url("../../../images/unhappy.svg") no-repeat;
+    background-size: contain;
+    margin: 70px auto 30px; }
+
+@media (max-width: 768px) {
+  .GamesList .game .play-for-real-game {
+    height: 100%; }
+  .logged .rc:not(.vs) .GamesList .favourite-game {
+    display: block; } }
+
+.Navbar nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.Navbar li {
+  font-size: 16px;
+  font-weight: bold; }
+
+.game-mode .Navbar {
+  padding: 0 50px; }
+
+.Navbar-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .Navbar-top h1 {
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 0; }
+    .Navbar-top h1 .icon::before {
+      content: "\ea54";
+      color: #1fb5b5;
+      font-size: 29px;
+      margin-right: 8px; }
+    .Navbar-top h1.heading-livecasino .icon::before {
+      content: "\ea53"; }
+    .Navbar-top h1.heading-virtualsports .icon::before {
+      content: "\ea51"; }
+
+.Navbar-bottom {
+  display: flex; }
+
+.mobileMenuCnt {
+  flex-grow: 1;
+  width: 70%; }
+
+.Navbar-list {
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 1;
+  position: relative; }
+  .Navbar-list li {
+    display: inline-block;
+    margin-right: 24px;
+    position: relative;
+    line-height: 40px;
+    white-space: nowrap;
+    flex-shrink: 0; }
+    .Navbar-list li.Mobile-SortPanel {
+      display: none; }
+
+.NavDropdownCnt {
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 24px; }
+  .NavDropdownCnt.open {
+    background-color: #131315;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    position: relative; }
+  .NavDropdownCnt .NavDropdownCnt-toggler {
+    color: #d8d8d8;
+    white-space: nowrap; }
+    .NavDropdownCnt .NavDropdownCnt-toggler:hover {
+      color: #d8d8d8; }
+    .NavDropdownCnt .NavDropdownCnt-toggler::before {
+      background: url("../../../images/filters.svg") no-repeat;
+      content: '';
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-bottom: -4px;
+      margin-right: 5px;
+      margin-left: 5px; }
+    .NavDropdownCnt .NavDropdownCnt-toggler::after {
+      background: url("../../../images/dropdown.svg") no-repeat;
+      content: '';
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background-position: 50% 90%;
+      margin-right: 5px; }
+
+.NavDropdown {
+  width: 220px;
+  display: none;
+  position: absolute;
+  background: #131315;
+  border-radius: 4px;
+  padding: 0 16px;
+  z-index: 10000;
+  left: 0;
+  max-height: 400px;
+  overflow: auto; }
+  .NavDropdown.open {
+    display: block; }
+  .NavDropdown li {
+    display: block;
+    line-height: 46px;
+    font-size: 14px; }
+    .NavDropdown li:last-child {
+      margin-bottom: 10px; }
+    .NavDropdown li.NavDropdown-ClearCnt {
+      line-height: 14px;
+      text-align: right;
+      margin-right: -10px;
+      margin-bottom: -8px; }
+    .NavDropdown li a.active-provider, .NavDropdown li a:hover {
+      color: #518335;
+      text-decoration: none; }
+  .NavDropdown input[type="checkbox"] + .checkbox {
+    margin-right: 13px; }
+    .NavDropdown input[type="checkbox"] + .checkbox::before {
+      width: 20px;
+      height: 20px;
+      padding: 4px 3px 0 3px;
+      background: #fff; }
+  .NavDropdown input[type=checkbox]:checked ~ .checkbox::before,
+  .NavDropdown input[type=checkbox].checked ~ .checkbox::before {
+    background: #131315;
+    border-color: #fff; }
+  .NavDropdown label {
+    cursor: pointer; }
+
+.NavDropdown-Clear {
+  font-size: 10px;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  margin-top: 5px;
+  cursor: pointer;
+  color: #fff; }
+
+.Navbar-mobile-toggle {
+  display: none;
+  line-height: 40px;
+  color: #d8d8d8;
+  font-size: 16px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  white-space: nowrap; }
+  .Navbar-mobile-toggle::before {
+    background: url("../../../images/filters.svg") no-repeat;
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-bottom: -4px;
+    margin-right: 5px;
+    margin-left: 5px; }
+  .Navbar-mobile-toggle::after {
+    background: url("../../../images/dropdown.svg") no-repeat;
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-position: 50% 90%; }
+
+@media (max-width: 768px) {
+  .Navbar nav {
+    flex-direction: column;
+    max-width: 250px;
+    width: 100%;
+    padding-left: 20px; }
+    .Navbar nav .Navbar-list,
+    .Navbar nav .SortPanel {
+      display: none; }
+    .Navbar nav.open {
+      max-height: 70vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background: #131315;
+      position: absolute; }
+      .Navbar nav.open .SortPanel {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0; }
+        .Navbar nav.open .SortPanel a {
+          margin-left: 0; }
+      .Navbar nav.open .Navbar-list {
+        display: flex;
+        flex-direction: column;
+        width: auto; }
+        .Navbar nav.open .Navbar-list .NavDropdownCnt {
+          order: 1; }
+          .Navbar nav.open .Navbar-list .NavDropdownCnt::after {
+            display: none; }
+          .Navbar nav.open .Navbar-list .NavDropdownCnt .NavDropdown {
+            display: block;
+            padding-left: 0;
+            position: static; }
+  .Navbar-mobile-toggle {
+    display: inline-block; }
+    .Navbar-mobile-toggle.open {
+      background-color: #131315;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px; }
+  .mobileMenuCnt {
+    z-index: 3;
+    text-align: left;
+    position: relative; }
+  html[dir=rtl] .Navbar-bottom .mobileMenuCnt {
+    position: relative;
+    width: 60%; }
+  html[dir=rtl] .Navbar nav.open {
+    left: 0; }
+  .Navbar-top {
+    flex-direction: column; }
+  .game .game-hover .name {
+    display: block; } }
+
+.Navbar-reversed nav {
+  max-width: 100%; }
+  @media (max-width: 768px) {
+    .Navbar-reversed nav {
+      flex-direction: row;
+      max-width: 100%;
+      padding-left: 0; } }
+  .Navbar-reversed nav .Navbar-list {
+    display: block; }
+    .Navbar-reversed nav .Navbar-list .swiper-wrapper {
+      flex-direction: row; }
+    .Navbar-reversed nav .Navbar-list::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(19, 20, 23, 0) 0%, #131417 100%);
+      top: 0;
+      right: 0;
+      z-index: 2; }
+    @media (max-width: 768px) {
+      .Navbar-reversed nav .Navbar-list .Mobile-SortPanel {
+        display: block; } }
+
+.Navbar-reversed .Navbar-mobile-toggle {
+  display: none; }
+
+.Navbar-reversed .Navbar-top {
+  flex-direction: row; }
+
+.Navbar-reversed .NavDropdownCnt {
+  margin-right: 0; }
+
+.SearchForm {
+  position: relative; }
+
+.SearchForm-input {
+  border: 1px solid #c6c6c6;
+  border-radius: 4px;
+  width: 373px;
+  height: 30px;
+  font-size: 11px;
+  padding-left: 9px;
+  background: url("../../../images/zoom-out.svg") no-repeat transparent;
+  background-position: calc(100% - 10px) center;
+  color: #c6c6c6; }
+  .SearchForm-input:focus, .SearchForm-input:active {
+    background-color: #000; }
+
+@media (max-width: 400px) {
+  .SearchForm-input {
+    width: 100%; } }
+
+.SearchResultsDropdown {
+  width: 373px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+  background-color: #131315;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  z-index: 10;
+  overflow: auto;
+  top: 40px;
+  display: none;
+  max-height: 270px; }
+  .SearchResultsDropdown.open {
+    display: block; }
+  .SearchResultsDropdown.more {
+    max-height: 400px; }
+  .SearchResultsDropdown .ready-to-go {
+    display: block; }
+  .SearchResultsDropdown .promotion-animation {
+    animation: none;
+    transform: none; }
+  .SearchResultsDropdown .grid-wrap-row {
+    flex-direction: column; }
+  .SearchResultsDropdown .grid--1of5 .grid-cell {
+    max-width: 100%; }
+    .SearchResultsDropdown .grid--1of5 .grid-cell.game-gray {
+      filter: grayscale(100%);
+      cursor: default; }
+    .SearchResultsDropdown .grid--1of5 .grid-cell .image {
+      max-width: 37px;
+      margin: 14px; }
+  .SearchResultsDropdown .game {
+    background-color: transparent;
+    border-radius: 0; }
+    .SearchResultsDropdown .game::after {
+      content: '';
+      position: absolute;
+      background: url("../../../images/arrow-right.svg") no-repeat;
+      width: 22px;
+      height: 16px;
+      right: 18px;
+      top: 0;
+      bottom: 0;
+      margin: auto; }
+    .SearchResultsDropdown .game:hover .game-hover {
+      background-color: transparent; }
+    .SearchResultsDropdown .game:hover img {
+      transform: none; }
+    .SearchResultsDropdown .game .game-hover {
+      top: 0;
+      opacity: 1;
+      justify-content: center; }
+      .SearchResultsDropdown .game .game-hover a::before {
+        display: none; }
+    .SearchResultsDropdown .game .name {
+      padding-top: 0;
+      text-align: left;
+      padding-left: 65px;
+      font-size: 16px;
+      opacity: 1;
+      cursor: pointer;
+      width: 100%; }
+      .SearchResultsDropdown .game .name.mnt {
+        cursor: default; }
+    .SearchResultsDropdown .game a {
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      position: absolute; }
+
+.SearchResultsDropdown-noResults {
+  color: #afafaf;
+  font-size: 12px;
+  text-align: center;
+  padding: 18px 10px; }
+
+html[dir=rtl] .SearchResultsDropdown .game .play-for-real-game {
+  top: 0;
+  transform: none;
+  height: 100%; }
+
+html[dir=rtl] .SearchResultsDropdown .game .name {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 65px;
+  text-align: right;
+  line-height: 1; }
+
+html[dir=rtl] .SearchResultsDropdown .game .game-hover {
+  justify-content: center; }
+
+html[dir=rtl] .SearchResultsDropdown .game::after {
+  right: auto;
+  left: 18px;
+  transform: rotate(180deg); }
+
+@media (max-width: 768px) {
+  .SearchResultsDropdown .game .game-hover .name {
+    display: block; }
+  .SearchResultsDropdown .game:hover .name {
+    opacity: 1; } }
+
+.mobile .game .game-hover .name {
+  display: block;
+  opacity: 1; }
+
+.SortPanel {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: 5px;
+  flex: 0 1 auto; }
+  .SortPanel a {
+    margin-left: 19px;
+    color: #d8d8d8;
+    opacity: 0.8; }
+    .SortPanel a:hover {
+      text-decoration: underline; }
+    .SortPanel a.active {
+      color: #518335;
+      text-decoration: underline; }
+    .SortPanel a.fav-icon::before {
+      content: "\e944";
+      font: normal normal normal 15px/1 iconFonts;
+      margin-right: 5px; }
+  .SortPanel::after {
+    width: 40px;
+    background: linear-gradient(90deg, rgba(19, 20, 22, 0) 0, #222224 57%, #222224 97%);
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 0;
+    height: 100%;
+    z-index: 2; }
+
+@media (max-width: 768px) {
+  .SortPanel::after {
+    display: none; } }
+
+.Navbar-top {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  z-index: 3; }
+  @media screen and (max-width: 768px) {
+    .Navbar-top {
+      position: relative; } }
+  .Navbar-top h1 {
+    display: none; }
+
+.Navbar-bottom {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 5px;
+  padding-bottom: 35px; }
+  @media screen and (max-width: 768px) {
+    .Navbar-bottom {
+      padding-bottom: 6px;
+      display: block; } }
+
+@media screen and (max-width: 768px) {
+  .mobileMenuCnt {
+    margin-top: 11px;
+    width: 100%; } }
+
+.Navbar-mobile-toggle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 37px;
+  color: #c7c7cc;
+  padding: 0 35px 0 16px;
+  position: relative;
+  z-index: 2; }
+  @media screen and (max-width: 768px) {
+    .Navbar-mobile-toggle {
+      display: none; } }
+  .Navbar-mobile-toggle.open {
+    box-shadow: 0 0 0 0 #ff8d00, 0 -1px 0 0 #ff8d00, 1px 0 0 0 #ff8d00, -1px 0 0 0 #ff8d00;
+    background-color: #0f212d; }
+  .Navbar-mobile-toggle::before {
+    content: none; }
+  .Navbar-mobile-toggle::after {
+    padding: 0;
+    background-image: none;
+    content: "\ea1a";
+    transform: rotate(-90deg);
+    position: absolute;
+    top: -3px;
+    right: 7px;
+    font-size: 19px;
+    line-height: 47px;
+    font-family: 'iconFonts';
+    width: auto;
+    height: auto; }
+
+.GameList-noFavGames {
+  font-size: 18px;
+  font-weight: 500; }
+
+.Navbar {
+  position: relative; }
+  .Navbar nav {
+    width: calc(100% - 200px); }
+    @media (max-width: 768px) {
+      .Navbar nav {
+        flex-direction: column;
+        max-width: 100%;
+        width: 100% !important;
+        padding: 0; }
+        .Navbar nav .Navbar-list {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap; } }
+    @media (max-width: 768px) {
+      .Navbar nav.open {
+        position: relative;
+        background-color: transparent; }
+        .Navbar nav.open .SortPanel {
+          display: none; } }
+  .Navbar li {
+    font-weight: 500; }
+    .Navbar li a {
+      line-height: initial;
+      display: block;
+      color: #c7c7cc;
+      font-size: 14px; }
+
+.Navbar-list {
+  position: relative; }
+  .Navbar-list::-webkit-scrollbar {
+    height: 0; }
+  @media screen and (max-width: 768px) {
+    .Navbar-list {
+      padding-bottom: 0; } }
+  @media (max-width: 768px) {
+    .Navbar-list li.Mobile-SortPanel {
+      display: block; } }
+
+.NavDropdown li {
+  line-height: 35px;
+  white-space: nowrap; }
+  .NavDropdown li a.active-provider, .NavDropdown li a:hover {
+    color: #ff8d00;
+    text-decoration: none; }
+
+.NavDropdown-Clear {
+  font-size: 12px;
+  margin-top: 12px; }
+
+.SortPanel {
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  color: #ff8d00; }
+  @media screen and (max-width: 768px) {
+    .SortPanel {
+      margin-top: 0;
+      position: relative; } }
+  .SortPanel a {
+    color: #c7c7cc; }
+    .SortPanel a.active {
+      color: #ff8d00; }
+
+.NavDropdownCnt {
+  font-size: 14px; }
+  @media (max-width: 768px) {
+    .NavDropdownCnt {
+      margin: 11px 0 0 0; } }
+  .NavDropdownCnt.open .NavDropdownCnt-toggler {
+    color: #ff8d00;
+    box-shadow: 0 0 0 0 #ff8d00, 0 -1px 0 0 #ff8d00, 1px 0 0 0 #ff8d00, -1px 0 0 0 #ff8d00;
+    border-radius: 4px 4px 0 0; }
+    @media (max-width: 768px) {
+      .NavDropdownCnt.open .NavDropdownCnt-toggler {
+        border: none; } }
+  .NavDropdownCnt .NavDropdownCnt-toggler {
+    color: #c7c7cc;
+    display: inline-block;
+    position: relative;
+    padding: 8px 35px 8px 16px; }
+    @media (max-width: 768px) {
+      .NavDropdownCnt .NavDropdownCnt-toggler {
+        border: none;
+        position: relative;
+        display: block;
+        box-shadow: 0px 0px 0px 1px #656565;
+        height: 36px;
+        border-radius: 4px;
+        padding: 8px 35px 8px 9px; } }
+    .NavDropdownCnt .NavDropdownCnt-toggler::before {
+      content: none; }
+    .NavDropdownCnt .NavDropdownCnt-toggler:after {
+      padding: 0;
+      background-image: none;
+      content: "\ea1a";
+      transform: rotate(-90deg);
+      position: absolute;
+      top: 10px;
+      right: 17px;
+      font-size: 19px;
+      line-height: 47px;
+      font-family: 'iconFonts'; }
+      @media (max-width: 768px) {
+        .NavDropdownCnt .NavDropdownCnt-toggler:after {
+          position: absolute;
+          right: 15px;
+          top: 8px; } }
+
+.NavDropdown.open.open {
+  box-shadow: 0 0 0 1px #ff8d00;
+  background-color: #141517;
+  left: 0;
+  top: 37px;
+  border-top: none;
+  z-index: 4;
+  border-radius: 0 0 4px 4px; }
+  @media (max-width: 768px) {
+    .NavDropdown.open.open {
+      width: 100%;
+      border-radius: 0 0 4px 4px; } }
+
+.SearchForm {
+  z-index: 1; }
+
+.SearchResultsDropdown {
+  background-color: #e5e5e5;
+  border: solid 1px #c7c7cc;
+  border-top: none;
+  width: 100%;
+  top: 36px;
+  padding: 5px 0 10px;
+  border-radius: 0 0 6px 6px; }
+  .SearchResultsDropdown .grid--1of5 .grid-cell .image {
+    display: none; }
+  .SearchResultsDropdown .game::after {
+    content: none; }
+  .SearchResultsDropdown .game .game-hover {
+    border: none;
+    position: relative;
+    padding: 6px 8px 0;
+    border-radius: 0; }
+    .SearchResultsDropdown .game .game-hover:hover .name {
+      color: #ff8d00; }
+  .SearchResultsDropdown .game .name {
+    display: block;
+    color: #0f212d;
+    border-bottom: solid 1px rgba(13, 123, 254, 0.3);
+    padding: 0 0 6px 0;
+    height: auto;
+    font-size: 13px;
+    transform: scale(1);
+    background-image: none;
+    position: relative; }
+
+.game-mode .random-games {
+  display: none; }
+
+.game-mode .SearchForm {
+  display: none; }
+
+.game-mode .rc {
+  background-color: transparent; }
+
+@media screen and (max-width: 767px) {
+  .header-container .search {
+    position: absolute;
+    padding: 0;
+    top: 74px;
+    left: 15px;
+    right: 15px;
+    width: auto; } }
+
+@media screen and (max-width: 767px) {
+  .header-container .search input {
+    padding: 1px, 10px, 1px, 10px;
+    opacity: 0;
+    height: 0;
+    position: absolute;
+    width: 100%;
+    top: -6px;
+    z-index: 3; } }
+
+.header-container .search .icon-cancel {
+  right: 0;
+  left: auto;
+  top: 0px;
+  bottom: 0px;
+  width: 35px;
+  display: none;
+  cursor: pointer; }
+  .header-container .search .icon-cancel::before {
+    position: relative;
+    top: calc(50% - $icon-registration-size/2);
+    right: 12px; }
+
+.header-container .search .icon-search {
+  pointer-events: none;
+  left: 14px;
+  right: auto;
+  top: calc(50% - 9px); }
+
+.header-container .search .icon {
+  position: absolute;
+  z-index: 3;
+  color: #ff8d00; }
+  @media screen and (max-width: 767px) {
+    .header-container .search .icon {
+      height: 58px;
+      top: -75px;
+      left: auto;
+      right: 0;
+      position: absolute;
+      background: linear-gradient(90deg, rgba(19, 20, 22, 0) 0, #131416 97%);
+      pointer-events: all;
+      cursor: pointer;
+      width: 20%;
+      padding: 21px, 10px, 0, 0; } }
+
+@media screen and (max-width: 767px) {
+  .header-container.active .icon-cancel {
+    display: block; }
+    .header-container.active .icon-cancel:before {
+      left: -2px;
+      top: -2px; }
+  .header-container.active input {
+    opacity: 1;
+    height: 36px;
+    background-color: transparent;
+    border-color: #464853; }
+  .header-container.active ~ .casino-box-shadow,
+  .header-container.active .casino-box-shadow {
+    padding-top: 57px; } }
+
+.rc {
+  background: #1c1d27;
+  padding: 0 0 32px; }
+
+#rcasino {
+  background: #1c1d27; }
+
+.Navbar {
+  padding: 20px 0 0 0; }
+  @media screen and (max-width: 1024px) {
+    .Navbar {
+      padding: 0; } }
+  @media (max-width: 768px) {
+    .Navbar nav .Navbar-list {
+      overflow-x: auto;
+      white-space: nowrap; } }
+
+.GameList-HomePage-Title {
+  color: #ff8d00;
+  font-size: 21px; }
+  @media screen and (max-width: 768px) and (max-width: 551px) {
+    .GameList-HomePage-Title {
+      font-size: 19px; } }
+  @media screen and (max-width: 550px) {
+    .GameList-HomePage-Title {
+      font-size: 16px; } }
+  .GameList-HomePage-Title:before {
+    content: "\e908";
+    font-family: 'betbaba';
+    font-size: 10px;
+    position: relative;
+    top: -3px;
+    padding-right: 6px; }
+    @media screen and (max-width: 768px) {
+      .GameList-HomePage-Title:before {
+        top: -1px;
+        font-size: 9px; } }
+  .GameList-HomePage-Title span {
+    font-size: 16px; }
+    @media screen and (max-width: 550px) {
+      .GameList-HomePage-Title span {
+        font-size: 14px; } }
+
+.Navbar-list {
+  width: 100%;
+  padding-bottom: 10px; }
+  .Navbar-list li {
+    line-height: auto;
+    margin: 1px 10px 1px 0; }
+    .Navbar-list li a {
+      padding: 8px 11px 9px;
+      border-radius: 4px;
+      background-color: #2d2e35;
+      margin: 1px;
+      text-decoration: none; }
+      .Navbar-list li a::before {
+        content: '';
+        border: solid 1px transparent;
+        width: 100%;
+        position: absolute;
+        top: -1px;
+        left: 0px;
+        bottom: -1px;
+        right: 0px;
+        z-index: -1;
+        border-radius: 4px; }
+      @media (hover: hover) {
+        .Navbar-list li a:hover {
+          background-color: #131416;
+          color: #ff8d00;
+          text-decoration: none; }
+          .Navbar-list li a:hover::before {
+            border: solid 1px #ff8d00; } }
+      .Navbar-list li a.active {
+        background-color: #131416;
+        color: #ff8d00;
+        text-decoration: none; }
+        .Navbar-list li a.active::before {
+          border: solid 1px #ff8d00; }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .Navbar-top {
+    top: 2px; } }
+
+.NavDropdown li a {
+  padding: 3px 0; }
+
+.SearchForm {
+  padding-top: 16px; }
+  .SearchForm:before {
+    content: none; }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .SearchForm {
+      padding-top: 0; } }
+
+.SortPanel, .NavDropdownCnt {
+  font-weight: 500; }
+
+.SortPanel {
+  margin: 45px 0 0 0; }
+  .SortPanel::after {
+    content: none; }
+
+.Categories-expand-link {
+  color: #ff8d00;
+  position: relative;
+  top: 10px; }
+
+.NavDropdownCnt {
+  line-height: inherit;
+  margin-right: 15px; }
+  @media (max-width: 768px) {
+    .NavDropdownCnt {
+      margin: 11px 0 0 0; } }
+  .NavDropdownCnt .NavDropdownCnt-toggler {
+    background-color: #2c2f34;
+    border-radius: 4px; }
+  .NavDropdownCnt.open .NavDropdownCnt-toggler {
+    background-color: #141517;
+    z-index: 3; }
+  @media (max-width: 768px) {
+    .NavDropdownCnt .NavDropdownCnt-toggler {
+      background-color: #000000; } }
+
+.SearchForm-input {
+  border-color: #656565;
+  background-color: #000000;
+  width: 195px;
+  font-size: 13px;
+  padding: 1px 10px 1px 9px;
+  height: 36px; }
+  @media screen and (max-width: 768px) {
+    .SearchForm-input {
+      width: 100%; } }
+  .SearchForm-input.has-dropdown {
+    border-radius: 6px 6px 0 0; }
+  .SearchForm-input:focus, .SearchForm-input.active {
+    background-color: #e5e5e5;
+    border-color: #c7c7cc;
+    color: #081d2b; }
+
+.GamesList .game .favourite-game {
+  top: 1px;
+  right: 1px;
+  overflow: hidden;
+  border-radius: 4px; }
+

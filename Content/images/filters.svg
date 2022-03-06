@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-1{fill:none}
+        </style>
+    </defs>
+    <g id="Group_235" transform="translate(-276 -208)">
+        <path id="Rectangle_82" d="M0 0H12V12H0z" class="cls-1" transform="translate(280 212)"/>
+        <g id="Filter" transform="translate(280 212)">
+            <path id="Path_203" fill="#d8d8d8" d="M12.5.5v2.4L7.7 6.1v6.4l-2.4-1.6V6.1L.5 2.9V.5z" transform="translate(-.5 -.5)"/>
+        </g>
+        <g id="Group_228">
+            <path id="Rectangle_83" d="M0 0H20V20H0z" class="cls-1" transform="translate(276 208)"/>
+        </g>
+    </g>
+</svg>

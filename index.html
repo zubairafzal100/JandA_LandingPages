@@ -1,0 +1,2420 @@
+<!DOCTYPE html>
+<html lang="en" dir="">
+  <head>
+    <!--Google Analytics-->
+
+    <title>Betting Site Project</title>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Responsive Meta -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no,maximum-scale=1,user-scalable=no,viewport-fit=cover,minimal-ui"
+    />
+    <meta
+      names="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <!-- Open Graph & Twitter Card -->
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Kanit:800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Theme Stylesheets -->
+    <link rel="stylesheet" href="./css/theme-style.css" />
+    <link rel="stylesheet" href="./css/theme-style.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="./js/jquery.js"></script>
+
+ </head>
+
+  <body class="anonymous betbaba-home" data-fullscreen-element="true" data-desktop="&#39;true&#39;" >
+    <!-- Preloader -->
+    <div class="modal-spinner" style="display: none">
+      <i class="spinner"></i>
+      <span></span>
+    </div>
+
+    <header class="main">
+      <nav
+        class="navbar navbar-default not-logged"
+        data-calculate-profile-position="true"
+      >
+        <div class="headerlogo-container headerlogo-container-react">
+          <div class="navbar-header logo">
+            <!-- <button
+              type="button"
+              class="navbar-btn-container collapsed navbar-toggle"
+              role="navigation"
+              data-toggle="collapse"
+              data-target="#main-nav"
+              aria-expanded="false"
+              aria-controls="#main-nav"
+            >
+              <div>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+            </button> -->
+            <div class="navbar-brand">
+              <a class="" href="./index.html" target="_self">
+                <span class="img img-responsive"></span>
+              </a>
+            </div>
+            <div class="play-for-fun-logo game-name">
+              <h1 id="gameNameHeader"></h1>
+            </div>
+          </div>
+          <div class="header-button-section">
+            <div class="user-login-button">
+              <div class="desktop-login relative">
+                <div id="staticLogin" class="login-wrapper">
+                  <form
+                    action=""
+                    autocomplete="off"
+                    id="loginInLineForm"
+                  >
+                    <div class="relative login-inline-username-cnt">
+                      <input
+                        class="login-inline-username"
+                        data-val="true"
+                        data-val-required="The username is required"
+                        id="login-inline-username"
+                        name="Username"
+                        placeholder="Username"
+                        tabindex="1"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="relative ovderflow-hidden login-inline-pass-cnt"
+                    >
+                      <input
+                        class="login-inline-pass"
+                        data-val="true"
+                        data-val-required="The password is required"
+                        id="login-inline-pass"
+                        name="Password"
+                        placeholder="Password"
+                        tabindex="2"
+                        type="password"
+                      />
+                      <div id="toggle-passwod" class="toggle-passwod">
+                        <span
+                          id="hidden-password-icon"
+                          class="icon hidden-password-icon"
+                        ></span>
+                        <span
+                          id="symbols-password-icon"
+                          class="icon symbols-password-icon"
+                          style="display: none"
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="vtop">
+                      <button
+                        class="btn login uppercase small"
+                        type="submit"
+                        data-target="#loginPopup"
+                        id="submitLoginInLine"
+                        name=""
+                        tabindex="3"
+                      >
+                        <i></i><span>login</span>
+                      </button>
+                      <span class="translation-progress hide">login</span>
+                    </div>
+                    <div class="keep-me-signed-inline">
+                      <input
+                        class="checkbox"
+                        id="keepMeSignedIn"
+                        name="keepMeSignedIn"
+                        type="checkbox"
+                        value="true"
+                      />
+                      <i class="checkbox"></i>
+                      <label for="keepMeSignedIn">Keep me signed in.</label>
+                      <i
+                        id="keep-signed-in-info-icon"
+                        class="icon keep-signed-in-info-icon"
+                      ></i>
+                    </div>
+                    <div class="relative">
+                      <div class="forgot-text forgot-text-holder">
+                        <a
+                          id="forgotPasswordInLineLink"
+                          name="forgotPasswordInLineLink"
+                          >I forgot my Password</a
+                        >
+                      </div>
+                    </div>
+                    <div></div>
+                  </form>
+                  <div
+                    class="validation-summary-valid alert error tooltip-position"
+                    data-valmsg-summary="true"
+                    id="loginValidationSummary"
+                    name=""
+                  >
+                    <ul>
+                      <li style="display: none"></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!--forgot password container-->
+                <div
+                  id="forgotPasswordInlineWrapper"
+                  class="forgot-pass-modal tooltip-position forgotPasswordInlineWrapper mini-modal"
+                  style="display: none"
+                >
+                  <button
+                    type="button"
+                    class="icon close"
+                  ></button>
+                  <div id="forgotPasswordInline" class="modal-content"></div>
+                </div>
+
+                <!--keep me signed in info-->
+                <div
+                  id="keepMeSignedInInfoWrapper"
+                  class="keepMeSignedInInfoWrapper mini-modal"
+                  style="display: none"
+                >
+                  <button type="button" class="icon close" onclick=""></button>
+                  <h6>Keep me signed in.</h6>
+                  <span
+                    >Protect your account. Uncheck if using public/shared
+                    device.</span
+                  >
+                </div>
+              </div>
+
+              <div class="mobile-login-holder">
+                <a
+                  class="small btn login"
+                  data-show-modal="True"
+                  data-target="loginPopup"
+                  href="#"
+                  id="buttonHeaderLogin"
+                  >login</a
+                >
+              </div>
+
+              <div class="register-button-holder">
+                <a
+                  class="small btn register"
+                  data-show-modal="True"
+                  data-target="registerPopup"
+                  href="#"
+                  id="buttonHeaderRegister"
+                  >sign up</a
+                >
+              </div>
+            </div>
+            <!-- <div
+              class="header-icons language-section-big-flag language-section-big-flag-without-name relative"
+            > -->
+              <!-- Language  -->
+
+              <!-- <div class="language-overlay">
+                <img
+                  src="./images/flag-en.png"
+                  class="img-flag"
+                />
+              </div>
+              <section class="language-section">
+                <select class="language" id="languageSelect">
+                  <option
+                    selected="selected"
+                    data-image="/Content/themes/betbaba/images/flags/flag-en.png"
+                    value="ENGLISH"
+                    data-redirect="/Home/SetLanguage/EN"
+                  >
+                    ENGLISH
+                  </option>
+                  <option
+                    data-image="/Content/themes/betbaba/images/flags/flag-tr.png"
+                    value="T&#220;RK&#199;E"
+                    data-redirect="/Home/SetLanguage/TR"
+                  >
+                    T&#220;RK&#199;E
+                  </option>
+                </select>
+              </section>
+            </div> -->
+
+            <!--  Begin fullscreen game ->
+            <!- Begin in game screen  -  close, full screen and exit full screen buttons -->
+            <div class="play-for-fun-filters" data-fullscreen-game="true">
+              <a class="full-screen">
+                <span class="realtime"></span>
+                <span class="fs" data-fullscreen="enter"
+                  ><i class="icon"></i
+                ></span>
+                <span class="efs" data-fullscreen="exit" style="display: none"
+                  ><i class="icon"></i
+                ></span>
+              </a>
+              <a class="close"><i class="icon"></i></a>
+            </div>
+            <!--End fullscreen game-->
+            <!-- End In game screen  -  close, full screen and exit full screen buttons -->
+          </div>
+        </div>
+      </nav>
+      <!-- <div class="header-bg">
+        <div class="navbar-collapse top-menu collapse" id="main-nav">
+          <ul
+            class="nav top-navigation navbar-nav content-padding max-width cf"
+          >
+            <li class="nav-Sports">
+              <a
+                data-require-login="false"
+                id="navSports"
+                class="sports"
+                name=""
+                href="#"
+                target="_self"
+              >
+                <i class="icon-bb"></i>
+                Sports
+              </a>
+            </li>
+            <li class="nav-LiveSports">
+              <a
+                data-require-login="false"
+                id="navLiveSports"
+                class="livesports"
+                name=""
+                href="#"
+                target="_self"
+              >
+                <i class="icon-bb"></i>
+                In-Play
+              </a>
+            </li>
+            <li class="nav-Casino">
+              <a
+                data-require-login="false"
+                id="navCasino"
+                class="casino"
+                name=""
+                href="#"
+                target="_self"
+              >
+                <i class="icon-bb"></i>
+                Casino
+              </a>
+            </li>
+            <li class="nav-LiveCasino">
+              <a
+                data-require-login="false"
+                id="navLiveCasino"
+                class="livecasino"
+                name=""
+                href="#"
+                target="_self"
+              >
+                <i class="icon-bb"></i>
+                Live Casino
+              </a>
+            </li>
+            <li class="nav-VirtualSports">
+              <a
+                data-require-login="false"
+                id="navVirtualSports"
+                class="virtualsports"
+                name=""
+                href="#"
+                target="_self"
+              >
+                <i class="icon-bb"></i>
+                Virtual Sports
+              </a>
+            </li>
+            <li class="nav-BetGamesTV">
+              <a
+                data-require-login="true"
+                id="navBetGamesTV"
+                class="betgamestv"
+                name=""
+                href="#"
+                target="_self"
+              >
+                <i class="icon-bb"></i>
+                Live Games
+              </a>
+            </li>
+            <li class="nav-Tombala">
+              <a
+                data-require-login="true"
+                id="navTombala"
+                class="tombala"
+                name=""
+                href="#"
+                target="_self"
+              >
+                <i class="icon-bb"></i>
+                Tombala
+              </a>
+            </li>
+            <li class="nav-Zeppelin">
+              <a
+                data-require-login="true"
+                id="navZeppelin"
+                class="zeppelin"
+                name=""
+                href="#"
+                target="_self"
+              >
+                <i class="icon-bb"></i>
+                Zeppelin
+              </a>
+            </li>
+            <li class="nav-TVBet">
+              <a
+                data-require-login="false"
+                id="navTVBet"
+                class="tvbet"
+                name=""
+                href="#"
+                target="_self"
+              >
+                <i class="icon-bb"></i>
+                TVBET
+              </a>
+            </li>
+            <li class="nav-Promotions">
+              <a
+                data-require-login="false"
+                id="navPromotions"
+                class="promotions"
+                name=""
+                href="#"
+                target="_self"
+              >
+                <i class="icon-bb"></i>
+                Promotions
+              </a>
+            </li>
+
+            <li class="live-chat only-mobile">
+              <a
+                id="navLiveChat"
+                name=""
+                href="javascript:void(0);"
+              >
+                <i class="icon"></i>
+                Live Chat
+              </a>
+            </li>
+            <li class="nav-help-desc only-mobile">
+              <a href="#">
+                <i class="icon"></i>
+                Help Center
+              </a>
+            </li>
+            <li class="submenu lang-logged">
+              <ul
+                class="flags-list flags-list-mobile-sb has-deposit"
+                id="languageSelectList"
+              >
+                <li class="language-footer-flags active" title="ENGLISH">
+                  <a
+                    href="#"
+                    target="_self"
+                    aria-hidden="true"
+                    class="footer-class"
+                  >
+                    <img
+                      src="./images/footer-flag-en.png"
+                      srcset="./images/footer-flag-en.png 2x"
+                      class="img-responsive footer-lang-img"
+                    />
+                    <span class="footer-lang-text" style="display: none"
+                      >english</span
+                    >
+                  </a>
+                </li>
+                <li class="language-footer-flags" title="T&#220;RK&#199;E">
+                  <a
+                    href="#"
+                    target="_self"
+                    aria-hidden="true"
+                    class="footer-class"
+                  >
+                    <img
+                      src="./images/footer-flag-tr.png"
+                      srcset="./images/footer-flag-tr.png 2x"
+                      class="img-responsive footer-lang-img"
+                    />
+                    <span class="footer-lang-text" style="display: none"
+                      >t&#252;rk&#231;e</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="submenu nav-sep-border"></li>
+
+            <li class="submenu">
+              <a href="#" target="_self" id="footerLinkAboutUs"
+                >About Us</a
+              >
+            </li>
+            <li class="submenu">
+              <a
+                href="#"
+                target="_self"
+                id="footerLinkTermsAndConditions"
+                >Terms &amp; Conditions</a
+              >
+            </li>
+            <li class="submenu">
+              <a
+                href="#"
+                target="_self"
+                id="footerLinkResponsibleGambling"
+                >Responsible Gambling</a
+              >
+            </li>
+            <li class="submenu">
+              <a
+                href="#"
+                target="_self"
+                id="footerLinkSecurityAndPrivacy"
+                >Security &amp; Privacy</a
+              >
+            </li>
+            <li class="submenu">
+              <a href="#" target="_self" id="footerLinkContactUs"
+                >Contact Us</a
+              >
+            </li>
+            <li class="submenu">
+              <a
+                href="#"
+                target="_blank"
+                id="footerLinkAffiliateProgram"
+                >BetBaba Affiliate</a
+              >
+            </li>
+            <li class="submenu">
+              <a
+                href="#"
+                target="_self"
+                id="footerLinkBettingRules"
+                >Betting Rules</a
+              >
+            </li>
+            <li class="submenu">
+              <a href="#" target="_self" id="footerLinkFAQ">FAQ</a>
+            </li>
+            <li class="submenu">
+              <a
+                href="#"
+                target="_self"
+                id="footerLinkPaymentMethods"
+                >Payment Methods</a
+              >
+            </li>
+            <li class="submenu">
+              <a href="#" target="_self" id="footerLinkPromotions"
+                >Promotions</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div> -->
+      <div class="cb"></div>
+    </header>
+
+    <!-- Main Banner -->
+    <!-- <div class="main-banner-container">
+      <img src="./images/IPL Bonus Banner.jpg" alt="banner">
+    </div> -->
+
+    <div class="content-wrapper">
+      <div
+        id="carouselBanner"
+        class="slider-area-container carousel slide carousel-fade"
+        data-touch="true"
+        data-ride="carousel"
+        data-interval="8000"
+      >
+        <div class="carousel-inner slider-area" role="listbox">
+          <div class="item 0 active">
+            <div
+              style="
+                background-image: url('./images/IPL\ Bonus\ Banner.jpg');
+                display: none;
+              "
+              class="desktop-view"
+              data-image-src="./images/IPL\ Bonus\ Banner.jpg"
+            ></div>
+
+            <div
+              style="background-image: url(''); display: none"
+              class="mobile-large-view"
+              data-image-src=""
+            ></div>
+
+            <div
+              style="background-image: url(''); display: none"
+              class="mobile-small-view"
+              data-image-src=""
+            ></div>
+          </div>
+          <div class="item 1">
+            <div
+              style="
+                background-image: url('./images/IPL\ Bonus\ Banner.jpg');
+                display: none;
+              "
+              class="desktop-view"
+              data-image-src="./images/IPL\ Bonus\ Banner.jpg"
+            ></div>
+
+            <div
+              style="
+                background-image: url('./images/IPL\ Bonus\ Banner.jpg');
+                display: none;
+              "
+              class="mobile-large-view"
+              data-image-src="./images/IPL\ Bonus\ Banner.jpg"
+            ></div>
+
+            <div
+              style="
+                background-image: url('./images/IPL\ Bonus\ Banner.jpg');
+                display: none;
+              "
+              class="mobile-small-view"
+              data-image-src="./images/IPL\ Bonus\ Banner.jpg"
+            ></div>
+          </div>
+          <div class="item 2">
+            <div
+              style="
+                background-image: url('./images/IPL\ Bonus\ Banner.jpg');
+                display: none;
+              "
+              class="desktop-view"
+              data-image-src="./images/IPL\ Bonus\ Banner.jpg"
+            ></div>
+
+            <div
+              style="background-image: url(''); display: none"
+              class="mobile-large-view"
+              data-image-src=""
+            ></div>
+
+            <div
+              style="background-image: url(''); display: none"
+              class="mobile-small-view"
+              data-image-src=""
+            ></div>
+          </div>
+          <div class="item 3">
+            <div
+              style="
+                background-image: url('./images/IPL\ Bonus\ Banner.jpg');
+                display: none;
+              "
+              class="desktop-view"
+              data-image-src="./images/IPL\ Bonus\ Banner.jpg"
+            ></div>
+
+            <div
+              style="background-image: url(''); display: none"
+              class="mobile-large-view"
+              data-image-src=""
+            ></div>
+
+            <div
+              style="background-image: url(''); display: none"
+              class="mobile-small-view"
+              data-image-src=""
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-content-jet">
+        <!-- <ol class="banner-carousel-indicators carousel-indicators">
+          <li
+            data-target="#carouselBanner"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselBanner" data-slide-to="1" class=""></li>
+          <li data-target="#carouselBanner" data-slide-to="2" class=""></li>
+          <li data-target="#carouselBanner" data-slide-to="3" class=""></li>
+        </ol> -->
+        <a
+          class="carousel-control-prev st"
+          href="#carouselBanner"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next st"
+          href="#carouselBanner"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        <!-- <ol class="banner-carousel-indicators carousel-indicators">
+          <li
+            data-target="#carouselBanner"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselBanner" data-slide-to="1" class=""></li>
+          <li data-target="#carouselBanner" data-slide-to="2" class=""></li>
+          <li data-target="#carouselBanner" data-slide-to="3" class=""></li>
+        </ol> -->
+
+        <div class="relative max-width banner-text-wrapper">
+          <div
+            class="home-item-indicator item 0 active"
+            data-slide-to="0"
+            data-target="#carouselBanner"
+          >
+            <div class="banner-margin">
+              <!-- <div class="home-banner">
+                <h2 class="banner-title">
+                  <span>%100 1777 TL</span><br /><span class="second-title-row"
+                    >Casino Bonus</span
+                  >
+                </h2>
+
+                <h3 class="title-info-text">
+                  Casino First Deposit Bonus<br />
+                </h3>
+
+                <a
+                  href="#"
+                  class="btn active home-banner-btn"
+                  >SEE MORE</a
+                >
+              </div> -->
+            </div>
+          </div>
+          <div
+            class="home-item-indicator item 1"
+            data-slide-to="1"
+            data-target="#carouselBanner"
+          >
+            <div class="banner-margin">
+              <div class="home-banner">
+                <h2 class="banner-title">
+                  %100 777 TL<br />
+                  <span class="second-title-row">Sports Bonus</span>
+                </h2>
+
+                <h3 class="title-info-text">
+                  Sports First<br />
+                  Deposit Bonus
+                </h3>
+
+                <a
+                  href="#"
+                  class="btn active home-banner-btn"
+                  >SEE MORE</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="home-item-indicator item 2"
+            data-slide-to="2"
+            data-target="#carouselBanner"
+          >
+            <div class="banner-margin">
+              <div class="home-banner">
+                <h2 class="banner-title">
+                  <span>%15</span>&nbsp;Weekly<br /><span
+                    class="second-title-row"
+                    >Cash Back Bonus</span
+                  >
+                </h2>
+
+                <h3 class="title-info-text">Cash Back Bonus<br /></h3>
+
+                <a
+                  href="#"
+                  class="btn active home-banner-btn"
+                  >SEE MORE</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="home-item-indicator item 3"
+            data-slide-to="3"
+            data-target="#carouselBanner"
+          >
+            <div class="banner-margin">
+              <div class="home-banner">
+                <h2 class="banner-title">
+                  <span>%20</span>&nbsp;1000 TL<br /><span
+                    class="second-title-row"
+                    >Casino Bonus</span
+                  >
+                </h2>
+
+                <h3 class="title-info-text">Every Day Casino Bonus<br /></h3>
+
+                <a
+                  href="#"
+                  class="btn active home-banner-btn"
+                  >SEE MORE</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <script>
+        $(function () {
+          brandScripts.initBetbabaBanner();
+        });
+      </script> -->
+      <div class="main-content-wrapper">
+        <!--static widget area-->
+
+        <div class="wrapper-padding">
+          <div class="home-static-widget-area">
+            <div class="slider-area-bot">
+              <div class="slider-area-c">
+                <div class="slider-img slider-1">
+                  <div class="slider-first parallax ready">
+                    <img src="./images/Slide Banners BG.jpg" class="layer-1 img-slider" style="
+                        transform-style: preserve-3d;
+                        transform-origin: 0px 0px 0px;
+                        transform: translate3d(0px, 0px, 0px);
+                      ">
+                    <div class="swiper-container swiper-vertical-directoin-two sl-wrap swiper-container-initialized swiper-container-vertical swiper-container-pointer-events" data-delay="6500">
+                      <div class="swiper-wrapper" id="swiper-wrapper-f0c881bccee85fcc" aria-live="off" style="
+                          transition-duration: 0ms;
+                          transform: translate3d(0px, -1920px, 0px);
+                        ">
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="2" role="group" aria-label="1 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-02.png" class="layer-2 img-slider-person swiper-slide item" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">KHELOYAR NEWS</div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" role="group" aria-label="2 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-03.png" class="layer-2 img-slider-person" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">
+                                  KHELOYAR TV
+                                </div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" role="group" aria-label="3 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-04.png" class="layer-2 img-slider-person swiper-slide item" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">KHELOYAR NET</div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" role="group" aria-label="4 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-02.png" class="layer-2 img-slider-person swiper-slide item" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">KHELOYAR NEWS</div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" role="group" aria-label="5 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-03.png" class="layer-2 img-slider-person" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">
+                                  KHELOYAR TV
+                                </div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                    <div class="content-shadow"></div>
+                    <img src="https://efesclubcdn.com/FTP/BETBABA/Home/sl-s-layer-three.png" class="layer-3 img-slider" style="
+                        transform-style: preserve-3d;
+                        transform-origin: 0px 0px 0px;
+                        transform: translate3d(0px, 0px, 0px);
+                      ">
+                  </div>
+                </div>
+              </div>
+
+              <div class="slider-area-c">
+                <div class="slider-img slider-1">
+                  <div class="slider-first parallax ready">
+                    <img src="./images/Slide Banners BG.jpg" class="layer-1 img-slider" style="
+                        transform-style: preserve-3d;
+                        transform-origin: 0px 0px 0px;
+                        transform: translate3d(0px, 0px, 0px);
+                      ">
+                    <div class="swiper-container swiper-vertical-directoin-two sl-wrap swiper-container-initialized swiper-container-vertical swiper-container-pointer-events" data-delay="6500">
+                      <div class="swiper-wrapper" id="swiper-wrapper-f0c881bccee85fcc" aria-live="off" style="
+                          transition-duration: 0ms;
+                          transform: translate3d(0px, -1920px, 0px);
+                        ">
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="2" role="group" aria-label="1 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-03.png" class="layer-2 img-slider-person swiper-slide item" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">KHELOYAR TV</div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" role="group" aria-label="2 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-04.png" class="layer-2 img-slider-person" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">
+                                  KHELOYAR NET
+                                </div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" role="group" aria-label="3 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-05.png" class="layer-2 img-slider-person swiper-slide item" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">KHELOYAR CLUB</div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" role="group" aria-label="4 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-03.png" class="layer-2 img-slider-person swiper-slide item" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">KHELOYAR TV</div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" role="group" aria-label="5 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-04.png" class="layer-2 img-slider-person" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">
+                                  KHELOYAR NET
+                                </div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                    <div class="content-shadow"></div>
+                    <img src="https://efesclubcdn.com/FTP/BETBABA/Home/sl-s-layer-three.png" class="layer-3 img-slider" style="
+                        transform-style: preserve-3d;
+                        transform-origin: 0px 0px 0px;
+                        transform: translate3d(0px, 0px, 0px);
+                      ">
+                  </div>
+                </div>
+              </div>
+
+              <div class="slider-area-c">
+                <div class="slider-img slider-1">
+                  <div class="slider-first parallax ready">
+                    <img src="./images/Slide Banners BG.jpg" class="layer-1 img-slider" style="
+                        transform-style: preserve-3d;
+                        transform-origin: 0px 0px 0px;
+                        transform: translate3d(0px, 0px, 0px);
+                      ">
+                    <div class="swiper-container swiper-vertical-directoin-two sl-wrap swiper-container-initialized swiper-container-vertical swiper-container-pointer-events" data-delay="6500">
+                      <div class="swiper-wrapper" id="swiper-wrapper-f0c881bccee85fcc" aria-live="off" style="
+                          transition-duration: 0ms;
+                          transform: translate3d(0px, -1920px, 0px);
+                        ">
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="2" role="group" aria-label="1 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-04.png" class="layer-2 img-slider-person swiper-slide item" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">KHELOYAR NET</div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" role="group" aria-label="2 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-05.png" class="layer-2 img-slider-person" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">
+                                  KHELOYAR CLUB
+                                </div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" role="group" aria-label="3 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-02.png" class="layer-2 img-slider-person swiper-slide item" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">KHELOYAR NEWS</div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" role="group" aria-label="4 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-04.png" class="layer-2 img-slider-person swiper-slide item" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">KHELOYAR NET</div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" role="group" aria-label="5 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-05.png" class="layer-2 img-slider-person" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">
+                                  KHELOYAR ClUB
+                                </div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                    <div class="content-shadow"></div>
+                    <img src="https://efesclubcdn.com/FTP/BETBABA/Home/sl-s-layer-three.png" class="layer-3 img-slider" style="
+                        transform-style: preserve-3d;
+                        transform-origin: 0px 0px 0px;
+                        transform: translate3d(0px, 0px, 0px);
+                      ">
+                  </div>
+                </div>
+              </div>
+
+              <div class="slider-area-c">
+                <div class="slider-img slider-1">
+                  <div class="slider-first parallax ready">
+                    <img src="./images/Slide Banners BG.jpg" class="layer-1 img-slider" style="
+                        transform-style: preserve-3d;
+                        transform-origin: 0px 0px 0px;
+                        transform: translate3d(0px, 0px, 0px);
+                      ">
+                    <div class="swiper-container swiper-vertical-directoin-two sl-wrap swiper-container-initialized swiper-container-vertical swiper-container-pointer-events" data-delay="6500">
+                      <div class="swiper-wrapper" id="swiper-wrapper-f0c881bccee85fcc" aria-live="off" style="
+                          transition-duration: 0ms;
+                          transform: translate3d(0px, -1920px, 0px);
+                        ">
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="2" role="group" aria-label="1 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-05.png" class="layer-2 img-slider-person swiper-slide item" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">KHELOYAR CLUB</div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" role="group" aria-label="2 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-02.png" class="layer-2 img-slider-person" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">
+                                  KHELOYAR NEWS
+                                </div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" role="group" aria-label="3 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-04.png" class="layer-2 img-slider-person swiper-slide item" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">KHELOYAR NET</div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" role="group" aria-label="4 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-05.png" class="layer-2 img-slider-person swiper-slide item" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">KHELOYAR CLUB</div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" role="group" aria-label="5 / 5" style="height: 540px; margin-bottom: 100px">
+                          <a href="#">
+                            <img src="./images/Slide Banners Movable-03.png" class="layer-2 img-slider-person" style="
+                                transform-style: preserve-3d;
+                                transform-origin: 0px 0px 0px;
+                                transform: translate3d(0px, 0px, 0px);
+                              ">
+                            <div class="layer-4 slider-content-wrap">
+                              <div class="slider-content">
+                                <div class="slider-text">
+                                  KHELOYAR TV
+                                </div>
+                                <span class="slider-btn slider-btn-2">
+                                  <span>Go to Site</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                    <div class="content-shadow"></div>
+                    <img src="https://efesclubcdn.com/FTP/BETBABA/Home/sl-s-layer-three.png" class="layer-3 img-slider" style="
+                        transform-style: preserve-3d;
+                        transform-origin: 0px 0px 0px;
+                        transform: translate3d(0px, 0px, 0px);
+                      ">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="max-width content-padding">
+          <div class="footer">
+            <div class="max-footer-width">
+              <div class="footer-grid-layout">
+                <div class="betbaba-footer-logo">
+                  <div class="navbar-header flex flex-row">
+                    <a class="" href="/" target="_self">
+                      <span class="img img-responsive"></span>
+                    </a>
+                  </div>
+
+                  <div class="logo-text-mob">
+                    2022 Betbaba.com All Rights Reserved.
+                  </div>
+                </div>
+
+                <div class="space"></div>
+                <!-- <div class="footer-language-wrapper">
+                  <h6></h6>
+
+                  <ul
+                    class="flags-list flags-list-mobile-sb has-deposit"
+                    id="languageSelectList"
+                  >
+                    <li class="language-footer-flags active" title="ENGLISH">
+                      <a
+                        href="#"
+                        target="_self"
+                        aria-hidden="true"
+                        class="footer-class"
+                      >
+                        <img
+                          src="./images/footer-flag-en.png"
+                          srcset="./images/footer-flag-en.png 2x"
+                          class="img-responsive footer-lang-img"
+                        />
+                        <span class="footer-lang-text" style="display: none"
+                          >english</span
+                        >
+                      </a>
+                    </li>
+                    <li class="language-footer-flags" title="T&#220;RK&#199;E">
+                      <a
+                        href="#"
+                        target="_self"
+                        aria-hidden="true"
+                        class="footer-class"
+                      >
+                        <img
+                          src="./images/footer-flag-tr.png"
+                          srcset="./images/footer-flag-tr.png 2x"
+                          class="img-responsive footer-lang-img"
+                        />
+                        <span class="footer-lang-text" style="display: none"
+                          >t&#252;rk&#231;e</span
+                        >
+                      </a>
+                    </li>
+                  </ul>
+                </div> -->
+                <div class="social-icons-wrapper">
+                  <ul class="social-icons table-cell text-right">
+                    <li class="inline-block">
+                      <a
+                        href="#"
+                        class="icon icon-twitter1 webapp-links"
+                        target="_blank"
+                        rel="noopener"
+                        aria-hidden="true"
+                      >
+                      </a>
+                    </li>
+                    <li class="inline-block">
+                      <a
+                        href="#"
+                        class="icon icon-instagram webapp-links"
+                        target="_blank"
+                        rel="noopener"
+                        aria-hidden="true"
+                      >
+                      </a>
+                    </li>
+                    <li class="inline-block age-restriction-table">
+                      <a
+                        href="#"
+                        class="icon icon-account-group-8"
+                        target="_blank"
+                        rel="noopener"
+                        aria-hidden="true"
+                      >
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-nav-items">
+                  <ul class="link-list links">
+                    <li class="">
+                      <a
+                        href="#"
+                        target="_self"
+                        id="footerLinkAboutUs"
+                        >About Us</a
+                      >
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        target="_self"
+                        id="footerLinkTermsAndConditions"
+                        >Terms &amp; Conditions</a
+                      >
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        target="_self"
+                        id="footerLinkResponsibleGambling"
+                        >Responsible Gambling</a
+                      >
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        target="_self"
+                        id="footerLinkSecurityAndPrivacy"
+                        >Security &amp; Privacy</a
+                      >
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        target="_self"
+                        id="footerLinkContactUs"
+                        >Contact Us</a
+                      >
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        target="_blank"
+                        id="footerLinkAffiliateProgram"
+                        >BetBaba Affiliate</a
+                      >
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        target="_self"
+                        id="footerLinkBettingRules"
+                        >Betting Rules</a
+                      >
+                    </li>
+                    <li class="">
+                      <a href="#" target="_self" id="footerLinkFAQ"
+                        >FAQ</a
+                      >
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        target="_self"
+                        id="footerLinkPaymentMethods"
+                        >Payment Methods</a
+                      >
+                    </li>
+                    <li class="">
+                      <a
+                        href="#"
+                        target="_self"
+                        id="footerLinkPromotions"
+                        >Promotions</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="curacao">
+                  <div class="curacao-egaming-holder table-cell">
+                    <div class="curacao-egaming two-logos">
+                      <div
+                        id="xcm-42576377-89e4-4fea-ada7-c90f37b9e328"
+                        data-xcm-seal-id="42576377-89e4-4fea-ada7-c90f37b9e328"
+                        data-xcm-image-size="128"
+                        data-xcm-image-type="basic-small"
+                      ></div>
+                      <script
+                        type="text/javascript"
+                        src="https://42576377-89e4-4fea-ada7-c90f37b9e328.seals-xcm.certria.com/xcm-seal.js"
+                      ></script>
+
+                      <div
+                        id="apg-231fe780-1ca0-4709-81b2-969a2312de93"
+                        data-apg-seal-id="231fe780-1ca0-4709-81b2-969a2312de93"
+                        data-apg-image-size="128"
+                        data-apg-image-type="basic-small"
+                      ></div>
+                      <script
+                        type="text/javascript"
+                        src="https://231fe780-1ca0-4709-81b2-969a2312de93.snippet.antillephone.com/apg-seal.js"
+                      ></script>
+                    </div>
+                  </div>
+                  <div class="site-gaming-register-text vmiddle">
+                    BetBaba is registered under Continental Solutions Ltd B.V.
+                    incorporated under the laws of Curaçao. <br /><br />© 2022
+                    BetBaba. All Rights Reserved.
+                  </div>
+                </div>
+                <div class="be-gamble-holder">
+                  <div class="vmiddle age-restriction-holder">
+                    <div class="table age-restriction-table">
+                      <div class="gamble">
+                        <a
+                          href="#"
+                          target="_blank"
+                          rel="noopener"
+                          class="gambleware"
+                        >
+                          <div class="gamble-first"></div>
+                          <span
+                            class="table-cell vmiddle first age-restriction-text"
+                          >
+                            Gaming can be addictive, play responsibly.
+                          </span>
+                        </a>
+                      </div>
+                      <div class="gamble-second">
+                        <div class="alignment-div">
+                          <span class="game-card"></span>
+                          <i class="icon icon-181"></i>
+                        </div>
+                        <div class="table-cell vmiddle age-restriction-text">
+                          Gaming can be addictive,<br />pllay responsibly.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="suported-devices">
+                  <div class="sup-devices-img"></div>
+                  <div class="sup-devices-text">
+                    &#169; 2022 BetBaba. All Rights Reserved.
+                  </div>
+                </div>
+                <div class="secure-payment-wrap">
+                  <div class="secure-pay-wrap">
+                    <div class="secure-pay-img"></div>
+                    <div class="secure-pay-text">
+                      <span>100% Secure<br />Payment</span>
+                    </div>
+                  </div>
+                  <div class="live-sup-wrap">
+                    <div class="live-sup-img"></div>
+                    <div class="live-sup-text">
+                      Live Support &<br />Live Chat
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="footer-carousel-deposit-logos">
+          <div class="payment-shadow">
+            <div
+              class="footer-image-hover swiper-container swiper-footer-payment-methods"
+            >
+              <div class="swiper-wrapper">
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-astropay-wallet-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="AstroPay Wallet"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-astropay-wallet-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="AstroPay Wallet"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-SurcunCrypto-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Crypto Deposit"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-SurcunCrypto-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Crypto Deposit"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-Cryptobunq-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Cryptobunq"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-Cryptobunq-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Cryptobunq"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-bank-transfer-voucher-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Bank Transfer Voucher"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-bank-transfer-voucher-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Bank Transfer Voucher"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-luqapay-instantcepbank-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Instant Cepbank"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-luqapay-instantcepbank-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Instant Cepbank"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-gpaysafe-jeton-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Jeton Card"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-gpaysafe-jeton-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Jeton Card"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-gpaysafe-cepbank-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Cepbank"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-gpaysafe-cepbank-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Cepbank"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-gpaysafe-qrcode-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="QR Code"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-gpaysafe-qrcode-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="QR Code"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-luqapay-bitcoin-new-en-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Crypto"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-luqapay-bitcoin-new-en-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Crypto"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-bestpaycard-papara-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Papara"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-bestpaycard-papara-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Papara"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-jetanindapapara-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Jet Aninda Papara"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-jetanindapapara-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Jet Aninda Papara"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-superinstra-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Bank Transfer"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-superinstra-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Bank Transfer"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-jetoncash-tr-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Jeton Cash"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-jetoncash-tr-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Jeton Cash"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-jetonwallet-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Jeton Wallet"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-jetonwallet-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Jeton Wallet"
+                  />
+                </div>
+                <div class="provider-logo swiper-slide">
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-visa-mastercard-troy-A.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Visa / MasterCard / Troy"
+                  />
+                  <img
+                    src="https://efesclubcdn.com//footer-logos/payment-deposit/BETBABA//footer-logo-visa-mastercard-troy-B.svg?refresh=2022-03-02-12"
+                    class="img img-responsive"
+                    alt="Visa / MasterCard / Troy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-carousel-deposit-logos">
+            <div class="payment-shadow">
+              <div
+                class="footer-image-hover swiper-container swiper-footer-game-providers"
+              >
+                <div class="swiper-wrapper">
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-226-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Microgaming"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-226-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Microgaming"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3316-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Kalamba Games"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3316-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Kalamba Games"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-239-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="EGT"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-239-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="EGT"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-250-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="1x2 Network VS"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-250-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="1x2 Network VS"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3322-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Hacksaw Gaming"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3322-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Hacksaw Gaming"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-223-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Amatic"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-223-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Amatic"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-222-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Kiron"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-222-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Kiron"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3311-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Blueprint"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3311-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Blueprint"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-249-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="1x2 Network"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-249-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="1x2 Network"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-241-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="BoomingGames"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-241-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="BoomingGames"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-247-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Red Tiger"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-247-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Red Tiger"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-238-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Playson"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-238-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Playson"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-248-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Betradar"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-248-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Betradar"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-237-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Netent"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-237-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Netent"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-220-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Quickspin"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-220-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Quickspin"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-256-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="PGSoft"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-256-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="PGSoft"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-251-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Thunderkick"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-251-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Thunderkick"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3321-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Booongo"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3321-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Booongo"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-246-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Pragmatic Play"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-246-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Pragmatic Play"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-245-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Patagonia"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-245-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Patagonia"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-23-234-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Ezugi"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-23-234-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Ezugi"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-235-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Habanero"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-235-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Habanero"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-23-233-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Evolution"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-23-233-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Evolution"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-31-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="BetSolutions"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-31-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="BetSolutions"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-23-230-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Authentic Gaming"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-23-230-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Authentic Gaming"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3324-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Onlyplay"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3324-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Onlyplay"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-242-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="ISoftBet"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-242-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="ISoftBet"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-255-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Stakelogic"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-255-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Stakelogic"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3314-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Push Gaming"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3314-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Push Gaming"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3315-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Big Time Gaming"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3315-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Big Time Gaming"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3323-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Spinomenal"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3323-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Spinomenal"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-254-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Tom Horn"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-254-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Tom Horn"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-243-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Mr Slotty"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-243-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Mr Slotty"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-37-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Endorphina"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-37-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Endorphina"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-23-231-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="BetGames TV"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-23-231-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="BetGames TV"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3320-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Wazdan"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3320-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Wazdan"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-240-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Play &#39;N&#39; Go"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-240-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Play &#39;N&#39; Go"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-232-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="BetSoft"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-232-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="BetSoft"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-28-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Yggdrasil"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-28-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Yggdrasil"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3318-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Nolimitcity"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3318-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Nolimitcity"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3313-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Relax Gaming"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-33-3313-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Relax Gaming"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-225-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Golden Race"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-225-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Golden Race"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-23-236-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Lucky Streak"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-23-236-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Lucky Streak"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-244-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Elk Studios"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-22-244-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="Elk Studios"
+                    />
+                  </div>
+                  <div class="item provider-logo swiper-slide">
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-35-A.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="TVbet"
+                    />
+                    <img
+                      src="https://efesclubcdn.com//footer-logos/game-providers/BETBABA//footer-logo-35-B.svg?refresh=2022-03-02-12"
+                      class="img img-responsive"
+                      alt="TVbet"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!--error popup-->
+    <div
+      class="modal fade"
+      data-backdrop="static"
+      data-keyboard="true"
+      id="errorPopup"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog small-modal" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <h1 class="modal-title" id="errorTitle"></h1>
+          </div>
+          <div class="modal-body">
+            <div class="modal-error">
+              <div class="alert-error center">
+                <i class="icon"></i>
+              </div>
+              <div class="center mt14 mb14" id="errorMessage"></div>
+              <div class="buttons">
+                <button
+                  id="errorPopusOKButton"
+                  class="btn full btn-dangerous"
+                  type="button"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var errorMessages = {
+        defaultTitle: "Error!",
+        default: "Error executing your request. Please try again later!",
+        404: "The requested resource is not found!",
+        500: "Internal server error! Please try again later!",
+      };
+
+      $(function () {
+        app.initErrorPopup("#errorPopup", errorMessages);
+      });
+    </script>
+
+    <!--static popup-->
+    <div
+      class="modal fade modal-with-logo"
+      id="staticPopup"
+      data-keyboard="true"
+      role="dialog"
+      data-backdrop="static ddddd"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="only-phones">
+              <div class="navbar-header">
+                <span class="img img-responsive"></span>
+              </div>
+            </div>
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <h1 class="modal-title active" id="staticPopupTitle"></h1>
+          </div>
+          <div class="modal-body" id="staticPopupContent"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-container" style="display: none"></div>
+    <a
+      href="javascript: void(0);"
+      class="footer-live-chat"
+      onclick="app.liveChatOpen();"
+    >
+      <i class="icon"></i>
+    </a>
+
+    <!-- Theme javascript Files -->
+    <script src="./js/jquery-val.js"></script>
+    <script src="./js/theme-librarie.js"></script>
+    <script src="./js/theme-script.js"></script>
+    <script src="./js/theme-bundle.js"></script>
+    <script src="./js/security.js"></script>
+    <script src="./js/keep-me.js"></script>
+    <script src="./js/promo-bundle.js"></script>
+
+    <script src="./js/carousel.js"></script>
+    
+    <script>
+      $(function () {
+        //init Vertical Swiper
+        brandScripts.initParallaxEffect();
+        carousel.initVerticalSwiper(".swiper-vertical-directoin-one");
+        carousel.initVerticalSwiper(".swiper-vertical-directoin-one");
+        carousel.initVerticalSwiper(".swiper-vertical-directoin-two");
+        carousel.initVerticalSwiper(".swiper-vertical-directoin-three");
+      });
+
+      $(function () {});
+
+      if (/iphone|ipod|ipad|Android/gi.test(navigator.platform)) {
+        if (navigator.standalone) {
+          var a = document.getElementsByTagName("a");
+          for (var i = 0; i < a.length; i++) {
+            a[i].onclick = function () {
+              window.location = this.getAttribute("href");
+              return false;
+            };
+          }
+        }
+      }
+    </script>
+
+    <!-- MODAL CONTAINER -->
+    <div id="modal-container" style="display: none"></div>
+    <!-- MODAL CONTAINER -->
+    <!--Live Chat-->
+  </body>
+</html>

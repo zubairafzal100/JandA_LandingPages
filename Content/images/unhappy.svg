@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="73.721" height="73.714" viewBox="0 0 73.721 73.714">
+    <defs>
+        <style>
+            .prefix__cls-3{fill:#a3a3a3}
+        </style>
+    </defs>
+    <g id="prefix__unhappy" transform="translate(1.86 1.831)">
+        <g id="prefix__add_tofav">
+            <g id="prefix__Group_270" data-name="Group 270" transform="translate(-.413 -.413)">
+                <path id="prefix__Path_211" d="M69.364 27.488L47.132 24.1 37.193 2.938a1.538 1.538 0 0 0-2.715 0l-9.943 21.153L2.3 27.488a1.537 1.537 0 0 0-1.223 1.081 1.647 1.647 0 0 0 .378 1.631l16.091 16.471-3.8 23.256a1.629 1.629 0 0 0 .6 1.554 1.454 1.454 0 0 0 1.593.122L35.83 60.624 55.716 71.6a1.454 1.454 0 0 0 1.593-.122 1.629 1.629 0 0 0 .6-1.554l-3.8-23.251L70.206 30.2a1.647 1.647 0 0 0 .382-1.63 1.537 1.537 0 0 0-1.222-1.082z" data-name="Path 211" transform="translate(-.417 -1.54)" style="stroke:#a3a3a3;stroke-width:4px;fill:none"/>
+                <path id="prefix__Rectangle_151" d="M0 0H70V70H0z" data-name="Rectangle 151" transform="translate(.413 .413)" style="fill:none"/>
+            </g>
+        </g>
+        <g id="prefix__noun_Unhappy_2142628" transform="translate(3 -5.025)">
+            <g id="prefix__Group_660" data-name="Group 660" transform="translate(-703 -288)">
+                <path id="prefix__Path_564" d="M730.662 337.131a1 1 0 0 1-1.324-1.5 6.582 6.582 0 0 1 4.368-1.631 6.367 6.367 0 0 1 6.267 4.77 1 1 0 1 1-1.946.461 4.37 4.37 0 0 0-4.321-3.23 4.582 4.582 0 0 0-3.044 1.13z" class="prefix__cls-3" data-name="Path 564"/>
+                <circle id="prefix__Ellipse_33" cx="3" cy="3" r="3" class="prefix__cls-3" data-name="Ellipse 33" transform="translate(722 324)"/>
+                <circle id="prefix__Ellipse_34" cx="3" cy="3" r="3" class="prefix__cls-3" data-name="Ellipse 34" transform="translate(742 324)"/>
+            </g>
+        </g>
+    </g>
+</svg>
